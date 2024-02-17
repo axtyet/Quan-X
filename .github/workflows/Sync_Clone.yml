@@ -15,25 +15,25 @@ jobs:
     - name: Checkout target repository
       uses: actions/checkout@v4.1.0
       with:
-        repository: axtyet/ios
-        path: ios-repo
+        repository: axtyet/Quan-X
+        path: Quan-X-repo
 
 ######
 
       # Fork Chxm1023
     - name: Fork Chxm1023/Rewrite
       run: |
-        mkdir -p ios-repo
+        mkdir -p Quan-X-repo/chxm1023
         git clone -b main https://github.com/chxm1023/Rewrite.git  czy_Tmp
-        cp -r czy_Tmp/* ios-repo/Rewrite
+        cp -r czy_Tmp/* Quan-X-repo/chxm1023/Rewrite
         rm -rf czy_Tmp   
-    - name: EditChxm1023/Rewrite
+    - name: Edit Chxm1023/Rewrite
       run: |
-        cd ios-repo/Rewrite
+        cd Quan-X-repo/Rewrite
         for file in *.js; do
             if [ "$file" ] ; then
               # 修改脚本链接
-              sed -i 's/raw\.githubusercontent\.com\/chxm1023\/Rewrite\/main/raw.githubusercontent\.com\/axtyet\/ios\/main\/Rewrite/g' "$file"
+              sed -i 's/raw\.githubusercontent\.com\/chxm1023\/Rewrite\/main/raw.githubusercontent\.com\/axtyet\/Quan-X\/main\/chxm1023\/Rewrite/g' "$file"
             else
               echo "$file not found."
             fi
@@ -41,11 +41,11 @@ jobs:
       # 修改脚本链接
     - name: Edit Rewrite/Revenuecat
       run: |
-        cd ios-repo/Rewrite/Revenuecat
+        cd Quan-X-repo/chxm1023/Rewrite/Revenuecat
         for file in *.js; do
             if [ "$file" ] ; then
               # 修改脚本链接
-              sed -i 's/raw\.githubusercontent\.com\/chxm1023\/Rewrite\/main\/Revenuecat/raw.githubusercontent\.com\/axtyet\/ios\/main\/Rewrite\/Revenuecat/g' "$file"
+              sed -i 's/raw\.githubusercontent\.com\/chxm1023\/Rewrite\/main\/Revenuecat/raw.githubusercontent\.com\/axtyet\/Quan-X\/main\/chxm1023\/Rewrite\/Revenuecat/g' "$file"
             else
               echo "$file not found."
             fi
@@ -53,30 +53,30 @@ jobs:
       # 修改脚本链接
     - name: Edit Rewrite/iTunes
       run: |
-        cd ios-repo//Rewrite/iTunes
+        cd Quan-X-repo/chxm1023/Rewrite/iTunes
         for file in *.js; do
             if [ "$file" ] ; then
               # 修改脚本链接
-              sed -i 's/raw\.githubusercontent\.com\/chxm1023\/Rewrite\/main\/iTunes/raw.githubusercontent\.com\/axtyet\/ios\/main\/Rewrite\/iTunes/g' "$file"
+              sed -i 's/raw\.githubusercontent\.com\/chxm1023\/Rewrite\/main\/iTunes/raw.githubusercontent\.com\/axtyet\/Quan-X\/main\/chxm1023\/Rewrite\/iTunes/g' "$file"
             else
               echo "$file not found."
             fi
           done
           
-    - name: Fork Chxm1023/Rewrite
+    - name: Fork Chxm1023/Advertising
       run: |
-        mkdir -p ios-repo
+        mkdir -p Quan-X-repo/chxm1023
         git clone -b main https://github.com/chxm1023/Advertising.git  cyz_Tmp
-        cp -r cyz_Tmp/* ios-repo/Advertising
+        cp -r cyz_Tmp/* Quan-X-repo/chxm1023/Advertising
         rm -rf cyz_Tmp
          # 修改脚本链接
     - name: Edit Advertising
       run: |
-        cd ios-repo/Advertising
+        cd Quan-X-repo/Advertising
         for file in *.js; do
             if [ "$file" ] ; then
               # 修改脚本链接
-              sed -i 's/raw\.githubusercontent\.com\/chxm1023\/Advertising\/main/raw.githubusercontent\.com\/axtyet\/ios\/main\/Advertising/g' "$file"
+              sed -i 's/raw\.githubusercontent\.com\/chxm1023\/Advertising\/main/raw.githubusercontent\.com\/axtyet\/Quan-X\/main\/chxm1023\/Advertising/g' "$file"
             else
               echo "$file not found."
             fi
@@ -84,15 +84,15 @@ jobs:
 
     - name: Fork Chxm1023/Script_X
       run: |
-        mkdir -p ios-repo
+        mkdir -p Quan-X-repo
         git clone -b main https://github.com/chxm1023/Script_X.git  yzc_Tmp
-        cp -r yzc_Tmp/* ios-repo/Script_X
+        cp -r yzc_Tmp/* Quan-X-repo/chxm1023/Script_X
         rm -rf yzc_Tmp   
 
         
     - name: Add and Commits
       run: |
-        cd ios-repo
+        cd Quan-X-repo
          if [[ -n $(git status -s) ]]; then
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
