@@ -1,0 +1,8 @@
+#!name=yunting
+#!desc=yunting
+
+[Script]
+yunting = type=http-response, pattern=(^https?:\/\/(ytmsout|ytapi)\.radio\.cn|60\.205\.171\.165)\/(contentBiz|publish|rights|user\/appUser\/getUserInfo|ytsrv\/srv\/appUser\/getUserInfoH5), script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/yunting.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% *.radio.cn, 60.205.171.165

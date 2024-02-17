@@ -1,0 +1,10 @@
+#!name=1
+#!desc=1
+
+[Script]
+
+mojitianqi = type=http-response,pattern=^https?:\/\/.*\.api\.moji\.com\/(sns\/json\/profile\/get_info_.+|json\/member_new\/homepage_info.+|user\/personal\/json\/profile_.+|flycard\/novice|shortvideo\/.+),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Script/main/mojitianqi.js
+
+[MITM]
+
+hostname = %APPEND% *.api.moji.com

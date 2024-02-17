@@ -1,0 +1,10 @@
+#!name=pdf点睛
+#!desc=pdf点睛
+
+[Script]
+
+PDFexpert = type=http-request,pattern=^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/pdfexpert6\/subscription\/refresh,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/PDFexpert.js
+
+[MITM]
+
+hostname = %APPEND% license.pdfexpert.com

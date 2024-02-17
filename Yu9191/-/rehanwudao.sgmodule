@@ -1,0 +1,8 @@
+#!name=rehanwudao
+#!desc=rehanwudao
+
+[Script]
+rehanwudao = type=http-response, pattern=http://dancefit.dailyyogac.com/dancefit, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/rehanwudao.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% dancefit.dailyyogac.com

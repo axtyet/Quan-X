@@ -1,0 +1,10 @@
+#!name=mon
+#!desc=mon
+
+[Script]
+
+memoryhelper = type=http-response,pattern=^https:\/\/memoryhelper\.fujianjin6471\.com\/api\/v4\.4\/expiration_date,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/memoryhelper.js
+
+[MITM]
+
+hostname = %APPEND% memoryhelper.fujianjin6471.com

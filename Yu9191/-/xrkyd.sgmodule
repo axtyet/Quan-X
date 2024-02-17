@@ -1,0 +1,8 @@
+#!name=xiangrikui
+#!desc=xiangrikui
+
+[Script]
+xiangrikui = type=http-response, pattern=^https:\/\/api\.v1\.esread\.com, script-path=https://raw.githubusercontent.com/Yu9191/Script/main/xrkyd.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% api.v1.esread.com

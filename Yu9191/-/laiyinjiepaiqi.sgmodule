@@ -1,0 +1,9 @@
+#!name=laiyinjiepaiqi
+#!desc=laiyinjiepaiqi
+#!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1075.png
+
+[Script]
+laiyinjiepaiqi = type=http-response, pattern=https://metronome-api\.quthing\.com/(login/mobile|vip/state), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/laiyinjiepaiqi.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% metronome-api.quthing.com

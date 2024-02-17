@@ -1,0 +1,10 @@
+#!name=pianyuji
+#!desc=pianyuji
+
+[Script]
+pianyuji = type=http-response, pattern=^https?:\/\/lentoapp\.com:8091\/getUserMemberShipInfo, script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes/pianyuji.js, requires-body=true, max-size=-1, timeout=60
+
+pianyuji = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes/pianyuji.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% lentoapp.com:8091, buy.itunes.apple.com

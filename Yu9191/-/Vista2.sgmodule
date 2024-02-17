@@ -1,0 +1,13 @@
+#!name = Vista
+#!author = ios151
+#!homepage = https://github.com/Yu9191/Script
+#!url= https://raw.githubusercontent.com/Yu9191/Script/main/Vista.sgmodule
+
+
+[Script]
+Vista = type=http-response,pattern=^http[s]?:\/\/open3.vistastory.com,requires-body=1,max-size=0,script-path=^http[s]?:\/\/open3.vistastory.com url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/Vista.js
+
+
+
+[MITM]
+hostname = %APPEND% open3.vistastory.com

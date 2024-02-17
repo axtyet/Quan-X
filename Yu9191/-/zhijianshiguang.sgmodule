@@ -1,0 +1,8 @@
+#!name=zjsg
+#!desc=zjsg
+
+[Script]
+zjsg = type=http-response, pattern=https://integral2.zhijiantime.com/v2/User, script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/zjsg.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% integral2.zhijiantime.com

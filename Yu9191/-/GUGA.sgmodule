@@ -1,0 +1,8 @@
+#!name=GUGA
+#!desc=GUGA
+
+[Script]
+GUGA = type=http-response,pattern=^https?:\/\/www\.guga\.co\/api-base\/v2\/(state|preferential-product),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/GUGA.js
+
+[MITM]
+hostname= %APPEND% www.guga.co

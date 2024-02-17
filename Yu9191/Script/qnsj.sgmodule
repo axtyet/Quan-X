@@ -1,0 +1,8 @@
+#!name=qingningsheji
+#!desc=qingningsheji
+
+[Script]
+qingningsheji = type=http-response, pattern=^https?:\/\/api\.qingning6\.com\/api\/user\/getUserInfo, script-path=https://raw.githubusercontent.com/Guding88/Script/main/qingningsheji.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% api.qingning6.com

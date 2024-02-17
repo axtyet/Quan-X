@@ -1,0 +1,8 @@
+#!name=解剖大师
+#!desc=解剖大师
+
+[Script]
+jpds = type=http-response, pattern=https:\/\/jiepou\.vesal\.cn\/vesal-jiepao-prod, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/jiepoudashi.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% jiepou.vesal.cn

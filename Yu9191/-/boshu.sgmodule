@@ -1,0 +1,10 @@
+#!name=博树
+#!desc=博树
+
+[Script]
+
+boshu = type=http-response,pattern=^https?:\/\/api\.busuu\.com\/users\/me,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Guding88/Script/main/boshu.js
+
+[MITM]
+
+hostname = %APPEND% api.busuu.com

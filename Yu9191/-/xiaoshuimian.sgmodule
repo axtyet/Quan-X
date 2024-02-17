@@ -1,0 +1,13 @@
+#!name=小睡眠
+#!desc=小睡眠
+
+[URL Rewrite]
+https:\/\/api\.psy-1\.com\/cosleep\/my\/ad - reject
+https:\/\/api\.psy-1\.com\/cosleep\/ad - reject
+https:\/\/api\.psy-1\.com\/cosleep\/startup - reject
+
+[Script]
+xsm = type=http-response, pattern=https:\/\/api\.psy-1\.com\/cosleep, script-path=https://raw.githubusercontent.com/xiaomaoJT/QxScript/main/rewrite/boxJS/source/xsm.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% api.psy-1.com

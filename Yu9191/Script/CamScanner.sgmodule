@@ -1,0 +1,8 @@
+#!name=CamScanner
+#!desc=CamScanner
+
+[Script]
+CamScanner = type=http-response, pattern=^https:\/\/.*\.(intsig\.net|camscanner\.com), script-path=https://raw.githubusercontent.com/axtyet/Quan-X/main/Yu9191/Script/CamScanner.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% *.camscanner.com, *.intsig.net

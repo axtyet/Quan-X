@@ -1,0 +1,8 @@
+#!name=luyinzhuanjia
+#!desc=luyinzhuanjia
+
+[Script]
+luyinzhuanjia = type=http-response, pattern=^http:\/\/luyintu\.cushuikeji\.cn\/tuv2\.(user\/info|order\/comboDuration|home\/activityAlert), script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/luyinzhuanjia.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% luyintu.cushuikeji.cn

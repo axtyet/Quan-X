@@ -1,0 +1,8 @@
+#!name=dolphinmedia
+#!desc=dolphinmedia
+
+[Script]
+dolphinmedia = type=http-response, pattern=^http[s]?:\/\/english.dolphinmedia.cn, script-path=https://raw.githubusercontent.com/Yu9191/Script/main/htyy.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% english.dolphinmedia.cn

@@ -1,0 +1,10 @@
+#!name=ps
+#!desc=ps
+
+[Script]
+
+PSExpress = type=http-response,pattern=https://lcs-mobile-cops.adobe.io/mobiles/access_profile/v3,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/PSExpress.js
+
+[MITM]
+
+hostname = %APPEND% lcs-mobile-cops.adobe.io

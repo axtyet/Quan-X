@@ -1,0 +1,11 @@
+#!name = Xmind
+#!author = ios151
+#!homepage = https://github.com/Yu9191/Script
+#!url= https://raw.githubusercontent.com/Yu9191/Script/main/Xmind.sgmodule
+
+[Script]
+Xmind = type=http-response,pattern=^https?:\/\/www\.xmind\.(cn|net|app)\/.+\/devices,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Script/main/Xmind.js
+
+
+[MITM]
+hostname = %APPEND% www.xmind.*

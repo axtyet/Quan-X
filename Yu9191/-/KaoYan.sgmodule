@@ -1,0 +1,11 @@
+#!name = 数学考研欧几里得
+#!author = ios151
+#!homepage = https://github.com/Yu9191/Script
+#!url= https://raw.githubusercontent.com/Yu9191/Script/main/kaoyan.sgmodule
+
+[Script]
+数学考研欧几里得 = type=http-response,pattern=^https?:\/\/api\.tumukaoyan\.com\/api\/wx\/CheckCodeV2.*?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Script/main/kaoyan.js
+
+
+[MITM]
+hostname = %APPEND% api.tumukaoyan.com

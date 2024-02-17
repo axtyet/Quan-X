@@ -1,0 +1,10 @@
+#!name=一起练琴
+#!desc=一起练琴
+
+[Script]
+
+yiqilianqin = type=http-response,pattern=^https?:\/\/api\.(.*lianqin.*|mangofuture)\.(com|cn)\/client\/v\d\/(user_vip|my_info),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/yiqilianqin.js
+
+[MITM]
+
+hostname = %APPEND% api.*lianqin*.*,api.mangofuture.cn

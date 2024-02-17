@@ -1,0 +1,11 @@
+#!name = FT中文网
+#!author = ios151
+#!homepage = https://github.com/Yu9191/Script
+#!url= https://raw.githubusercontent.com/Yu9191/Script/main/FTzww.sgmodule
+
+[Script]
+ FT = type=http-response,pattern=^https:\/\/dqbam2jv6gg9m\.cloudfront\.net\/index\.php\/jsapi\/paywall,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/FTzhongwenwang.js
+
+
+[MITM]
+hostname = %APPEND% dqbam2jv6gg9m.cloudfront.net

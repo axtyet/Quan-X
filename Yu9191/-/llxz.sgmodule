@@ -1,0 +1,13 @@
+#!name=六六写字
+#!desc=六六写字
+
+[Script]
+
+#六六课字表 
+llxz = type=http-response,pattern=^https?:\/\/api\.liupinshuyuan\.com\/liuliuWriteV2\/api\/sync-course,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/llxz.js 
+#六六课程 
+llxz = type=http-response,pattern=^https?:\/\/api\.liupinshuyuan\.com\/liuliuWriteV2\/api\/student\/course-detail,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/llxz.js 
+
+[MITM]
+
+hostname = %APPEND% api.liupinshuyuan.com

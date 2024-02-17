@@ -1,0 +1,9 @@
+#!name=zhaomujihua
+#!desc=zhaomujihua
+
+[Script]
+#朝暮计划
+zhaomujihua = type=http-response, pattern=^https:\/\/app\.zomoplan\.com\/zhaoMuPlan\/user\/info, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/zhaomujihua.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% app.zomoplan.com

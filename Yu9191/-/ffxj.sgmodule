@@ -1,0 +1,10 @@
+#!name=fangfuxiangji
+#!desc=fangfuxiangji
+
+[Script]
+fangfuxiangji = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Guding88/Script/main/fangfuxiangji.js, requires-body=true, max-size=-1, timeout=60
+
+fangfuxiangji = type=http-request, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Guding88/Script/main/fangfuxiangji.js, timeout=60
+
+[MITM]
+hostname = %APPEND% api.revenuecat.com

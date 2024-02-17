@@ -1,0 +1,8 @@
+#!name=bandeng
+#!desc=bandeng
+
+[Script]
+bandeng = type=http-response, pattern=^https?:\/\/mobileapp\.wuyamusic\.com\/playmusic-app-server-400\/(vip\/user\/list.+|music\/score\/get2.+|choose\/getmusic|api|app\/swiper), script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/bandeng.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% mobileapp.wuyamusic.com

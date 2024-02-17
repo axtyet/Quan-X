@@ -1,0 +1,11 @@
+#!name = 傲软全家桶
+#!author = 聪
+#!homepage = https://github.com/Yu9191/Script
+#!url= https://raw.githubusercontent.com/Yu9191/Script/main/Arqjt.sgmodule
+
+[Script]
+Arqjt = type=http-response,pattern=^https?:\/\/.*\.(aoscdn\.com|apsapp\.cn),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Script/main/Arqjt.sgmodule
+
+
+[MITM]
+hostname = %APPEND% *.apsapp.cn, %APPEND% *.aoscdn.com

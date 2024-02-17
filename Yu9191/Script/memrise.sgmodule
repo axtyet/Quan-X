@@ -1,0 +1,8 @@
+#!name=memrise
+#!desc=memrise
+
+[Script]
+memrise = type=http-response, pattern=^https:\/\/api\.memrise\.com, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/memrise.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% api.memrise.com

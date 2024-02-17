@@ -1,0 +1,11 @@
+#!name=2
+#!desc=3
+
+[Script]
+
+babybaby = type=http-response,pattern=https://prod.api.zhiyuanzhongyi.com/api/v30/user/getUserConfig,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Script/main/babybaby.js
+babyba = type=http-response,pattern=https://prod.api.zhiyuanzhongyi.com/api/v30/user/info,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Script/main/babyba.js
+
+[MITM]
+
+hostname = %APPEND% prod.api.zhiyuanzhongyi.com

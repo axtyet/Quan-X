@@ -1,0 +1,13 @@
+#!name=tradingview
+#!desc=tradingview
+
+[Script]
+
+#未开通试用
+TradingView = type=http-response,pattern=https://cn.tradingview.com/api/v1/user/profile/me/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/TradingView.js
+#开通试用或者会员未到期
+TradingView = type=http-response,pattern=https://cn.tradingview.com/order/apple/receipt/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/TradingView.js
+
+[MITM]
+
+hostname = %APPEND% cn.tradingview.com

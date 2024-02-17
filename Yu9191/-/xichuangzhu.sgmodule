@@ -1,0 +1,12 @@
+#!name=Xcz
+#!desc=Xcz
+
+[Script]
+#西窗烛,诗词之美
+Xcz = type=http-response, pattern=^https?:\/\/lchttpapi\.xczim\.com\/1.1\/users, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Xcz.js, requires-body=true, max-size=-1, timeout=60
+
+#汉字的故事
+Xcz = type=http-response, pattern=^https?:\/\/avoscloud\.com\/1.1\/users, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Xcz.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% lchttpapi.xczim.com, avoscloud.com

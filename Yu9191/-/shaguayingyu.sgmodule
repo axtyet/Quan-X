@@ -1,0 +1,8 @@
+#!name=sgyy
+#!desc=sgyy
+
+[Script]
+sgyy = type=http-response, pattern=^https:\/\/sgyy\.easyenglish888\.com\/user\/info, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/sgyy.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% sgyy.easyenglish888.com

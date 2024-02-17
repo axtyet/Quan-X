@@ -1,0 +1,8 @@
+#!name=picsart
+#!desc=picsart
+
+[Script]
+picsart = type=http-response, pattern=https://api.(meiease|picsart).(cn|com)/shop/subscription/apple/purchases, script-path=https://raw.githubusercontent.com/Marol62926/MarScrpt/main/picsart.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% api.meiease.*, api.picsart.*

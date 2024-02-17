@@ -1,0 +1,10 @@
+#!name=快影
+#!desc=快影
+
+[Script]
+
+kmovie = type=http-response,pattern=^http[s]?:\/\/api.kmovie.gifshow.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/kmovie.js
+
+[MITM]
+
+hostname = %APPEND% api.kmovie.gifshow.com

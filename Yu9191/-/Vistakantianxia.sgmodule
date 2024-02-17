@@ -1,0 +1,8 @@
+#!name=Vista
+#!desc=Vista
+
+[Script]
+Vista = type=http-response, pattern=^https?:\/\/open3\.vistastory\.com\/v\d\/api\/(vip|my\/home\/get_home_center|user/pendant|poster\/share_poster|adm\/get_popup_ad|index\/loading_ad), script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Vista.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% open3.vistastory.com

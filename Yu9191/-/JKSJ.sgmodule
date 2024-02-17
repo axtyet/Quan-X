@@ -1,0 +1,10 @@
+#!name=极客时间课程文章
+#!desc=极客时间课程文章
+
+[Script]
+
+jikeshijian = type=http-response,pattern=https://time.geekbang.org/serv/v1,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/jikeshijian.js
+
+[MITM]
+
+hostname = %APPEND% time.geekbang.org

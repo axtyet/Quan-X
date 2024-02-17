@@ -1,0 +1,5 @@
+#!name=ccjt
+#!desc=ccjt
+
+[Script]
+ccjt = type=http-response, pattern=http://cc.lzjoy.com, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/ccjt.js, requires-body=true, max-size=-1, timeout=60

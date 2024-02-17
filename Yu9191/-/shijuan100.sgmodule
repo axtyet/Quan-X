@@ -1,0 +1,8 @@
+#!name=Shijuan100
+#!desc=Shijuan100
+
+[Script]
+Shijuan100 = type=http-response, pattern=^https:\/\/paper\.zjapp\.xyz\/api\/v1\/status\/list, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Shijuan100.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% paper.zjapp.xyz

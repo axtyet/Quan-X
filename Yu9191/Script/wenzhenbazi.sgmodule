@@ -1,0 +1,10 @@
+#!name=问真
+#!desc=问真
+
+[Script]
+
+wenzhenpaipan = type=http-response,pattern=^https?:\/\/bzpp2\.iwzbz\.com\/api\/.*\/user\/getvipinfo,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/axtyet/Quan-X/main/Yu9191/Script/wenzhenbazi.js
+
+[MITM]
+
+hostname = %APPEND% bzpp2.iwzbz.com

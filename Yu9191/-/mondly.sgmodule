@@ -1,0 +1,8 @@
+#!name=mondly
+#!desc=mondly
+
+[Script]
+mondly = type=http-response, pattern=^https:\/\/api\.mondlylanguages\.com\/v3\/ios\/user\/sync, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/mondly.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% api.mondlylanguages.com

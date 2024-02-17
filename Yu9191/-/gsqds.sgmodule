@@ -1,0 +1,10 @@
+#!name=怪兽轻断食
+#!desc=怪兽轻断食1.4.4
+
+[Script]
+
+gsqds = type=http-response,pattern=https://ef.aiotoolbox.com.cn/basis/v2/init,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/gsqds.js
+
+[MITM]
+
+hostname = %APPEND% ef.aiotoolbox.com.cn

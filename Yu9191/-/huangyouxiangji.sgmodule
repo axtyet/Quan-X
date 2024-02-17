@@ -1,0 +1,17 @@
+#!name=黄油相机
+#!desc=黄油相机
+
+[URL Rewrite]
+#建议添加本地分流 - reject
+https:\/\/api4\.bybutter\.com\/v4\/app\/placements\/\d\/advertisements - reject
+https:\/\/tcbox\.baidu\.com\/ztbox - reject
+https:\/\/adx-cn\.anythinktech\.com\/bid - reject
+https:\/\/bgg\.baidu\.com\/bgg\/produce - reject
+https:\/\/api4\.bybutter\.com\/v4\/shop\/banners\/recommendation - reject
+https:\/\/api4\.bybutter\.com\/v4\/shop\/orders\/apple\/receipts - reject
+
+[Script]
+bc = type=http-response, pattern=https:\/\/api4\.bybutter\.com\/v4\/*, script-path=https://raw.githubusercontent.com/xiaomaoJT/QxScript/main/rewrite/boxJS/source/bc.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% api4.bybutter.com, tcbox.baidu.com, adx-cn.anythinktech.com, bgg.baidu.com
