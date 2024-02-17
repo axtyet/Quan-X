@@ -168,6 +168,26 @@ jobs:
         cp -r qwe_Tmp/* Quan-X-repo/RuCu6
         rm -rf qwe_Tmp
 
+    # Fork yqc007
+    - name: Fork yqc007
+      run: |
+        mkdir -p Quan-X-repo/yqc007
+        git clone -b master https://github.com/yqc007/QuantumultX.git  ewq_Tmp
+        cp -r ewq_Tmp/* Quan-X-repo/RuCu6
+        rm -rf ewq_Tmp
+     # 修改脚本链接
+    - name: Edit QuantumultX/Yqc007
+      run: |
+        cd Quan-X-repo/Yqc007
+        for file in *.js; do
+            if [ "$file" ] ; then
+              # 修改脚本链接
+              sed -i 's/raw\.githubusercontent\.com\/yqc007\/QuantumultX\/master/raw.githubusercontent\.com\/axtyet\/Quan-X\/main\/Yqc007/g' "$file"
+            else
+              echo "$file not found."
+            fi
+          done
+
 
 
       # 保存、推送   
