@@ -220,6 +220,14 @@ jobs:
             fi
           done
 
+    # Fork Peng-YM
+    - name: Fork Peng-YM
+      run: |
+        mkdir -p Quan-X-repo/Peng-YM
+        git clone https://github.com/Peng-YM/QuanX.git asdf_Tmp
+        cp -r asdf_Tmp/* Quan-X-repo/Peng-YM
+        rm -rf asdf_Tmp
+
 
 
       # 保存、推送   
