@@ -188,6 +188,38 @@ jobs:
             fi
           done
 
+     # Fork 可莉插件、脚本
+    - name: Fork lodepuly Plugin&Script
+      run: |
+        mkdir -p Quan-X-repo/KeLee
+        git clone https://gitlab.com/lodepuly/vpn_tool.git lodepuly_Tmp
+        cp -r lodepuly_Tmp/* Quan-X-repo/KeLee
+        rm -rf lodepuly_Tmp
+    # 修改脚本链接
+    - name: Edit KeLee/QuantumultX
+      run: |
+        cd Quan-X-repo/KeLee/Tool/QuantumultX/Rewrite
+        for file in *.snippet; do
+            if [ "$file" ] ; then
+              # 修改脚本链接
+              sed -i 's/gitlab\.com\/lodepuly\/vpn_tool\/-\/raw\/master\/Resource\/Script/raw.githubusercontent\.com\/axtyet\/Quan-X\/main\/KeLee\/Resource\/Script/g' "$file"
+            else
+              echo "$file not found."
+            fi
+          done
+     # 修改脚本链接
+    - name: Edit KeLee/Loon
+      run: |
+        cd Quan-X-repo/KeLee/Tool/Loon/Plugin
+        for file in *.plugin; do
+            if [ "$file" ] ; then
+              # 修改脚本链接
+              sed -i 's/gitlab\.com\/lodepuly\/vpn_tool\/-\/raw\/master\/Resource\/Script/raw.githubusercontent\.com\/axtyet\/Quan-X\/main\/KeLee\/Resource\/Script/g' "$file"
+            else
+              echo "$file not found."
+            fi
+          done
+
 
 
       # 保存、推送   
