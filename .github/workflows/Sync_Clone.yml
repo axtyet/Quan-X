@@ -246,7 +246,7 @@ jobs:
      # 修改脚本链接
     - name: Edit Guding88
       run: |
-        cd Quan-X-repo/Guding88
+        cd Quan-X-repo/Guding88/Script
         for file in *.js; do
             if [ "$file" ] ; then
               # 修改脚本链接
