@@ -1,0 +1,479 @@
+{
+  "id": "pengym.app.sub",
+  "name": "Peng-YM 应用订阅",
+  "author": "@Peng-YM",
+  "icon": "https://avatars2.githubusercontent.com/u/21050064?s=460&u=40a74913dd0a3d00670d05148c3a08c787470021&v=4",
+  "repo": "https://github.com/Peng-YM/QuanX",
+  "apps": [
+    {
+      "id": "Github Monitor",
+      "name": "GitHub 监控",
+      "keys": [
+        "@github.repo"
+      ],
+      "settings": [
+        {
+          "id": "@github.repo",
+          "name": "仓库地址",
+          "val": "[\n\t\t{\n\t\t\t\t\"name\": \"NZW9314 脚本\",\n\t\t\t\t\"url\": \"https://github.com/nzw9314/QuantumultX/tree/master\"\n\t\t},\n\t\t{\n\t\t\t\t\"name\": \"Chavy 脚本\",\n\t\t\t\t\"url\": \"https://github.com/chavyleung/scripts\"\n\t\t},\n\t\t{\n\t\t\t\t\"name\": \"NobyDa\",\n\t\t\t\t\"file_names\": [\"JD-DailyBonus/JD_DailyBonus.js\", \"52pojie-DailyBonus\"],\n\t\t\t\t\"url\": \"https://github.com/NobyDa/Script/tree/master\"\n\t\t}\n]",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 5,
+          "desc": "仓库地址 (JSON 格式)"
+        },
+        {
+          "id": "@github.token",
+          "name": "Github Token (可选)",
+          "val": "784a03feb07989d3339dfa41c7eb41777436cbfa",
+          "type": "text",
+          "desc": "Github Token"
+        }
+      ],
+      "author": "@Peng-YM",
+      "repo": "https://github.com/Peng-YM/QuanX",
+      "icons": [
+        "https://raw.githubusercontent.com/Orz-3/mini/master/github.png",
+        "https://raw.githubusercontent.com/Orz-3/task/master/github.png"
+      ],
+      "script": "https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/github.js"
+    },
+    {
+      "id": "Flow",
+      "name": "机场流量查询",
+      "keys": [
+        "@flow.subscriptions"
+      ],
+      "settings": [
+        {
+          "id": "@flow.subscriptions",
+          "name": "机场订阅",
+          "val": "[\n\t{\n\t\t\"link\": \"订阅地址1\",\n\t\t\"name\": \"取个名字1\",\n\t\t\"icon\": \"https://raw.githubusercontent.com/Orz-3/mini/master/pudding.png\"\n\t},\n\t{\n\t\t\"link\": \"订阅地址2\",\n\t\t\"name\": \"取个名字2\",\n\t\t\"icon\": \"https://raw.githubusercontent.com/Orz-3/mini/master/Nexitally.png\"\n\t}\n]",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 5,
+          "desc": "机场订阅 (JSON 格式)"
+        }
+      ],
+      "author": "@Peng-YM",
+      "repo": "https://github.com/Peng-YM/QuanX",
+      "icons": [
+        "https://raw.githubusercontent.com/58xinian/icon/master/flow_mini.png",
+        "https://raw.githubusercontent.com/58xinian/icon/master/flow.png"
+      ],
+      "script": "https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/flow.js"
+    },
+    {
+      "id": "Steam",
+      "name": "Steam 价格监控",
+      "keys": [
+        "@steam.games"
+      ],
+      "settings": [
+        {
+          "id": "@steam.games",
+          "name": "游戏列表",
+          "val": "[\n\t{\n\t\t\"id\": 271590,\n\t\t\"name\": \"GTA V\"\n\t},\n\t{\n\t\t\"id\": 814380,\n\t\t\"name\": \"只狼：影逝二度\"\n\t},\n\t{\n\t\t\"id\": 292030,\n\t\t\"name\": \"巫师 3：狂猎\"\n\t}\n]\n",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 5,
+          "desc": "游戏列表 (JSON 格式)"
+        }
+      ],
+      "author": "@Peng-YM",
+      "repo": "https://github.com/Peng-YM/QuanX",
+      "icons": [
+        "https://raw.githubusercontent.com/Orz-3/mini/master/steam.png",
+        "https://raw.githubusercontent.com/Orz-3/task/master/steam.png"
+      ],
+      "script": "https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/steam.js"
+    },
+    {
+      "id": "Zongheng",
+      "name": "纵横小说",
+      "keys": [
+        "@zongheng.ids"
+      ],
+      "settings": [
+        {
+          "id": "@zongheng.ids",
+          "name": "小说列表",
+          "val": "[\"408586\"]",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 5,
+          "desc": "小说的id列表, 使用方法：进入纵横小说页面，例如<<剑来>>：http://book.zongheng.com/book/672340.html 则id为672340，将id添加到列表即可。"
+        }
+      ],
+      "author": "@Peng-YM",
+      "repo": "https://github.com/Peng-YM/QuanX",
+      "icons": [
+        "https://raw.githubusercontent.com/Orz-3/mini/master/zongheng.png",
+        "https://raw.githubusercontent.com/Orz-3/task/master/zongheng.png"
+      ],
+      "script": "https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/zongheng.js"
+    },
+    {
+      "id": "Telegram",
+      "name": "Telegram 频道媒体推送",
+      "keys": [
+        "@telegram.channels",
+        "@telegram.maxMedias"
+      ],
+      "settings": [
+        {
+          "id": "@telegram.channels",
+          "name": "频道列表",
+          "val": "[\"ABCD\"]",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 2,
+          "desc": "频道列表，比如说一个频道的链接为https://t.me/s/ABCD，那么将\"ABCD\"加到列表中。"
+        },
+        {
+          "id": "@telegram.maxMedias",
+          "name": "每个频道最多显示视频和图片的数量",
+          "val": 3,
+          "type": "text",
+          "rows": 1,
+          "desc": "每个频道最多显示视频和图片的数量, 默认为3"
+        }
+      ],
+      "author": "@Peng-YM",
+      "repo": "https://github.com/Peng-YM/QuanX",
+      "icons": [
+        "https://raw.githubusercontent.com/58xinian/icon/master/telegram_mini.png",
+        "https://raw.githubusercontent.com/58xinian/icon/master/telegram.png"
+      ],
+      "script": "https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/telegram.js"
+    },
+    {
+      "id": "Caiyun",
+      "name": "彩云天气",
+      "keys": [
+        "@caiyun.token.caiyun",
+        "@caiyun.token.tencent",
+        "@caiyun.display_location",
+        "@caiyun.location.latitude",
+        "@caiyun.location.longitude",
+        "@caiyun.address"
+      ],
+      "settings": [
+        {
+          "id": "@caiyun.token.caiyun",
+          "name": "彩云天气API Token",
+          "val": null,
+          "type": "text",
+          "autoGrow": false,
+          "rows": 2,
+          "desc": "彩云天气的Token，可以自行申请或者前往频道获取"
+        },
+        {
+          "id": "@caiyun.token.tencent",
+          "name": "腾讯地图API Token",
+          "val": "AHEBZ-ASTWX-CIW4P-7TV7T-AWKLS-7CFWP",
+          "type": "text",
+          "rows": 1,
+          "desc": ""
+        },
+        {
+          "id": "@caiyun.display_location",
+          "name": "是否在日志中显示经纬度",
+          "val": false,
+          "type": "boolean",
+          "desc": ""
+        },
+        {
+          "id": "@caiyun.location.latitude",
+          "name": "纬度",
+          "val": null,
+          "type": "text",
+          "desc": "纬度，可以关闭MITM获取位置，手动设置"
+        },
+        {
+          "id": "@caiyun.location.longitude",
+          "name": "经度",
+          "val": null,
+          "type": "text",
+          "desc": "经度，可以关闭MITM获取位置，手动设置"
+        }
+      ],
+      "author": "@Peng-YM",
+      "repo": "https://github.com/Peng-YM/QuanX",
+      "icons": [
+        "https://raw.githubusercontent.com/Orz-3/mini/master/caiyun.png",
+        "https://raw.githubusercontent.com/Orz-3/task/master/caiyun.png"
+      ],
+      "script": "https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/caiyun.js"
+    },
+    {
+      "id": "running-mode",
+      "name": "SSID 运行模式",
+      "keys": [
+        "@surge_running_mode.silence",
+        "@surge_running_mode.cellular",
+        "@surge_running_mode.wifi",
+        "@surge_running_mode.all_direct",
+        "@surge_running_mode.all_proxy"
+      ],
+      "author": "@Peng-YM",
+      "repo": "https://github.com/Peng-YM/QuanX",
+      "settings": [
+        {
+          "id": "@surge_running_mode.silence",
+          "name": "静默运行",
+          "val": false,
+          "type": "boolean",
+          "desc": "打开后模式切换时不显示通知"
+        },
+        {
+          "id": "@surge_running_mode.cellular",
+          "name": "默认蜂窝数据模式",
+          "val": "RULE",
+          "type": "radios",
+          "items": [
+            {
+              "key": "RULE",
+              "label": "规则模式"
+            },
+            {
+              "key": "PROXY",
+              "label": "全局代理模式"
+            },
+            {
+              "key": "DIRECT",
+              "label": "全局直连模式"
+            }
+          ],
+          "desc": "默认规则模式"
+        },
+        {
+          "id": "@surge_running_mode.wifi",
+          "name": "默认WIFI模式",
+          "val": "RULE",
+          "type": "radios",
+          "items": [
+            {
+              "key": "RULE",
+              "label": "规则模式"
+            },
+            {
+              "key": "PROXY",
+              "label": "全局代理模式"
+            },
+            {
+              "key": "DIRECT",
+              "label": "全局直连模式"
+            }
+          ],
+          "desc": "默认规则模式"
+        },
+        {
+          "id": "@surge_running_mode.all_direct",
+          "name": "全局直连的WIFI列表",
+          "val": "[\"WRT32X\", \"WRT32X Extreme\"]",
+          "type": "text",
+          "desc": "填入全局直连的WIFI列表，不可留空，默认的方括号需要保留！"
+        },
+        {
+          "id": "@surge_running_mode.all_proxy",
+          "name": "全局代理的WIFI列表",
+          "val": "[]",
+          "type": "text",
+          "desc": "填入全局代理的WIFI列表，不可留空，默认的方括号需要保留！"
+        }
+      ],
+      "icons": [
+        "https://github.com/Peng-YM/QuanX/blob/master/assets/icons/Surge_run_transparent1.png?raw=true",
+        "https://github.com/Peng-YM/QuanX/blob/master/assets/icons/Surge_run1.png?raw=true"
+      ]
+    },
+    {
+      "id": "ssid-auto-policy",
+      "name": "SSID 自动策略",
+      "keys": [
+        "@surge_auto_policy.silence",
+        "@surge_auto_policy.cellular",
+        "@surge_auto_policy.wifi",
+        "@surge_auto_policy.all_direct",
+        "@surge_auto_policy.all_proxy",
+        "@surge_auto_policy.whitelist",
+        "@surge_auto_policy.global_proxy",
+        "@surge_auto_policy.global_direct"
+      ],
+      "author": "@Peng-YM",
+      "repo": "https://github.com/Peng-YM/QuanX",
+      "settings": [
+        {
+          "id": "@surge_auto_policy.silence",
+          "name": "静默运行",
+          "val": false,
+          "type": "boolean",
+          "desc": "打开后模式切换时不显示通知"
+        },
+        {
+          "id": "@surge_auto_policy.global_proxy",
+          "name": "全局代理模式下启动的策略",
+          "val": "📌 手动选择 <== 注意需要改成自己的策略！",
+          "type": "text",
+          "desc": "全局代理模式下，所有不在白名单的策略组将自动切换至此策略。"
+        },
+        {
+          "id": "@surge_auto_policy.global_direct",
+          "name": "全局直连模式下启动的策略",
+          "val": "DIRECT",
+          "type": "text",
+          "desc": "全局直连模式下，所有不在白名单的策略组将自动切换至此策略。"
+        },
+        {
+          "id": "@surge_auto_policy.cellular",
+          "name": "默认蜂窝数据模式",
+          "val": "RULE",
+          "type": "radios",
+          "items": [
+            {
+              "key": "RULE",
+              "label": "规则模式"
+            },
+            {
+              "key": "PROXY",
+              "label": "全局代理模式"
+            },
+            {
+              "key": "DIRECT",
+              "label": "全局直连模式"
+            }
+          ],
+          "desc": "默认规则模式"
+        },
+        {
+          "id": "@surge_auto_policy.wifi",
+          "name": "默认WIFI模式",
+          "val": "RULE",
+          "type": "radios",
+          "items": [
+            {
+              "key": "RULE",
+              "label": "规则模式"
+            },
+            {
+              "key": "PROXY",
+              "label": "全局代理模式"
+            },
+            {
+              "key": "DIRECT",
+              "label": "全局直连模式"
+            }
+          ],
+          "desc": "默认规则模式"
+        },
+        {
+          "id": "@surge_auto_policy.all_direct",
+          "name": "全局直连的WIFI列表",
+          "val": "WRT32X, WRT32X Extreme",
+          "type": "text",
+          "desc": "填入全局直连的WIFI名称，多个WIFI用逗号分隔"
+        },
+        {
+          "id": "@surge_auto_policy.all_proxy",
+          "name": "全局代理的WIFI列表",
+          "val": "",
+          "type": "text",
+          "desc": "填入全局代理的WIFI名称，多个WIFI用逗号分隔"
+        },
+        {
+          "id": "@surge_auto_policy.whitelist",
+          "name": "白名单策略",
+          "val": "Netease, AdGuard",
+          "type": "text",
+          "desc": "填入白名单列表，在此列表中的策略不会执行切换。比如说去广告策略，网易云等策略可以加入此列表。多个策略用逗号分隔"
+        }
+      ],
+      "icons": [
+        "https://github.com/Peng-YM/QuanX/blob/master/assets/icons/Surge_run_transparent.png?raw=true",
+        "https://github.com/Peng-YM/QuanX/blob/master/assets/icons/Surge_run.png?raw=true"
+      ]
+    },
+    {
+      "id": "github-private-repo",
+      "name": "Github私有仓库",
+      "keys": [
+        "@github_private_repo.username",
+        "@github_private_repo.token"
+      ],
+      "author": "@Peng-YM",
+      "repo": "https://github.com/Peng-YM/QuanX",
+      "settings": [
+        {
+          "id": "@github_private_repo.username",
+          "name": "Github用户名",
+          "val": "",
+          "type": "text",
+          "desc": "你的Github用户名"
+        },
+        {
+          "id": "@github_private_repo.token",
+          "name": "Github仓库的Token",
+          "val": "",
+          "type": "text",
+          "desc": "请参照脚本说明生成token，否则无法访问！"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/58xinian/icon/master/Github_mini.png",
+        "https://raw.githubusercontent.com/58xinian/icon/master/Github.png"
+      ]
+    },
+    {
+      "id": "next-dns",
+      "name": "NextDNS",
+      "author": "@Peng-YM",
+      "repo": "https://github.com/Peng-YM/Sub-Store",
+      "keys": [],
+      "settings": [
+        {
+          "id": "@NextDNS.url",
+          "name": "NextDNS绑定URL",
+          "val": "",
+          "type": "text",
+          "desc": "NextDNS配置页面 > 已绑定的IP > 显示高级选项 > 最下面一行链接"
+        },
+        {
+          "id": "@NextDNS.servers",
+          "name": "DNS服务器",
+          "val": "",
+          "type": "text",
+          "desc": "NextDNS配置页面 > 已绑定的IP > DNS服务器，注意需要用英文逗号分隔。"
+        },
+        {
+          "id": "@NextDNS.silence",
+          "name": "静默运行",
+          "val": false,
+          "type": "boolean",
+          "desc": "打开后DNS绑定时不显示通知"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/58xinian/icon/master/telegram_mini.png",
+        "https://raw.githubusercontent.com/58xinian/icon/master/telegram.png"
+      ]
+    },
+    {
+      "id": "nCov",
+      "name": "疫情监控",
+      "author": "@YangZhaocool",
+      "repo": "https://github.com/Peng-YM/QuanX",
+      "keys": [
+        "@nCov.api"
+      ],
+      "settings": [
+        {
+          "id": "@nCov.api"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/COVID-19.png"
+      ],
+      "script": "https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/nCov.js"
+    }
+  ]
+}
