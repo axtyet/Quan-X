@@ -1,0 +1,11 @@
+#!name = Bing AI
+#!desc = 将Safari浏览器伪装为Edge浏览器，以便绕过BingAI的使用限制。
+#!openUrl = 
+#!author = smxl
+#!homepage = hhttps://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/QuantumultX/Rewrite
+
+#[rewrite_local]
+^https?://www.bing.com url request-header (\r\n)User-Agent:(?=.+(?:iPhone))(?!.+(?:BingSapphire|EdgiOS)).+(\r\n) request-header $1User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) EdgiOS/110.0.1587.54 Version/16.0 Mobile/15E148 Safari/604.1$2
+
+#[mitm]
+hostname = www.bing.com

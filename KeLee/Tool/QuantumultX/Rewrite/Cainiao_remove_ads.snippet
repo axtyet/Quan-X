@@ -1,0 +1,24 @@
+#!name = 菜鸟去广告
+#!desc = 过滤菜鸟广告
+#!openUrl = 
+#!author = @keywos RuCu6
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/QuantumultX/Rewrite
+
+#[rewrite_local]
+# 不明请求
+^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch Cainiao4iPhone url-and-header reject-dict
+
+# 首页 - 今日好物推荐、底部商品推广、底部标签页、问卷调查、主页图标
+^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.adkeyword\.get\.cn\/1\.0\? url reject-dict
+^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.index\.cn\/1\.0\? url reject-dict
+^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbmensa\.research\.researchservice\.(acquire|event|close)\.cn\/1\.0\? url reject-dict
+
+# 发现页 - 裹裹券
+^https:\/\/(cn-acs\.m\.cainiao\.com\/gw\/mtop\.com|cainiao\.longquan\.place\.getpageresourcecontent\.cn)\/1\.0\? url reject-dict
+
+# 首页 - 今日好物推荐、底部商品推广、底部标签页、问卷调查、主页图标
+^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.m?show\.cn\/1\.0\? url script-response-body https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script/Cainiao/Cainiao_remove_ads.js
+^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.(homepage\.merge|pickup\.empty\.page|protocol\.homepage)\.get\.cn\/1\.0\? url script-response-body https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script/Cainiao/Cainiao_remove_ads.js
+
+#[mitm]
+hostname = cn-acs.m.cainiao.com

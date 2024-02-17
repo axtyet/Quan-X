@@ -1,0 +1,13 @@
+#!name = GitHub加速
+#!desc = 通过重定向至镜像站的方式解决访问困难的问题，但可能无法保证服务的可用性。
+#!openUrl = 
+#!author = 可莉🅥
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/GitHub.png
+#!date = 2024-01-04 20:03:54
+
+[Rewrite]
+^https:\/\/raw\.githubusercontent\.com 302 https://raw.fastgit.org
+
+[Mitm]
+hostname = raw.githubusercontent.com

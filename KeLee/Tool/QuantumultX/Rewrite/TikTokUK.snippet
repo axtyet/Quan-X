@@ -1,0 +1,14 @@
+#!name = TikTok英区解锁
+#!desc = 解锁英区TikTok，需要配置此插件至英国节点。
+#!openUrl = 
+#!author = 可莉🅥
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/QuantumultX/Rewrite
+
+#[rewrite_local]
+(?<=&mcc_mnc=)4 url 307 2
+(?<=\d\/\?\w{7}_\w{4}=)1[6-9]..(?=.?.?&) url 307 18.4
+(?<=_region=)CN(?=&) url 307 UK
+^(https?:\/\/(tnc|dm)[\w-]+\.\w+\.com\/.+)(\?)(.+) url 302 $1$4
+
+#[mitm]
+hostname = *.byteoversea.com,*.tik-tokapi.com,*.tiktokv.com

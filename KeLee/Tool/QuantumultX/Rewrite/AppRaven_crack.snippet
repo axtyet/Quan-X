@@ -1,0 +1,11 @@
+#!name = AppRaven解锁
+#!desc = 点击恢复购买即可解锁订阅
+#!openUrl = 
+#!author = 佚名
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/QuantumultX/Rewrite
+
+#[rewrite_local]
+^https?:\/\/AppRaven\.net\/AppRaven\/(app|social|buy) url script-request-body https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script/AppRaven/AppRaven_crack.js
+
+#[mitm]
+hostname = appraven.net

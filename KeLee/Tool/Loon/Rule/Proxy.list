@@ -1,0 +1,12 @@
+# NAME: Proxy
+# AUTHOR: ArriettyQAQ
+# GITHUB: https://gitlab.com/lodepuly/vpn_tool/-/tree/main/tool/Loon
+# UPDATED: 2021-01-13 20:58:31
+# DOMAIN-KEYWORD: 0
+# DOMAIN-SUFFIX: 1
+# USER-AGENT: 0
+# DOMAIN: 0
+# TOTAL: 0
+DOMAIN-SUFFIX,ibm.com
+DOMAIN-SUFFIX,plex.tv
+DOMAIN,relay.firefox.com

@@ -1,0 +1,11 @@
+#!name = 搜图神器解锁
+#!desc = 点击恢复购买即可解锁订阅
+#!openUrl = 
+#!author = 彭于晏
+#!homepage = hhttps://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/QuantumultX/Rewrite
+
+#[rewrite_local]
+^https?:\/\/wallpaper\.soutushenqi\.com\/api\/v1\/account\/token url script-request-body https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script/SearchPicture/SearchPicture_crack.js
+
+#[mitm]
+hostname = wallpaper.soutushenqi.com

@@ -1,0 +1,10 @@
+# Author: 可莉🅥
+# GitLab: https://gitlab.com/lodepuly/vpn_tool/-/tree/main/tool/Loon
+# 引用地址 https://support.apple.com/en-us/HT210060
+# App Store - Apple 设备需要访问以下主机和域，才能安装和更新 App。
+
+DOMAIN-SUFFIX, itunes.apple.com //商店内容，如 App、图书和音乐
+DOMAIN-SUFFIX, apps.apple.com //商店内容，如 App、图书和音乐
+DOMAIN-SUFFIX, mzstatic.com //商店内容，如 App、图书和音乐
+DOMAIN, itunes.apple.com
+DOMAIN, ppq.apple.com //企业 App 验证

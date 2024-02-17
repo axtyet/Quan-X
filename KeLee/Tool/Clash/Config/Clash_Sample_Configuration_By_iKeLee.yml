@@ -1,0 +1,572 @@
+# Clash 配置
+# 日期：2023.03.02
+# 配置作者：https://t.me/iKeLee
+# 适用版本：所有使用 Premium 核心的Clash程序
+
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: silent
+external-controller: 127.0.0.1:9090
+
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  ipv6: true
+  default-nameserver:
+     - 119.29.29.29
+  nameserver:
+# 腾讯阿里DoH2
+     - https://1.12.12.12/dns-query
+     - https://223.5.5.5/dns-query
+  fallback:
+# 腾讯DoH2
+     - https://120.53.53.53/dns-query
+
+profile:
+  tracing: true
+
+# interval 代表间隔时间，单位为 s；
+# tolerance 代表容差时间，单位为 ms；
+# 由于分流规则引用了 GitHub 文件，如果你的本地网络无法访问 GitHub，你将无法让 Clash 正常工作；
+# 你需要先使用翻墙工具让本地网络出墙，再启动 Clash 才能正常下载分流规则并正常启动，待 Clash 启动成功并更新完订阅资源和分流规则之后，方可关闭你之前打开的翻墙工具；
+# 请使用节点订阅转换服务将服务商的订阅链接转换为 Clash 的订阅，并输出为 Node List 格式；
+# 请使用节点订阅转换工具提供的保留节点和过滤节点功能，生成不同地区的订阅链接，并填入下方 proxy-providers 区域；
+# 其他内容具体见注释；
+# 节点订阅转换网址 https://api.dler.io/
+# 如果服务商不支持上面的节点订阅转换，则使用国内的节点订阅转换服务，如 https://id9.cc/
+# URL在线编码工具 https://www.urlencoder.org
+
+# 节点订阅
+# 默认每三小时更新一次节点订阅，每 6s 检测一次健康度。
+
+proxy-providers:
+  香港节点:
+    type: http
+    path: ./Proxy/香港节点.yml
+    url: https://api.dler.io/sub?target=clash&new_name=true&url=此处替换为经URL编码后的机场订阅地址&insert=false&include=%5E(%3F%3D.*((%3Fi)%F0%9F%87%AD%F0%9F%87%B0%7C%E6%B8%AF%7C%E8%99%9A%E9%80%9A%7CHK%7CHong))(%3F!.*((%3Fi)%E5%9B%9E%E5%9B%BD%7C%E6%A0%A1%E5%9B%AD%7C%E6%B8%B8%E6%88%8F%7C%E6%95%99%E8%82%B2%7C%E4%B9%85%E8%99%9A%7C%E5%AE%98%E7%BD%91%7C%E5%AE%A2%E6%9C%8D%7C%E7%BD%91%E7%AB%99%7C%E7%BD%91%E5%9D%80%7C%E8%8E%B7%E5%8F%96%7C%E8%AE%A2%E9%98%85%7C%E6%B5%81%E9%87%8F%7C%E5%88%B0%E6%9C%9F%7C%E6%9C%BA%E5%9C%BA%7C%E4%B8%8B%E6%AC%A1%7C%E7%BE%A4%7C%5Cdx%7C%5Cd%E5%80%8D%7CGAME%7CTG)).*%24&filename=%E9%A6%99%E6%B8%AF%E8%8A%82%E7%82%B9.yml&emoji=false&list=true&udp=false&tfo=false&scv=false&fdn=false&sort=true
+    interval: 10800
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 6
+
+  台湾节点:
+    type: http
+    path: ./Proxy/台湾节点.yml
+    url: https://api.dler.io/sub?target=clash&new_name=true&url=此处替换为经URL编码后的机场订阅地址&insert=false&include=%5E(%3F%3D.*((%3Fi)%F0%9F%87%B9%F0%9F%87%BC%7C%E5%8F%B0%7CTW%7CTai))(%3F!.*((%3Fi)%E5%9B%9E%E5%9B%BD%7C%E6%A0%A1%E5%9B%AD%7C%E6%B8%B8%E6%88%8F%7C%E6%95%99%E8%82%B2%7C%E4%B9%85%E8%99%9A%7C%E5%AE%98%E7%BD%91%7C%E5%AE%A2%E6%9C%8D%7C%E7%BD%91%E7%AB%99%7C%E7%BD%91%E5%9D%80%7C%E8%8E%B7%E5%8F%96%7C%E8%AE%A2%E9%98%85%7C%E6%B5%81%E9%87%8F%7C%E5%88%B0%E6%9C%9F%7C%E6%9C%BA%E5%9C%BA%7C%E4%B8%8B%E6%AC%A1%7C%E7%BE%A4%7C%5Cdx%7C%5Cd%E5%80%8D%7CGAME%7CTG)).*%24&filename=%E5%8F%B0%E6%B9%BE%E8%8A%82%E7%82%B9.yml&emoji=false&list=true&udp=false&tfo=false&scv=false&fdn=false&sort=true
+    interval: 10800
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 6
+
+  日本节点:
+    type: http
+    path: ./Proxy/日本节点.yml
+    url: https://api.dler.io/sub?target=clash&new_name=true&url=此处替换为经URL编码后的机场订阅地址&insert=false&include=%5E(%3F%3D.*((%3Fi)%F0%9F%87%AF%F0%9F%87%B5%7C%E6%97%A5%7C%E5%B7%9D%E6%97%A5%7C%E4%B8%9C%E4%BA%AC%7C%E5%A4%A7%E9%98%AA%7C%E6%B3%89%E6%97%A5%7C%E5%9F%BC%E7%8E%89%7CJP%7CJapan))(%3F!.*((%3Fi)%E5%9B%9E%E5%9B%BD%7C%E6%A0%A1%E5%9B%AD%7C%E6%B8%B8%E6%88%8F%7C%E6%95%99%E8%82%B2%7C%E4%B9%85%E8%99%9A%7C%E5%AE%98%E7%BD%91%7C%E5%AE%A2%E6%9C%8D%7C%E7%BD%91%E7%AB%99%7C%E7%BD%91%E5%9D%80%7C%E8%8E%B7%E5%8F%96%7C%E8%AE%A2%E9%98%85%7C%E6%B5%81%E9%87%8F%7C%E5%88%B0%E6%9C%9F%7C%E6%9C%BA%E5%9C%BA%7C%E4%B8%8B%E6%AC%A1%7C%E7%BE%A4%7C%5Cdx%7C%5Cd%E5%80%8D%7CGAME%7CTG)).*%24&filename=%E6%97%A5%E6%9C%AC%E8%8A%82%E7%82%B9.yml&emoji=false&list=true&udp=false&tfo=false&scv=false&fdn=false&sort=true
+    interval: 10800
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 6
+
+  韩国节点:
+    type: http
+    path: ./Proxy/韩国节点.yml
+    url: https://api.dler.io/sub?target=clash&new_name=true&url=此处替换为经URL编码后的机场订阅地址&insert=false&include=%5E(%3F%3D.*((%3Fi)%F0%9F%87%B0%F0%9F%87%B7%7C%E9%9F%A9%7C%E9%9F%93%7C%E9%A6%96%E5%B0%94%7CKR%7CKorea))(%3F!.*((%3Fi)%E5%9B%9E%E5%9B%BD%7C%E6%A0%A1%E5%9B%AD%7C%E6%B8%B8%E6%88%8F%7C%E6%95%99%E8%82%B2%7C%E4%B9%85%E8%99%9A%7C%E5%AE%98%E7%BD%91%7C%E5%AE%A2%E6%9C%8D%7C%E7%BD%91%E7%AB%99%7C%E7%BD%91%E5%9D%80%7C%E8%8E%B7%E5%8F%96%7C%E8%AE%A2%E9%98%85%7C%E6%B5%81%E9%87%8F%7C%E5%88%B0%E6%9C%9F%7C%E6%9C%BA%E5%9C%BA%7C%E4%B8%8B%E6%AC%A1%7C%E7%BE%A4%7C%5Cdx%7C%5Cd%E5%80%8D%7CGAME%7CTG)).*%24&filename=%E9%9F%A9%E5%9B%BD%E8%8A%82%E7%82%B9.yml&emoji=false&list=true&udp=false&tfo=false&scv=false&fdn=false&sort=true
+    interval: 10800
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 6
+
+  美国节点:
+    type: http
+    path: ./Proxy/美国节点.yml
+    url: https://api.dler.io/sub?target=clash&new_name=true&url=此处替换为经URL编码后的机场订阅地址&insert=false&include=%5E(%3F%3D.*((%3Fi)%F0%9F%87%BA%F0%9F%87%B8%7C%E7%BE%8E%7C%E6%B3%A2%E7%89%B9%E5%85%B0%7C%E8%BE%BE%E6%8B%89%E6%96%AF%7C%E4%BF%84%E5%8B%92%E5%86%88%7C%E5%87%A4%E5%87%B0%E5%9F%8E%7C%E8%B4%B9%E5%88%A9%E8%92%99%7C%E7%A1%85%E8%B0%B7%7C%E6%8B%89%E6%96%AF%E7%BB%B4%E5%8A%A0%E6%96%AF%7C%E6%B4%9B%E6%9D%89%E7%9F%B6%7C%E5%9C%A3%E4%BD%95%E5%A1%9E%7C%E5%9C%A3%E5%85%8B%E6%8B%89%E6%8B%89%7C%E8%A5%BF%E9%9B%85%E5%9B%BE%7C%E8%8A%9D%E5%8A%A0%E5%93%A5%7CUS%7CUnitedStates))(%3F!.*((%3Fi)%E5%9B%9E%E5%9B%BD%7C%E6%A0%A1%E5%9B%AD%7C%E6%B8%B8%E6%88%8F%7C%E6%95%99%E8%82%B2%7C%E4%B9%85%E8%99%9A%7C%E5%AE%98%E7%BD%91%7C%E5%AE%A2%E6%9C%8D%7C%E7%BD%91%E7%AB%99%7C%E7%BD%91%E5%9D%80%7C%E8%8E%B7%E5%8F%96%7C%E8%AE%A2%E9%98%85%7C%E6%B5%81%E9%87%8F%7C%E5%88%B0%E6%9C%9F%7C%E6%9C%BA%E5%9C%BA%7C%E4%B8%8B%E6%AC%A1%7C%E7%BE%A4%7C%5Cdx%7C%5Cd%E5%80%8D%7CGAME%7CTG)).*%24&filename=%E7%BE%8E%E5%9B%BD%E8%8A%82%E7%82%B9.yml&emoji=false&list=true&udp=false&tfo=false&scv=false&fdn=false&sort=true
+    interval: 10800
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 6
+
+  新加坡节点:
+    type: http
+    path: ./Proxy/新加坡节点.yml
+    url: https://api.dler.io/sub?target=clash&new_name=true&url=此处替换为经URL编码后的机场订阅地址&insert=false&include=%5E(%3F%3D.*((%3Fi)%F0%9F%87%B8%F0%9F%87%AC%7C%E6%96%B0%E5%8A%A0%E5%9D%A1%7C%E7%8B%AE%7CSG%7CSingapore))(%3F!.*((%3Fi)%E5%9B%9E%E5%9B%BD%7C%E6%A0%A1%E5%9B%AD%7C%E6%B8%B8%E6%88%8F%7C%E6%95%99%E8%82%B2%7C%E4%B9%85%E8%99%9A%7C%E5%AE%98%E7%BD%91%7C%E5%AE%A2%E6%9C%8D%7C%E7%BD%91%E7%AB%99%7C%E7%BD%91%E5%9D%80%7C%E8%8E%B7%E5%8F%96%7C%E8%AE%A2%E9%98%85%7C%E6%B5%81%E9%87%8F%7C%E5%88%B0%E6%9C%9F%7C%E6%9C%BA%E5%9C%BA%7C%E4%B8%8B%E6%AC%A1%7C%E7%BE%A4%7C%5Cdx%7C%5Cd%E5%80%8D%7CGAME%7CTG)).*%24&filename=%E6%96%B0%E5%8A%A0%E5%9D%A1%E8%8A%82%E7%82%B9.yml&emoji=false&list=true&udp=false&tfo=false&scv=false&fdn=false&sort=true
+    interval: 10800
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 6
+
+  全球节点:
+    type: http
+    path: ./Proxy/全球节点.yml
+    url: https://api.dler.io/sub?target=clash&new_name=true&url=此处替换为经URL编码后的机场订阅地址&insert=false&include=%5E(%3F%3D.*(.*))(%3F!.*((%3Fi)%E4%B9%85%E8%99%9A%7C%E5%AE%98%E7%BD%91%7C%E5%AE%A2%E6%9C%8D%7C%E7%BD%91%E7%AB%99%7C%E7%BD%91%E5%9D%80%7C%E8%8E%B7%E5%8F%96%7C%E8%AE%A2%E9%98%85%7C%E6%B5%81%E9%87%8F%7C%E5%88%B0%E6%9C%9F%7C%E6%9C%BA%E5%9C%BA%7C%E4%B8%8B%E6%AC%A1%7C%E7%BE%A4%7CTG)).*%24&filename=%E5%85%A8%E7%90%83%E8%8A%82%E7%82%B9.yml&emoji=false&list=true&udp=false&tfo=false&scv=false&fdn=false&sort=true
+    interval: 10800
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 6
+
+proxy-groups:
+  - name: 手动节点选择
+    type: select
+    disable-udp: false
+    use:
+      - 全球节点
+    proxies:
+      - DIRECT
+
+  - name: 地区选择
+    type: select
+    proxies:
+      - 香港策略
+      - 台湾策略
+      - 日本策略
+      - 韩国策略
+      - 美国策略
+      - 新加坡策略
+
+  - name: 境外游戏CDN下载
+    type: select
+    proxies:
+      - 香港策略
+      - 台湾策略
+      - 日本策略
+      - 韩国策略
+      - 美国策略
+      - 新加坡策略
+      - DIRECT
+
+  - name: App Store
+    type: select
+    proxies:
+      - 地区选择
+      - DIRECT
+
+  - name: Apple ID
+    type: select
+    proxies:
+      - 地区选择
+      - DIRECT
+
+  - name: TestFlight
+    type: select
+    proxies:
+      - 地区选择
+      - DIRECT
+
+  - name: Microsoft
+    type: select
+    proxies:
+      - 地区选择
+      - DIRECT
+
+  - name: TikTok
+    type: select
+    proxies:
+      - 香港策略
+      - 台湾策略
+      - 日本策略
+      - 韩国策略
+      - 美国策略
+      - 新加坡策略
+
+  - name: Telegram
+    type: select
+    proxies:
+      - 香港策略
+      - 台湾策略
+      - 日本策略
+      - 韩国策略
+      - 美国策略
+      - 新加坡策略
+
+  - name: Netflix
+    type: select
+    proxies:
+      - 香港策略
+      - 台湾策略
+      - 日本策略
+      - 韩国策略
+      - 美国策略
+      - 新加坡策略
+
+  - name: Speedtest
+    type: select
+    disable-udp: false
+    use:
+      - 全球节点
+    proxies:
+      - DIRECT
+
+  - name: 香港策略
+    type: select
+    proxies:
+      - ⏱香港延时优选策略组
+      - 🚥香港故障转移策略组
+      - 🎛香港负载均衡策略组
+
+  - name: 台湾策略
+    type: select
+    proxies:
+      - ⏱台湾延时优选策略组
+      - 🚥台湾故障转移策略组
+      - 🎛台湾负载均衡策略组
+
+  - name: 日本策略
+    type: select
+    proxies:
+      - ⏱日本延时优选策略组
+      - 🚥日本故障转移策略组
+      - 🎛日本负载均衡策略组
+
+  - name: 韩国策略
+    type: select
+    proxies:
+      - ⏱韩国延时优选策略组
+      - 🚥韩国故障转移策略组
+      - 🎛韩国负载均衡策略组
+
+  - name: 美国策略
+    type: select
+    proxies:
+      - ⏱美国延时优选策略组
+      - 🚥美国故障转移策略组
+      - 🎛美国负载均衡策略组
+
+  - name: 新加坡策略
+    type: select
+    proxies:
+      - ⏱新加坡延时优选策略组
+      - 🚥新加坡故障转移策略组
+      - 🎛新加坡负载均衡策略组
+
+  - name: 兜底策略
+    type: select
+    proxies:
+      - 地区选择
+      - 手动节点选择
+      - DIRECT
+
+# 延时优选
+# url-test 的容差参数未开启时默认为 0ms
+  - name: ⏱香港延时优选策略组
+    type: url-test
+    tolerance: 20
+    lazy: false
+    disable-udp: false
+    use:
+      - 香港节点
+
+  - name: ⏱台湾延时优选策略组
+    type: url-test
+    tolerance: 20
+    lazy: false
+    disable-udp: false
+    use:
+      - 台湾节点
+
+  - name: ⏱日本延时优选策略组
+    type: url-test
+    tolerance: 20
+    lazy: false
+    disable-udp: false
+    use:
+      - 日本节点
+
+  - name: ⏱韩国延时优选策略组
+    type: url-test
+    tolerance: 20
+    lazy: false
+    disable-udp: false
+    use:
+      - 韩国节点
+
+  - name: ⏱美国延时优选策略组
+    type: url-test
+    tolerance: 20
+    lazy: false
+    disable-udp: false
+    use:
+      - 美国节点
+
+  - name: ⏱新加坡延时优选策略组
+    type: url-test
+    tolerance: 20
+    lazy: false
+    disable-udp: false
+    use:
+      - 新加坡节点
+
+# 故障转移
+  - name: 🚥香港故障转移策略组
+    type: fallback
+    lazy: false
+    disable-udp: false
+    use:
+      - 香港节点
+
+  - name: 🚥台湾故障转移策略组
+    type: fallback
+    lazy: false
+    disable-udp: false
+    use:
+      - 台湾节点
+
+  - name: 🚥日本故障转移策略组
+    type: fallback
+    lazy: false
+    disable-udp: false
+    use:
+      - 日本节点
+
+  - name: 🚥韩国故障转移策略组
+    type: fallback
+    lazy: false
+    disable-udp: false
+    use:
+      - 韩国节点
+
+  - name: 🚥美国故障转移策略组
+    type: fallback
+    lazy: false
+    disable-udp: false
+    use:
+      - 美国节点
+
+  - name: 🚥新加坡故障转移策略组
+    type: fallback
+    lazy: false
+    disable-udp: false
+    use:
+      - 新加坡节点
+
+# 负载均衡
+  - name: 🎛香港负载均衡策略组
+    type: load-balance
+    lazy: false
+    disable-udp: false
+    strategy: consistent-hashing
+    use:
+      - 香港节点
+
+  - name: 🎛台湾负载均衡策略组
+    type: load-balance
+    lazy: false
+    disable-udp: false
+    strategy: consistent-hashing
+    use:
+      - 台湾节点
+
+  - name: 🎛日本负载均衡策略组
+    type: load-balance
+    lazy: false
+    disable-udp: false
+    strategy: consistent-hashing
+    use:
+      - 日本节点
+
+  - name: 🎛韩国负载均衡策略组
+    type: load-balance
+    lazy: false
+    disable-udp: false
+    strategy: consistent-hashing
+    use:
+      - 韩国节点
+
+  - name: 🎛美国负载均衡策略组
+    type: load-balance
+    lazy: false
+    disable-udp: false
+    strategy: consistent-hashing
+    use:
+      - 美国节点
+
+  - name: 🎛新加坡负载均衡策略组
+    type: load-balance
+    lazy: false
+    disable-udp: false
+    strategy: consistent-hashing
+    use:
+      - 新加坡节点
+
+# 分流规则订阅
+# 默认每二十四小时更新一次分流规则
+rule-providers:
+  Lan:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Lan.yaml
+    url: https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Clash/Lan/Lan.yaml
+    interval: 10800
+
+  Direct:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Direct.yaml
+    url: https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/Direct.yaml
+    interval: 10800
+
+  Proxy:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Proxy.yaml
+    url: https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/Proxy.yaml
+    interval: 10800
+
+  ChineseGameDownload:
+    type: http
+    behavior: classical
+    path: ./RuleSet/ChineseGameDownload.yaml
+    url: https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/ChineseGameDownload.yaml
+    interval: 10800
+
+  InternationalGameDownload:
+    type: http
+    behavior: classical
+    path: ./RuleSet/InternationalGameDownload.yaml
+    url: https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/InternationalGameDownload.yaml
+    interval: 10800
+
+  TikTok:
+    type: http
+    behavior: classical
+    path: ./RuleSet/TikTok.yaml
+    url: https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Clash/TikTok/TikTok.yaml
+    interval: 10800
+
+  Game:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Game.yaml
+    url: https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Clash/Game/Game.yaml
+    interval: 10800
+
+  Steam:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Steam.yaml
+    url: https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Clash/Steam/Steam.yaml
+    interval: 10800
+
+  Netflix:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Netflix.yaml
+    url: https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Clash/Netflix/Netflix.yaml
+    interval: 10800
+
+  iCloudChina:
+    type: http
+    behavior: classical
+    path: ./RuleSet/iCloudChina.yaml
+    url: https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/iCloudChina.yaml
+    interval: 10800
+
+  ApplePushNotificationService:
+    type: http
+    behavior: classical
+    path: ./RuleSet/AppleID.yaml
+    url: https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/ApplePushNotificationService.yaml
+    interval: 10800
+
+  AppleSoftwareUpdates:
+    type: http
+    behavior: classical
+    path: ./RuleSet/AppleID.yaml
+    url: https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/AppleSoftwareUpdates.yaml
+    interval: 10800
+
+  AppleID:
+    type: http
+    behavior: classical
+    path: ./RuleSet/AppleID.yaml
+    url: https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/AppleID.yaml
+    interval: 10800
+
+  AppStore:
+    type: http
+    behavior: classical
+    path: ./RuleSet/AppStore.yaml
+    url: https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/AppStore.yaml
+    interval: 10800
+
+  TestFlight:
+    type: http
+    behavior: classical
+    path: ./RuleSet/TestFlight.yaml
+    url: https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Clash/TestFlight/TestFlight.yaml
+    interval: 10800
+
+  Speedtest:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Speedtest.yaml
+    url: https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Clash/Speedtest/Speedtest.yaml
+    interval: 10800
+
+  Bing:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Bing.yaml
+    url: https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Clash/Bing/Bing.yaml
+    interval: 10800
+
+  Microsoft:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Microsoft.yaml
+    url: https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Clash/Microsoft/Microsoft.yaml
+    interval: 10800
+
+  Google:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Google.yaml
+    url: https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Clash/Google/Google.yaml
+    interval: 10800
+
+  Telegram:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Telegram.yaml
+    url: https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Clash/Telegram/Telegram.yaml
+    interval: 10800
+
+  ESET_Activation_Service:
+    type: http
+    behavior: classical
+    path: ./RuleSet/ESET_Activation_Service.yaml
+    url: https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/ESET_Activation_Service.yaml
+    interval: 10800
+
+# 分流规则
+rules:
+  - RULE-SET,Lan,DIRECT
+  - RULE-SET,Direct,DIRECT
+  - RULE-SET,Proxy,地区选择
+  - RULE-SET,ChineseGameDownload,DIRECT
+  - RULE-SET,InternationalGameDownload,境外游戏CDN下载
+  - RULE-SET,TikTok,TikTok
+  - RULE-SET,Game,手动节点选择
+  - RULE-SET,Steam,地区选择
+  - RULE-SET,Netflix,Netflix
+  - RULE-SET,TestFlight,TestFlight
+  - RULE-SET,iCloudChina,DIRECT
+  - RULE-SET,ApplePushNotificationService,DIRECT
+  - RULE-SET,AppleSoftwareUpdates,DIRECT
+  - RULE-SET,AppleID,Apple ID
+  - RULE-SET,AppStore,App Store
+  - RULE-SET,Speedtest,Speedtest
+  - RULE-SET,Bing,地区选择
+  - RULE-SET,Microsoft,Microsoft
+  - RULE-SET,Google,地区选择
+  - RULE-SET,Telegram,Telegram
+  - RULE-SET,ESET_Activation_Service,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,兜底策略

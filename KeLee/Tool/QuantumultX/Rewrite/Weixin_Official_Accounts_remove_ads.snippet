@@ -1,0 +1,14 @@
+#!name = 微信公众号去广告
+#!desc = 过滤微信公众号广告
+#!openUrl = 
+#!author = RuCu6
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/QuantumultX/Rewrite
+
+#[rewrite_local]
+# 移除公众号中的推广内容 //mp.weixin.qq.com
+^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|relatedarticle)\? url reject-dict
+
+# ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad url script-request-body https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script/Weixin/Weixin_Official_Accounts_remove_ads.js
+
+#[mitm]
+hostname = mp.weixin.qq.com

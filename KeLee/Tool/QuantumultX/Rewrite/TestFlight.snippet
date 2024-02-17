@@ -1,0 +1,11 @@
+#!name = TestFlight解锁
+#!desc = 解除TestFlight的区域限制
+#!author = RuCu6
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/QuantumultX/Rewrite
+
+#[rewrite_local]
+^https:\/\/testflight\.apple\.com\/v2\/accounts\/.*\/apps\/\d*\/builds\/\d*\/install$ url request-body "storefrontId"\x20:\x20.*, request-body "storefrontId":"143441-19,29",
+# ^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$ url script-request-body https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script/TestFlight/TF_Download.js
+
+#[mitm]
+hostname = testflight.apple.com
