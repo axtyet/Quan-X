@@ -1,0 +1,146 @@
+#!name=App/小程序-AD净化
+#!desc=去一些App/小程序的广告！
+#!author = chxm1023
+#!homepage = https://github.com/chxm1023/Script_X/blob/main/README.md
+#!url=https://raw.githubusercontent.com/chxm1023/Advertising/main/Shadowrocket/AppAd.sgmodule
+
+[URL Rewrite]
+########## App去广告 ##########
+# 京东金融 去除开屏广告
+# hostname = ms.jr.jd.com
+^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/newna\/m\/getLoadingPicture - reject-200
+
+# 555影视 去除广告模块
+# hostname = vip7.fzwdyy.cn, vpic.cms.qq.com
+^https?:\/\/vip7\.fzwdyy\.cn:8083\/api\/(getAdvertInfo|getGOOGAdvert) - reject
+^https?:\/\/vpic\.cms\.qq\.com\/nj_vpic - reject
+
+# 美团外卖
+# hostname = *.meituan.com
+^https?:\/\/.*\.meituan\.com\/(client\/getInitiateImage|api\/.+\/startpicture) - reject-200
+
+# 大师兄 开屏倒计时广告
+# hostname = sdk.alibaba.com.ailbaba.me
+^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/.+\/(top_notice.+|advert.position.[^2](?<=position..)) - reject
+
+# Senfun稀饭 https://t.me/ae86_ios/719
+# hostname = pzoap.moedot.net
+^https?:\/\/pzoap\.moedot\.net\/xgapp\.php\/v2\/top_notice? - reject
+
+# Clicli https://t.me/ae86_ios/139
+# hostname = js-ad.ayximgss.com
+^https?:\/\/js-ad\.ayximgs\.com\.ad-universe-cdn\.hzhcbkj\.cn\/xgapp\.php\/v2\/top_notice? - reject
+
+# Omofun https://t.me/ae86_ios/140
+# hostname = 103.91.210.141:2515
+^https?:\/\/103\.91\.210\.141:2515\/xgapp\.php\/v2\/top_notice? - reject
+
+# 鸭奈飞 去开屏广告
+^http?:\/\/pipi\.4kya\.com/\/xgapp\.php\/v3\/advert.position.[^2](?<=position..) - reject
+
+# 无他相机 去开屏广告
+# hostname = image.cdn.zxrtb.com
+http:\/\/image\.cdn\.zxrtb\.com - reject-200
+
+# 网速管家 去开屏广告
+# hostname = *.speedtest.cn
+^https:\/\/.*\.speedtest\.cn\/(images|api\/.+\/showpic\/position?(.*?)) - reject-200
+
+# 穿山甲/拼多多之类广告
+# hostname = adim.pinduoduo.com
+^https:\/\/(adim|images)\.pinduoduo\.com\/(.+\/toutiao|mrk\/.+) - reject
+# hostname = video-dsp.pddpic.com
+^https:\/\/video-dsp\.pddpic\.com\/market-dsp-video\/.+ - reject
+# hostname = *.gdt.qq.com
+^http[s]?:\/\/.*\.gdt\.qq\.com\/gdt_mview.fcg - reject
+# hostname = access.pangolin-sdk-toutiao*.com,
+^http[s]?:\/\/api-access\.pangolin-sdk-toutiao.*\.com - reject
+# hostname = *.pglstatp-toutiao.com
+^http[s]?:\/\/.*\.pglstatp-toutiao\.com\/.+ - reject
+
+# 特狗影视-屏蔽弹窗
+^http:\/\/162\.209\.190\.203:510\/tegou\.php\/.+\/top_notice - reject
+
+# 酷狗音乐(概念版)去开屏广告
+# hostname = adsfileretry.service.kugou.com
+^http[s]?:\/\/adsfileretry\.service\.kugou\.com - reject
+# hostname = pgdt.gtimg.cn
+^https:\/\/pgdt\.gtimg\.cn - reject
+
+# 掌上公交去广告
+# hostname = *.mygolbs.com
+^http?:\/\/quanguo\.mygolbs\.com:8081 - reject
+^https?:\/\/remind\.mygolbs\.com\/remind-off\/query\/.+ - reject
+# 掌上公交最下方新闻广告列表
+# hostname = *.baidu.com
+^https?:\/\/(cpu-openapi|mobads)\.baidu\.com\/(api\/.+\/data\/list|ads\/.+) - reject
+
+# 淘淘阅读
+# hostname = bid.adview.cn
+^https?:\/\/bid\.adview\.cn\/agent\/getAd - reject
+
+# 豆瓣开屏广告
+^https?:\/\/api\.douban\.com\/.+\/.*ads - reject
+
+########## 小程序广告 ##########
+# 怪兽充电
+# hostname = *.enmonster.com
+https?:\/\/.*\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert\/skin) - reject-dict
+
+
+
+[Script]
+########## App去广告 ##########
+# 京喜/京喜特价/京东小家 去除开屏广告
+# hostname = api.*.jd.com
+京喜Ad = type=http-response,pattern=^https?:\/\/api\..*\.jd\.com\/(client\.action\?functionId=lite_advertising|.+\/service\/getLoadingLinks),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Advertising/main/jhad.js
+
+# 趣听音乐馆 屏蔽弹窗–横幅
+# hostname = api.bspapp.com, api.next.bspapp.com
+趣听ad = type=http-response,pattern=^https?:\/\/(api|api\.next)\.bspapp\.com\/client$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Advertising/main/quting.js
+
+# 555影视 去除广告模块
+# hostname = a.weilai555.com, app-v1.ecoliving168.com
+555影视ad = type=http-response,pattern=^https?:\/\/.*\.(weilai555\.com:1000|ecoliving168\.com)\/api\/v\d\/movie\/(index_recommend.+|detail),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Advertising/main/555ad.js
+
+# 酷安 去好物推荐
+# hostname = api.coolapk.com
+酷安 = type=http-response,script-path= https://raw.githubusercontent.com/chxm1023/Advertising/main/KA.js,pattern= ^https:\/\/api\.coolapk\.com\/v6\/feed\/detail.+,max-size=0,requires-body=true,timeout=10,script-update-interval=0,enable=true
+
+########## 小程序广告 ##########
+# 亲邻开门-AD净化(App+小程序)
+# hostname = qadx*.qinlinad.com, mall-dsp*.qinlinkeji.com
+亲邻开门 = type=http-response,script-path= https://raw.githubusercontent.com/chxm1023/Advertising/main/xcx/qlkm.js,pattern= ^https:\/\/(qadx.*\.qinlinad|mall-dsp.*\.qinlinkeji)\.com,max-size=0,requires-body=true,timeout=10,script-update-interval=0,enable=true
+
+# 海绵去水印
+# hostname = analysis.20kaka.cn
+海绵去水印 = type=http-response,script-path= https://raw.githubusercontent.com/chxm1023/Rewrite/main/xcx/hmqsy.js,pattern= ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat,max-size=0,requires-body=true,timeout=10,script-update-interval=0,enable=true
+
+# 功夫去水印
+# hostname = q12.tuanyougou.com
+功夫去水印 = type=http-response,script-path= https://raw.githubusercontent.com/chxm1023/Rewrite/main/xcx/hmqsy.js,pattern= ^https?:\/\/q12\.tuanyougou\.com,max-size=0,requires-body=true,timeout=10,script-update-interval=0,enable=true
+
+# 搜罗好货
+# hostname = www.i3zh.com
+搜罗好货 = type=http-response,script-path= https://raw.githubusercontent.com/chxm1023/Rewrite/main/xcx/slhh.js,pattern= ^https?:\/\/www\.i3zh\.com\/wp-json\/watch-life-net\/.+\/(options|posts),max-size=0,requires-body=true,timeout=10,script-update-interval=0,enable=true
+
+# 小打卡
+# hostname = *.sharedaka.com
+小打卡 = type=http-response,script-path= https://raw.githubusercontent.com/chxm1023/Rewrite/main/xcx/xiaodaka.js,pattern= ^https:\/\/.*\.sharedaka\.com,max-size=0,requires-body=true,timeout=10,script-update-interval=0,enable=true
+
+# 漫画台Lite
+# hostname = comic.321mh.com
+漫画台Lite = type=http-response,script-path= https://raw.githubusercontent.com/chxm1023/Rewrite/main/xcx/donghuatai.js,pattern= ^https?:\/\/comic\.321mh\.com,max-size=0,requires-body=true,timeout=10,script-update-interval=0,enable=true
+
+# 公众号文章去广告
+#hostname = mp.weixin.qq.com
+微信公众号底部去广告 = type=http-response,script-path= https://raw.githubusercontent.com/chxm1023/Advertising/main/wxgzhad.js,pattern= ^http[s]?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad.+,max-size=0,requires-body=true,timeout=10,script-update-interval=0,enable=true
+
+# 小野分享
+#hostname = lysl2020.com
+小野分享 = type=http-response,script-path= https://raw.githubusercontent.com/chxm1023/Advertising/main/Admodule.js,pattern= ^https:\/\/lysl2020.com/wp-json/wp/v2/posts,max-size=0,requires-body=true,timeout=10,script-update-interval=0,enable=true
+
+
+
+[MITM]
+hostname = %APPEND% us.l.qq.com, mime.baidu.com, api.douban.com, bid.adview.cn, cpu-openapi.baidu.com, mobads.baidu.com, *.mygolbs.com, adsfileretry.service.kugou.com, gateway.kugou.com, us.l.qq.com, pgdt.gtimg.cn, adsmind.gdtimg.com, *.pglstatp-toutiao.com, access.pangolin-sdk-toutiao*.com, *.gdt.qq.com, video-dsp.pddpic.com, *.pinduoduo.com, *.speedtest.cn, image.cdn.zxrtb.com,pipi.4kya.com, pzoap.moedot.net, js-ad.ayximgss.com, sdk.alibaba.com.ailbaba.me, api.coolapk.com, a.weilai555.com, app-v1.ecoliving168.com, vpic.cms.qq.com, vip7.fzwdyy.cn, api.bspapp.com, api.next.bspapp.com, ms.jr.jd.com, api.*.jd.com, qadx*.qinlinad.com, mall-dsp*.qinlinkeji.com, analysis.20kaka.cn, q12.tuanyougou.com, www.i3zh.com, *.sharedaka.com, comic.321mh.com, *.enmonster.com, mp.weixin.qq.com, lysl2020.com
