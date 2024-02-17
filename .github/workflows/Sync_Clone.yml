@@ -228,6 +228,15 @@ jobs:
         cp -r asdf_Tmp/* Quan-X-repo/Peng-YM
         rm -rf asdf_Tmp
 
+    # Fork NobyDa
+    - name: Fork NobyDa
+      run: |
+        mkdir -p Quan-X-repo/NobyDa
+        git clone -b master https://github.com/NobyDa/Script.git qaz_Tmp
+        cp -r qaz_Tmp/* Quan-X-repo/NobyDa
+        rm -rf qaz_Tmp
+        
+
 
 
       # 保存、推送   
