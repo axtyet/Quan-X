@@ -156,7 +156,7 @@ jobs:
     - name: Fork Yu9191/-
       run: |
         mkdir -p Quan-X-repo/Yu9191
-        git clone -b main https://github.com/Yu9191/Script.git  sad_Tmp
+        git clone -b main https://github.com/Yu9191/-.git  sad_Tmp
         cp -r sad_Tmp/* Quan-X-repo/Yu9191/-
         rm -rf sad_Tmp
 
