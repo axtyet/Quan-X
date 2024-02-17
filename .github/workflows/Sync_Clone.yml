@@ -29,7 +29,7 @@ jobs:
         rm -rf czy_Tmp   
     - name: Edit Chxm1023/Rewrite
       run: |
-        cd Quan-X-repo/Rewrite
+        cd Quan-X-repo/chxm1023/Rewrite
         for file in *.js; do
             if [ "$file" ] ; then
               # 修改脚本链接
@@ -72,7 +72,7 @@ jobs:
          # 修改脚本链接
     - name: Edit Advertising
       run: |
-        cd Quan-X-repo/Advertising
+        cd Quan-X-repo/chxm1023/Advertising
         for file in *.js; do
             if [ "$file" ] ; then
               # 修改脚本链接
