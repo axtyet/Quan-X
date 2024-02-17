@@ -173,7 +173,7 @@ jobs:
       run: |
         mkdir -p Quan-X-repo/yqc007
         git clone -b master https://github.com/yqc007/QuantumultX.git  ewq_Tmp
-        cp -r ewq_Tmp/* Quan-X-repo/RuCu6
+        cp -r ewq_Tmp/* Quan-X-repo/Yqc007
         rm -rf ewq_Tmp
      # 修改脚本链接
     - name: Edit QuantumultX/Yqc007
