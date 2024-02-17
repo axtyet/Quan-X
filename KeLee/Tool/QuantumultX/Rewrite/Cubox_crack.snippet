@@ -1,0 +1,11 @@
+#!name = Cubox解锁
+#!desc = 点击恢复购买即可解锁VIP
+#!openUrl = 
+#!author = 彭于晏
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/QuantumultX/Rewrite
+
+#[rewrite_local]
+^https?:\/\/cubox\.pro\/c\/api\/userInfo url script-request-body https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script/Cubox/Cubox_crack.js
+
+#[mitm]
+hostname = cubox.pro

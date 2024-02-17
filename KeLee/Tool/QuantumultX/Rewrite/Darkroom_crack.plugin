@@ -1,0 +1,11 @@
+#!name = Darkroom解锁
+#!desc = 点击恢复购买即可解锁订阅
+#!openUrl = 
+#!author = Marol62926
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/QuantumultX/Rewrite
+
+#[rewrite_local]
+^https?:\/\/api.revenuecat.com\/v1\/(receipts|subscribers)\/* url script-request-body https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Darkroom/Darkroom_crack.js
+
+#[mitm]
+hostname = api.revenuecat.com

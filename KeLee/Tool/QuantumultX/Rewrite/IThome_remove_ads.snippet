@@ -1,0 +1,14 @@
+#!name = IT之家去广告
+#!desc = 过滤IT之家信息流广告和文末广告，仅支持8.30及以上版本客户端。
+#!openUrl = 
+#!author = toulanboy 可莉🅥
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/QuantumultX/Rewrite
+
+#[rewrite_local]
+^https?:\/\/api\.zuihuimai\.com\/static\/.*\/hongbao url reject
+^https?:\/\/dat\.ruanmei\.com\/ithome\/money\/acd\.json$ url reject
+
+^https?:\/\/(api\.ithome\.com\/json\/(((newslist|listpage)\/news)|(slide\/index)))|(napi\.ithome\.com\/api\/news\/index) url script-response-body https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script/IThome/IThome_remove_ads.js
+
+#[mitm]
+hostname = api.ithome.com, napi.ithome.com, api.zuihuimai.com, dat.ruanmei.com

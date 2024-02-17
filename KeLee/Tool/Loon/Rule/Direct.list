@@ -1,0 +1,15 @@
+# NAME: Direct
+# AUTHOR: 可莉🅥
+# GITHUB: https://gitlab.com/lodepuly/vpn_tool/-/tree/main/tool/Loon
+# UPDATED: 2022-08-15 22:25:07
+# DOMAIN-KEYWORD: 0
+# DOMAIN-SUFFIX: 3
+# USER-AGENT: 0
+# DOMAIN: 1
+# TOTAL: 0
+DOMAIN-SUFFIX,ibm.com
+DOMAIN-SUFFIX,plex.tv
+DOMAIN-SUFFIX,odysseyplus.site
+DOMAIN,ssl.ptlogin2.qq.com
+DOMAIN,localhost.ptlogin2.qq.com
+DOMAIN,relay.firefox.com

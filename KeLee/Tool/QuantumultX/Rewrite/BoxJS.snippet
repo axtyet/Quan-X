@@ -1,0 +1,11 @@
+#!name = BoxJS
+#!desc = JavaScript数据管理器
+#!openUrl = http://boxjs.com
+#!author = chavyleung
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/QuantumultX/Rewrite
+
+#[rewrite_local]
+^https?:\/\/(.+\.)?boxjs\.(com|net) url script-analyze-echo-response https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script/BoxJS/BoxJS.js
+
+#[mitm]
+hostname = boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net

@@ -1,0 +1,11 @@
+#!name = 百度网盘解锁
+#!desc = 解锁百度网盘高速加载、倍速播放、高清画质、智能字幕、完整文稿、SVIP10皮肤以及点亮SVIP10标识等内容。
+#!openUrl = 
+#!author = 510004015
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/QuantumultX/Rewrite
+
+#[rewrite_local]
+^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user url script-response-body https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script/BaiduNetDisk/BaiduNetDisk_crack.js
+
+#[mitm]
+hostname = pan.baidu.com

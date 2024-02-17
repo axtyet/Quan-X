@@ -1,0 +1,9 @@
+# Author: 可莉🅥
+# GitLab: https://gitlab.com/lodepuly/vpn_tool/-/tree/main/tool/Loon
+# 引用地址 https://support.apple.com/en-us/HT210060
+# Apple ID - Apple 设备必须能够连接到以下主机才能验证 Apple ID。所有使用 Apple ID 的服务（如 iCloud、App 安装和 Xcode）都需要满足这个条件。
+
+DOMAIN, appleid.apple.com //“设置”和“系统偏好设置”中的 Apple ID 认证
+DOMAIN, appleid.cdn-apple.com //“设置”和“系统偏好设置”中的 Apple ID 认证
+DOMAIN, idmsa.apple.com //Apple ID 认证
+DOMAIN, gsa.apple.com //Apple ID 认证

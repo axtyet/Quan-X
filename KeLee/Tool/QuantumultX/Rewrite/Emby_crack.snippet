@@ -1,0 +1,11 @@
+#!name = Emby解锁
+#!desc = 点击恢复购买即可解锁
+#!openUrl = 
+#!author = 可莉🅥
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/QuantumultX/Rewrite
+
+#[rewrite_local]
+^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice url script-request-body https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script/Emby/Emby_crack.js
+
+#[mitm]
+hostname = mb3admin.com

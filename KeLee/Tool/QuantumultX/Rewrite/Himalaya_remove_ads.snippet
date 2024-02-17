@@ -1,0 +1,56 @@
+#!name = 喜马拉雅去广告
+#!desc = 过滤喜马拉雅广告
+#!openUrl = 
+#!author = 佚名
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/QuantumultX/Rewrite
+
+#[rewrite_local]
+# 喜马拉雅_修复轮播广告失效Bug
+^https?:\/\/.*\.xima.*\.com\/discovery-feed\/focus\/queryF url reject
+# 喜马拉雅_播放页_Live
+^https?:\/\/.*\.xima.*\.com\/mobile-playpage\/view\/ url reject
+# 喜马拉雅_MyInfo红点提醒
+^https?:\/\/.*\.xima.*\.com\/chaos-notice-web\/v1\/message\/preview\/list url reject
+# 喜马拉雅_屏蔽大红包Tips
+^https?:\/\/.*\.xima.*\.com\/social-web\/bottomTabs\/dynamicEntrance\/status url reject
+# 喜马拉雅_屏蔽gif弹窗Ad
+^https?:\/\/.*\.xmcdn\.com\/\w{8}\/\w{4}-\w{16}\/.+gif$ url reject
+# 喜马拉雅_gslb
+^https?:\/\/gslb.*\.xima.*\.com\/ url reject
+# 喜马拉雅_屏蔽Aged请求
+^https?:\/\/.*\.xima.*\.com\/(dog-portal\/checkOld|(child-mobile\/child|aged-mobile\/aged)\/mode\/query) url reject
+# 喜马拉雅_部分Tab弹窗
+^https?:\/\/.*\.xima.*\.com\/discovery-feed\/isShowUserGiftPendant url reject
+# 喜马拉雅_屏蔽红点提示
+^https?:\/\/.*\.xima.*\.com\/mobile-user\/unread url reject
+# 喜马拉雅_屏蔽minor请求
+^https?:\/\/.*\.xima.*\.com/mobile-user/minorProtection/pop url reject
+# 喜马拉雅_屏蔽隐私搜集
+^https?:\/\/.*\.xima.*\.com\/collector\/xl\/v\d url reject
+# 喜马拉雅_屏蔽版本更新
+^https?:\/\/.*\.xima.*\.com\/butler-portal\/versionCheck url reject
+# 喜马拉雅_屏蔽开屏广告
+^https?:\/\/(adse\.wsa|adse|adbehavior|xdcs-collector)\.xima.*\.com\/.* url reject
+# 喜马拉雅_屏蔽位置请求
+^https?:\/\/.*\.xima.*\.com\/mobile\/discovery\/v\d\/location url reject
+# 喜马拉雅_屏蔽热搜词
+^https?:\/\/.*\.xima.*\.com\/hotWord url reject
+# 喜马拉雅_屏蔽搜索框定时广告
+^https?:\/\/.*\.xima.*\.com\/guideWord url reject
+# 喜马拉雅_屏蔽实时Ad请求
+^https?:\/\/.*\.xima.*\.com\/api\/v\d\/adRealTime url reject
+# 喜马拉雅_屏蔽ting广告
+^https?:\/\/.*\.xima.*\.com\/ting\/(loading|feed|home)? url reject
+
+
+# 喜马拉雅_屏蔽首页横幅广告
+^https?:\/\/.*\.xima.*\.com\/focus-mobile\/focusPic url script-response-body https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script/Himalaya/Himalaya_remove_ads.js
+# 喜马拉雅_屏蔽首页动态广告
+^https?:\/\/.*\.xima.*\.com\/discovery-feed\/v\d\/mix url script-response-body https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script/Himalaya/Himalaya_remove_ads.js
+# 喜马拉雅_屏蔽标签页滚动广告
+^https?:\/\/.*\.xima.*\.com\/discovery-category\/v\d/category url script-response-body https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script/Himalaya/Himalaya_remove_ads.js
+# 喜马拉雅_去除我的页面广告标签
+^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage url script-response-body https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script/Himalaya/Himalaya_remove_ads.js
+
+#[mitm]
+hostname = hostname = *.xima*.*, *.xmcdn.*

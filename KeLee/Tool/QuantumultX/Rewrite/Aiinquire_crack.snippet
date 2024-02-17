@@ -1,0 +1,13 @@
+#!name = 爱企查解锁
+#!desc = 点击恢复购买即可解锁订阅
+#!openUrl = 
+#!author = I-am-R-E 张军
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/QuantumultX/Rewrite
+
+#[rewrite_local]
+^https:\/\/b2baifanfan\.baidu\.com\/crm\/web\/b2b\/im\/common\/getConfigByDeviceNum url reject-200
+
+^https?:\/\/aiqicha\.baidu\.com\/usercenter\/getvipinfoajax url script-request-body https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script/Aiinquire/Aiinquire_crack.js
+
+#[mitm]
+hostname = aiqicha.baidu.com, b2baifanfan.baidu.com
