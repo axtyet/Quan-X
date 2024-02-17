@@ -235,6 +235,26 @@ jobs:
         git clone -b master https://github.com/NobyDa/Script.git qaz_Tmp
         cp -r qaz_Tmp/* Quan-X-repo/NobyDa
         rm -rf qaz_Tmp
+
+    # Fork Guding88
+    - name: Fork Guding88
+      run: |
+        mkdir -p Quan-X-repo/Guding88/Script
+        git clone https://github.com/Guding88/Script.git qas_Tmp
+        cp -r qas_Tmp/* Quan-X-repo/Guding88/Script
+        rm -rf qas_Tmp
+     # 修改脚本链接
+    - name: Edit Guding88
+      run: |
+        cd Quan-X-repo/Guding88
+        for file in *.js; do
+            if [ "$file" ] ; then
+              # 修改脚本链接
+              sed -i 's/raw\.githubusercontent\.com\/Guding88\/Script\/main/raw.githubusercontent\.com\/axtyet\/Quan-X\/main\/Guding88\/Script/g' "$file"
+            else
+              echo "$file not found."
+            fi
+          done
         
 
 
