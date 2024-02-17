@@ -82,7 +82,14 @@ jobs:
             fi
           done
 
-          
+    - name: Fork Chxm1023/Script_X
+      run: |
+        mkdir -p ios-repo
+        git clone -b main https://github.com/chxm1023/Script_X.git  yzc_Tmp
+        cp -r yzc_Tmp/* ios-repo/Script_X
+        rm -rf yzc_Tmp   
+
+        
     - name: Add and Commits
       run: |
         cd ios-repo
