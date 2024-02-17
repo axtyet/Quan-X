@@ -1,5 +1,0 @@
-payload:
-# Gemini
-  - DOMAIN,generativelanguage.googleapis.com
-  - DOMAIN,gemini.google.com
-  - DOMAIN,bard.google.com

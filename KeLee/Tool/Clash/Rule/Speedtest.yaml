@@ -1,8 +1,0 @@
-payload:
-# 视频测试地址
-  - DOMAIN,videoqoe-akamai.stvidtest.net
-  - DOMAIN,videoqoe-fastly.stvidtest.net
-  - DOMAIN,videoqoe.stvidtest.net
-# 网速测试地址
-  - DOMAIN-KEYWORD,speed
-  - DOMAIN-KEYWORD,ookla
