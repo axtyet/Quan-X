@@ -160,6 +160,14 @@ jobs:
         cp -r sad_Tmp/* Quan-X-repo/Yu9191/-
         rm -rf sad_Tmp
 
+     # Fork RuCu6
+    - name: Fork RuCu6
+      run: |
+        mkdir -p Quan-X-repo/RuCu6
+        git clone -b main https://github.com/RuCu6/QuanX.git  qwe_Tmp
+        cp -r qwe_Tmp/* Quan-X-repo/RuCu6
+        rm -rf qwe_Tmp
+
 
 
       # 保存、推送   
