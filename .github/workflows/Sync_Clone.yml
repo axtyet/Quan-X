@@ -239,14 +239,14 @@ jobs:
     # Fork Guding88
     - name: Fork Guding88
       run: |
-        mkdir -p Quan-X-repo/Guding88/Script
+        mkdir -p Quan-X-repo/Bone/Script
         git clone https://github.com/Guding88/Script.git qas_Tmp
-        cp -r qas_Tmp/* Quan-X-repo/Guding88/Script
+        cp -r qas_Tmp/* Quan-X-repo/Bone/Script
         rm -rf qas_Tmp
      # 修改脚本链接
     - name: Edit Guding88
       run: |
-        cd Quan-X-repo/Guding88/Script
+        cd Quan-X-repo/Bone/Script
         for file in *.js; do
             if [ "$file" ] ; then
               # 修改脚本链接
@@ -256,7 +256,6 @@ jobs:
             fi
           done
         
-
 
 
       # 保存、推送   
