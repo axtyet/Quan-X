@@ -62,6 +62,27 @@ jobs:
               echo "$file not found."
             fi
           done
+          
+    - name: Fork Chxm1023/Rewrite
+      run: |
+        mkdir -p ios-repo
+        git clone -b main https://github.com/chxm1023/Advertising.git  cyz_Tmp
+        cp -r cyz_Tmp/* ios-repo/Advertising
+        rm -rf cyz_Tmp
+         # 修改脚本链接
+    - name: Edit Advertising
+      run: |
+        cd ios-repo/Advertising
+        for file in *.js; do
+            if [ "$file" ] ; then
+              # 修改脚本链接
+              sed -i 's/raw\.githubusercontent\.com\/chxm1023\/Advertising\/main/raw.githubusercontent\.com\/axtyet\/ios\/main\/Advertising/g' "$file"
+            else
+              echo "$file not found."
+            fi
+          done
+
+          
     - name: Add and Commits
       run: |
         cd ios-repo
