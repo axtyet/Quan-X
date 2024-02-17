@@ -100,7 +100,7 @@ jobs:
         # 修改脚本链接
     - name: Edit Yu9191/Rewrite
       run: |
-        cd Quan-X-repo/QuantumultX/Yu9191/Rewrite
+        cd Quan-X-repo/Yu9191/Rewrite
         for file in *.js; do
             if [ "$file" ] ; then
               # 修改脚本链接
@@ -112,7 +112,7 @@ jobs:
       # 修改脚本链接
     - name: Edit Yu9191/Rewrite/itunes
       run: |
-        cd Quan-X-repo/QuantumultX/Yu9191/Rewrite/itunes
+        cd Quan-X-repo/Yu9191/Rewrite/itunes
         for file in *.js; do
             if [ "$file" ] ; then
               # 修改脚本链接
