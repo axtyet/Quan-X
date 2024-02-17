@@ -89,7 +89,80 @@ jobs:
         cp -r yzc_Tmp/* Quan-X-repo/chxm1023/Script_X
         rm -rf yzc_Tmp   
 
+
+        # Fork Yu9191
+    - name: Fork Yu9191/Rewrite
+      run: |
+        mkdir -p Quan-X-repo/Yu9191
+        git clone -b main https://github.com/Yu9191/Rewrite.git  asd_Tmp
+        cp -r asd_Tmp/* Quan-X-repo/Yu9191/Rewrite
+        rm -rf asd_Tmp
+        # 修改脚本链接
+    - name: Edit Yu9191/Rewrite
+      run: |
+        cd Quan-X-repo/QuantumultX/Yu9191/Rewrite
+        for file in *.js; do
+            if [ "$file" ] ; then
+              # 修改脚本链接
+              sed -i 's/raw\.githubusercontent\.com\/Yu9191\/Rewrite\/main/raw.githubusercontent\.com\/axtyet\/Quan-X\/main\/Yu9191\/Rewrite/g' "$file"
+            else
+              echo "$file not found."
+            fi
+          done
+      # 修改脚本链接
+    - name: Edit Yu9191/Rewrite/itunes
+      run: |
+        cd Quan-X-repo/QuantumultX/Yu9191/Rewrite/itunes
+        for file in *.js; do
+            if [ "$file" ] ; then
+              # 修改脚本链接
+              sed -i 's/raw\.githubusercontent\.com\/Yu9191\/Rewrite\/main\/itunes/raw.githubusercontent\.com\/axtyet\/Quan-X\/main\/Yu9191\/Rewrite\/itunes/g' "$file"
+            else
+              echo "$file not found."
+            fi
+          done
+
+    - name: Fork Yu9191/Script
+      run: |
+        mkdir -p Quan-X-repo/Yu9191
+        git clone -b main https://github.com/Yu9191/Script.git  das_Tmp
+        cp -r das_Tmp/* Quan-X-repo/Yu9191/Script
+        rm -rf das_Tmp
+        # 修改脚本链接
+    - name: Edit Yu9191/Script
+      run: |
+        cd Quan-X-repo/QuantumultX/Yu9191/Script
+        for file in *.sgmodule; do
+            if [ "$file" ] ; then
+              # 修改脚本链接
+              sed -i 's/raw\.githubusercontent\.com\/Yu9191\/Script\/main/raw.githubusercontent\.com\/axtyet\/Quan-X\/main\/Yu9191\/Script/g' "$file"
+            else
+              echo "$file not found."
+            fi
+          done
+     # 修改脚本链接
+    - name: Edit Yu9191/Script
+      run: |
+        cd Quan-X-repo/QuantumultX/Yu9191/Script
+        for file in *.js; do
+            if [ "$file" ] ; then
+              # 修改脚本链接
+              sed -i 's/raw\.githubusercontent\.com\/Yu9191\/Script\/main/raw.githubusercontent\.com\/axtyet\/Quan-X\/main\/Yu9191\/Script/g' "$file"
+            else
+              echo "$file not found."
+            fi
+          done
         
+    - name: Fork Yu9191/-
+      run: |
+        mkdir -p Quan-X-repo/Yu9191
+        git clone -b main https://github.com/Yu9191/Script.git  sad_Tmp
+        cp -r sad_Tmp/* Quan-X-repo/Yu9191/-
+        rm -rf sad_Tmp
+
+
+
+      # 保存、推送   
     - name: Add and Commits
       run: |
         cd Quan-X-repo
