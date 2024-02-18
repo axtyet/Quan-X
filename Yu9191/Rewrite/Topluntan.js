@@ -13,44 +13,34 @@ https://super.toppps.com/app-api/v1/toppps/(live/getLiveSpaceDetailsV2|products)
 hostname = super.toppps.com
 */
 
-var body = $response.body;
-var url = $request.url;
+const response_body = $response.body;
+const url = $request.url;
 
-if (url.indexOf("https://super.toppps.com/app-api/v1/toppps/live/getLiveSpaceDetailsV2") !== -1) {
+let body = response_body;
+
+if (url.includes("https://super.toppps.com/app-api/v1/toppps/live/getLiveSpaceDetailsV2")) {
     // 空中课堂定制课程
     body = body.replace(/"tryRights":\s*false/g, '"tryRights": true')
                .replace(/"leftTryTime":\s*\d+/g, '"leftTryTime": 9000000')
                .replace(/"pdfRights":\s*false/g, '"pdfRights": true');
 
-    var pdfUrlMatch = body.match(/"pdfList":\s*\["([^"]+)"/);
+    const pdfUrlMatch = body.match(/"pdfList":\s*\["([^"]+)"/);
     if (pdfUrlMatch && pdfUrlMatch.length > 1) {
-        var pdfListEncoded = pdfUrlMatch[1];
-        var pdfListDecoded = decodeURIComponent(pdfListEncoded);
+        const pdfListEncoded = pdfUrlMatch[1];
+        const pdfListDecoded = decodeURIComponent(pdfListEncoded);
         
-        // 检查是否为 Quantumult X 环境
-        if ('undefined' !== typeof $task) {
-            // 在 Quantumult X 环境下使用 $notify() 函数进行通知
-            $notify("PDF 下载链接", "", pdfListDecoded);
-        } else {
-            // 在 Surge 环境下使用 $notification.post() 函数进行通知
-            $notification.post("PDF 下载链接", "", pdfListDecoded);
-        }
+        // 发送通知
+        notifyPDFLink(pdfListDecoded);
     }
-} else if (url.indexOf("https://super.toppps.com/app-api/v1/toppps/products") !== -1) {
+} else if (url.includes("https://super.toppps.com/app-api/v1/toppps/products")) {
     // 空中课堂普通课程
-    var pdfUrlMatch = body.match(/"pdfUrl":\s*"([^"]+)"/);
+    const pdfUrlMatch = body.match(/"pdfUrl":\s*"([^"]+)"/);
     if (pdfUrlMatch && pdfUrlMatch.length > 1) {
-        var pdfUrlEncoded = pdfUrlMatch[1];
-        var pdfUrlDecoded = decodeURIComponent(pdfUrlEncoded);
+        const pdfUrlEncoded = pdfUrlMatch[1];
+        const pdfUrlDecoded = decodeURIComponent(pdfUrlEncoded);
         
-        // 检查是否为 Quantumult X 环境
-        if ('undefined' !== typeof $task) {
-            // 在 Quantumult X 环境下使用 $notify() 函数进行通知
-            $notify("PDF 下载链接", "", pdfUrlDecoded);
-        } else {
-            // 在 Surge 环境下使用 $notification.post() 函数进行通知
-            $notification.post("PDF 下载链接", "", pdfUrlDecoded);
-        }
+        // 发送通知
+        notifyPDFLink(pdfUrlDecoded);
     }
 
     body = body.replace(/"pdfFree":\s*\d+/g, '"pdfFree": 1')
@@ -61,4 +51,15 @@ if (url.indexOf("https://super.toppps.com/app-api/v1/toppps/live/getLiveSpaceDet
 }
 
 $done({ body });
+
+function notifyPDFLink(link) {
+    if ('undefined' !== typeof $task) {
+        // 在 Quantumult X 环境下使用 $notify() 函数进行通知
+        $notify("PDF 下载链接", "", link);
+    } else {
+        // 在 Surge 环境下使用 $notification.post() 函数进行通知
+        $notification.post("PDF 下载链接", "", link);
+    }
+}
+
 
