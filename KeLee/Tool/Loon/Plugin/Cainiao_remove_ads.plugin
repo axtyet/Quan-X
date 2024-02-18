@@ -1,10 +1,10 @@
 #!name = 菜鸟去广告
 #!desc = 过滤菜鸟广告
 #!openUrl = 
-#!author = keywos RuCu6
+#!author = RuCu6
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Cainiao.png
-#!date = 2023-11-19 09:35:36
+#!date = 2024-02-18 15:50:34
 
 [Rule]
 DOMAIN, adsmind.ugdtimg.com, REJECT
@@ -25,7 +25,7 @@ DOMAIN, ykad-data.youku.com, REJECT
 # 首页 - 好物推荐、商品推广、底部标签页、快递详情页、问卷调查、主页图标
 ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.adkeyword\.get\.cn reject-dict
 ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.cncommunity\.my\.station\.query\.cn reject-dict
-^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.(batch\.show\.v2|index)\.cn reject-dict
+^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.(batch\.show\.v2|expose\.mreply|index)\.cn reject-dict
 ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbopen\.miniapp\.recommend\.cpc\.cn reject-dict
 ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbmensa\.research\.researchservice\.(acquire|event|close)\.cn reject-dict
 ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.(homepage\.merge|tabbar\.marketing)\.get\.cn reject-dict
