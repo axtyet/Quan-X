@@ -101,6 +101,8 @@ if (typeof $response == "undefined") {
     'HabitKit':{ name: 'Pro', id: 'habitkit_1799_lt'},
     'windiary':{ name: 'Pro', id: 'windiary_1799_lt'},
     'Liftbear':{ name: 'Pro', id: 'liftbear_2399_1y'},
+    'Currency':{ name: 'plus', id: 'com.jeffreygrossman.currencyapp.iap.pro.crossgrade'},
+    
     
     
     };
