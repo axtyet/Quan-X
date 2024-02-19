@@ -1,0 +1,8 @@
+#!name=4gexj
+#!desc=4gexj
+
+[Script]
+4gexj = type=http-response, pattern=^https?:\/\/(purchase-.*-api|user-kaji-api)\.(yiruikecorp|b612kaji|tianyancam)\.com\/v\d\/purchase\/subscription\/subscriber\/status, script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/4gexj.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% purchase-*-api.*.com, user-kaji-api.b612kaji.com
