@@ -1,10 +1,10 @@
 /*
 引用地址https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/12306.js
 */
-// 2024-02-18 23:25:38
+// 2023-02-22 18:20
 
 let body;
-let obj = JSON.parse($response.body);
+let obj = JSON.parse($request.body);
 
 if (obj.placementNo === "0007") {
   body =
