@@ -7,7 +7,7 @@
 #!date = 2024-01-14 14:39:20
 
 [Rule]
-# 小程序通用规则
+# 微信小程序通用规则
 DOMAIN, wxsnsdy.wxs.qq.com, REJECT
 DOMAIN, wxsmsdy.video.qq.com, REJECT
 DOMAIN, wxsnsdythumb.wxs.qq.com, REJECT
@@ -19,6 +19,10 @@ DOMAIN, ads-shopping.shouqianba.com, REJECT
 DOMAIN, ad.maoyan.com, REJECT
 
 [Rewrite]
+# 企麦点餐系统
+^https:\/\/webapi\.qmai\.cn\/web\/catering\/advertising\/ reject-dict
+^https:\/\/webapi\.qmai.cn\/web\/cmk-center\/marketing\/canvas\/advert-reach$ reject
+
 # 交通银行小程序开屏广告 @张军
 ^https:\/\/creditcardapp\.bankcomm\.com\/cnsvPmpaMdbcardWeb\/page\/getGuidePageAds reject
 
@@ -75,8 +79,6 @@ DOMAIN, ad.maoyan.com, REJECT
 ^https:\/\/ads\.ishansong\.com\/advert reject-dict
 
 #霸王茶姬 @ArthasYZ
-^https:\/\/webapi\.qmai.cn\/web\/catering\/advertising reject
-^https:\/\/webapi\.qmai.cn\/web\/cmk-center\/marketing\/canvas\/advert-reach$ reject
 
 #EMS @ArthasYZ
 ^https:\/\/ump\.ems\.com\.cn\/mailAd$ reject
@@ -215,7 +217,6 @@ DOMAIN, ad.maoyan.com, REJECT
 ^https:\/\/api\.prod\.dj\.mstand\.cn\/scrm\/app\/mdm\/index\/listAdv\?types reject-dict
 
 #挪瓦咖啡 webapi.qmai.cn, images.qmai.cn
-^https:\/\/webapi\.qmai\.cn\/web\/catering\/advertising\/ad reject-dict
 ^https:\/\/images\.qmai\.cn\/s214925\/2023 reject-dict
 
 #首汽约车 gw-passenger-wap.01zhuanche.com
