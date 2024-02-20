@@ -1,0 +1,12 @@
+#!name=saomiaobao
+#!desc=saomiaobao
+
+[Script]
+#资料
+saomiaobao = type=http-response, pattern=https://app.yinxiang.com/third/profile/public/restful/public-user-profile?, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/saomiaobao.js, requires-body=true, max-size=-1, timeout=60
+
+#会员
+saomiaobao2 = type=http-response, pattern=https://app.yinxiang.com/third/scanner/scanner/app/userInfo/get, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/saomiaobao2.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% app.yinxiang.com
