@@ -255,6 +255,14 @@ jobs:
               echo "$file not found."
             fi
           done
+          
+    # Fork fmz200
+    - name: Fork fmz200
+      run: |
+        mkdir -p Quan-X-repo/wool_scripts
+        git clone https://github.com/fmz200/wool_scripts.git asf_Tmp
+        cp -r asf_Tmp/* Quan-X-repo/wool_scripts
+        rm -rf asf_Tmp
         
 
 
