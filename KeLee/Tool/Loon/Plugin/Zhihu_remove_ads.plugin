@@ -4,7 +4,7 @@
 #!author = RuCu6 blackmatrix7
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Zhihu.png
-#!date = 2024-01-24 13:20:06
+#!date = 2024-02-19 20:05:06
 
 [Rule]
 # 知乎
@@ -24,6 +24,9 @@ IP-CIDR6, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT
 ^https:\/\/api\.zhihu\.com\/content-distribution-core\/bubble\/common\/settings reject-dict
 ^https:\/\/api\.zhihu\.com\/(moments\/lastread|drama\/hot-drama-list) reject-dict
 ^https:\/\/api\.zhihu\.com\/root\/window reject-dict
+
+# 会员页面 - 弹窗、悬浮动图
+^https:\/\/api\.zhihu\.com\/(bazaar\/float_window|market\/popovers_v2) reject-dict
 
 # 我的页面 - 项目列表、会员卡片
 ^https:\/\/api\.zhihu\.com\/me\/guides reject-dict
@@ -72,4 +75,4 @@ http-response ^https:\/\/appcloud2\.zhihu\.com\/v3\/config script-path = https:/
 http-response ^https:\/\/m-cloud\.zhihu\.com\/api\/cloud\/config\/all\? script-path = https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script/Zhihu/Zhihu_remove_ads.js, requires-body = true, tag = 拦截服务器推送配置
 
 [Mitm]
-hostname = *.zhihu.com
+hostname = api.zhihu.com, www.zhihu.com, appcloud2.zhihu.com, link.zhihu.com, zhuanlan.zhihu.com, m-cloud.zhihu.com

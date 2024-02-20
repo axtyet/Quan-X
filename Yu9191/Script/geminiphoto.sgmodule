@@ -1,0 +1,8 @@
+#!name=Gemini
+#!desc=Gemini
+
+[Script]
+Gemini = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Gemini.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% buy.itunes.apple.com
