@@ -1,0 +1,8 @@
+#!name=YLKS
+#!desc=YLKS
+
+[Script]
+YLKS = type=http-response, pattern=^http[s]?:\/\/bookapi.ellabook.cn\/rest\/api\/service, script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/YLKS.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% bookapi.ellabook.cn
