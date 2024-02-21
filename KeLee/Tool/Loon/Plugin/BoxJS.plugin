@@ -4,7 +4,7 @@
 #!author = chavyleung
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/Other_icon/120px/BoxJS.png
-#!date = 2024-01-25 00:30:03
+#!date = 2024-02-21 19:15:44
 
 # [General]
 # force-http-engine-hosts = boxjs.com:80, boxjs.net:80
