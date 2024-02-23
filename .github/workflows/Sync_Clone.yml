@@ -352,6 +352,14 @@ jobs:
         cp -r sty_Tmp/* Quan-X-repo/VirgilClyne
         rm -rf sty_Tmp
 
+    # Fork KOP-XIAO
+    - name: Fork KOP-XIAO
+      run: |
+        mkdir -p Quan-X-repo/KOP-XIAO
+        git clone -b master https://github.com/KOP-XIAO/QuantumultX.git ewr_Tmp
+        cp -r ewr_Tmp/* Quan-X-repo/KOP-XIAO
+        rm -rf ewr_Tmp
+
 
       # 保存、推送   
     - name: Add and Commits
