@@ -360,6 +360,42 @@ jobs:
         cp -r ewr_Tmp/* Quan-X-repo/KOP-XIAO
         rm -rf ewr_Tmp
 
+    # Fork chavyleung
+    - name: Fork chavyleung
+      run: |
+        mkdir -p Quan-X-repo/chavyleung
+        git clone -b master https://github.com/chavyleung/scripts.git sdt_Tmp
+        cp -r sdt_Tmp/* Quan-X-repo/chavyleung
+        rm -rf sdt_Tmp
+
+     # Fork Fokit
+    - name: Fork Fokit
+      run: |
+        mkdir -p Quan-X-repo/Fokit
+        git clone -b main https://github.com/chavyleung/scripts.git hyu_Tmp
+        cp -r hyu_Tmp/* Quan-X-repo/Fokit
+        rm -rf hyu_Tmp
+     # 修改脚本链接
+    - name: Edit http
+      run: |
+        cd Quan-X-repo/Fokit/scripts
+        for file in *.js; do
+            if [ "$file" ] ; then
+              # 修改脚本链接
+              sed -i 's/raw\.githubusercontent\.com\/FoKit\/Scripts\/main\/scripts/raw.githubusercontent\.com\/axtyet\/Quan-X\/main\/FoKit\/scripts/g' "$file"
+            else
+              echo "$file not found."
+            fi
+          done
+
+     # Fork evilbutcher
+    - name: Fork evilbutcher
+      run: |
+        mkdir -p Quan-X-repo/evilbutcher
+        git clone -b main https://github.com/evilbutcher/QuantumultX.git dfr_Tmp
+        cp -r dfr_Tmp/* Quan-X-repo/evilbutcher
+        rm -rf dfr_Tmp
+
 
       # 保存、推送   
     - name: Add and Commits
