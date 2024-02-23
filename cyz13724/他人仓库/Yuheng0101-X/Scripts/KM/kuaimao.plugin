@@ -1,0 +1,22 @@
+#!name=快猫视频
+#!desc=免登录解锁所有视频
+#!openUrl = https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/KM
+#!author = 𝒀𝒖𝒉𝒆𝒏𝒈
+#!date = 2023-12-01
+
+[MITM]
+
+hostname = kmppi.zhihuibafang.xyz
+
+[URL Rewrite]
+
+# 去广告
+^https?:\/\/(kmppi.zhihuibafang.xyz)\/common\/get(Ad|Banner)List - reject-200
+
+[Script]
+
+# 免登录
+http-request ^https?:\/\/(kmppi.zhihuibafang.xyz)\/video\/(getUrl|getInfo) script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/KM/auto-login.js, timeout=60, tag=km-KMAUTOLOGIN
+
+# 解锁视频
+http-response ^https?:\/\/(kmppi.zhihuibafang.xyz)\/(video\/getInfo|common\/getNewAnnou|user\/getDetail) script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/KM/crack.js, requires-body=true, timeout=60, tag=KMCRACK

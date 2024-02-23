@@ -1,0 +1,233 @@
+{
+  "id": "ChinaUnicom.app.sub",
+  "name": "ChinaUnicom 的应用订阅",
+  "author": "ChinaUnicomDev",
+  "icon": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/10010.png",
+  "repo": "https://github.com/ChinaTelecomOperators",
+  "apps": [
+    {
+      "id": "ChinaUnicom.10010v4",
+      "name": "联通余量(v4)",
+      "descs_html": [
+        "<a href=\"https://github.com/ChinaTelecomOperators/ChinaUnicom\">查看文档</a>",
+        "<a onClick=\"window.location.reload(true);\"><b style='color: yellow'>点此刷新</b></a>",
+        "<h4 style='color: red'>因为数据会覆盖 请务必先刷新 再修改 再保存</h4>",
+        "<b style='color: green'>登录方式一</b>",
+        "1. 填写手机号, 保存, 执行发送验证码",
+        "2. 填写验证码, 保存, 执行用验证码登录",
+        "3. 先刷新, 再设置密码, 保存. 以后即可自动登录",
+        "<b style='color: green'>登录方式二(⚠️ 此方式可能被联通风控)</b>",
+        "仅填写手机号, 服务密码, appId. 保存. 以后即可自动登录",
+        "<br/>",
+        "<b style='color: red'>完成登录操作后</b>",
+        "<p>刷新 手动执行一次 这样会立即更新包数据 但是不会发送通知</p>",
+        "<p>再刷新 此时应该能看到有包数据了</p>",
+        "<p>下次执行时会有通知</p>",
+        "<b style='color: green'>额外的配置:</b>",
+        "<b style='color: red'>在完成登录并执行成功一次后 刷新</b>",
+        "1. <a href=\"https://10010v4.zhetengsha.eu.org\">然后点此打开外部配置页</a>",
+        "2. 完成配置后 保存",
+        "3. 返回此处 刷新",
+        "4. 手动执行 查看结果"
+      ],
+      "keys": [
+        "@ChinaUnicom.10010v4.debug",
+        "@ChinaUnicom.10010v4.mobile",
+        "@ChinaUnicom.10010v4.password",
+        "@ChinaUnicom.10010v4.appId",
+        "@ChinaUnicom.10010v4.cookie",
+        "@ChinaUnicom.10010v4.token_online",
+        "@ChinaUnicom.10010v4.min_usage",
+        "@ChinaUnicom.10010v4.normal_limited_only",
+        "@ChinaUnicom.10010v4.script_only",
+        "@ChinaUnicom.10010v4.new_pkg_notify_disabled",
+        "@ChinaUnicom.10010v4.title",
+        "@ChinaUnicom.10010v4.subt",
+        "@ChinaUnicom.10010v4.desc",
+        "@ChinaUnicom.10010v4.bark",
+        "@ChinaUnicom.10010v4.pkgs",
+        "@ChinaUnicom.10010v4.last",
+        "@ChinaUnicom.10010v4.today",
+        "@ChinaUnicom.10010v4.config",
+        "@ChinaUnicom.10010v4.vars"
+      ],
+      "author": "ChinaUnicomDev",
+      "repo": "https://github.com/ChinaTelecomOperators/ChinaUnicom",
+      "scripts": [
+        {
+          "name": "发送验证码（填手机号, 保存, 执行）",
+          "script": "https://github.com/ChinaTelecomOperators/ChinaUnicom/releases/download/Prerelease-Alpha/10010_send_sms.js"
+        },
+        {
+          "name": "用验证码登录（填手机号, 验证码, 保存, 执行 ⚠️ 执行后 记得刷新）",
+          "script": "https://github.com/ChinaTelecomOperators/ChinaUnicom/releases/download/Prerelease-Alpha/10010_sms_sign.js"
+        },
+        {
+          "name": "手动执行查询（⚠️ 执行后 记得刷新）",
+          "script": "https://github.com/ChinaTelecomOperators/ChinaUnicom/releases/download/Prerelease-Alpha/10010.js"
+        },
+        {
+          "name": "(方式2)发送验证码（填手机号, 保存, 执行）",
+          "script": "https://github.com/ChinaTelecomOperators/ChinaUnicom/releases/download/Prerelease-Alpha/10010_send_sms2.js"
+        },
+        {
+          "name": "(方式2)用验证码登录（填手机号, 验证码, 保存, 执行 ⚠️ 执行后 记得刷新）",
+          "script": "https://github.com/ChinaTelecomOperators/ChinaUnicom/releases/download/Prerelease-Alpha/10010_sms_sign2.js"
+        }
+      ],
+      "settings": [
+        {
+          "id": "@ChinaUnicom.10010v4.debug",
+          "name": "调试模式",
+          "val": false,
+          "type": "boolean",
+          "persistentHint": true,
+          "desc": "默认不开启调试. 开启后将推送各种调试信息"
+        },
+        {
+          "id": "@ChinaUnicom.10010v4.mobile",
+          "name": "手机号",
+          "val": "",
+          "type": "text",
+          "persistentHint": true,
+          "desc": "联通客户端登录手机号"
+        },
+        {
+          "id": "@ChinaUnicom.10010v4.code",
+          "name": "验证码(执行验证码登录才需要填)",
+          "placeholder": "",
+          "val": "",
+          "type": "text",
+          "persistentHint": true,
+          "desc": "登录短信验证码"
+        },
+        {
+          "id": "@ChinaUnicom.10010v4.password",
+          "name": "服务密码",
+          "val": "",
+          "type": "text",
+          "persistentHint": true,
+          "desc": "联通客户端登录的服务密码"
+        },
+        {
+          "id": "@ChinaUnicom.10010v4.appId",
+          "name": "appId",
+          "val": "",
+          "type": "text",
+          "persistentHint": true,
+          "desc": "联通客户端 appId"
+        },
+        {
+          "id": "@ChinaUnicom.10010v4.cookie",
+          "name": "Cookie",
+          "val": "",
+          "type": "text"
+        },
+        {
+          "id": "@ChinaUnicom.10010v4.token_online",
+          "name": "tokenOnline",
+          "val": "",
+          "type": "text"
+        },
+        {
+          "id": "@ChinaUnicom.10010v4.min_usage",
+          "name": "最小用量通知阈值(单位 M) ",
+          "val": 0,
+          "type": "number",
+          "persistentHint": true,
+          "desc": "通知模板内的任一一项用量 >= 该数值时 才会通知. 例 [通用有限.用量] 表示这段时间内 有限的通用包的差额. 如果你要无变化时不通知, 这里可以设为 0.01"
+        },
+        {
+          "id": "@ChinaUnicom.10010v4.normal_limited_only",
+          "name": "仅在 [通用有限.用量] >= 最小用量通知阈值 时, 进行通知",
+          "val": false,
+          "type": "boolean",
+          "persistentHint": true,
+          "desc": "默认关闭. 开启后, 仅在 [通用有限.用量] >= 最小用量通知阈值 时, 才会通知"
+        },
+        {
+          "id": "@ChinaUnicom.10010v4.script_only",
+          "name": "仅在常规执行时更新上次数据",
+          "val": false,
+          "type": "boolean",
+          "persistentHint": true,
+          "desc": "默认关闭. 开启后, 面板/请求等情况触发时, 不会更新上次数据, 从而不影响常规执行时的时长用量数据"
+        },
+        {
+          "id": "@ChinaUnicom.10010v4.new_pkg_notify_disabled",
+          "name": "关闭新增包通知",
+          "val": false,
+          "type": "boolean",
+          "persistentHint": true,
+          "desc": "默认检测到新包时会发送通知"
+        },
+        {
+          "id": "@ChinaUnicom.10010v4.title",
+          "name": "通知标题模板",
+          "val": "",
+          "type": "textarea",
+          "persistentHint": true,
+          "desc": "默认: [套餐], 例: 流邦卡19元套餐. 变量看文档"
+        },
+        {
+          "id": "@ChinaUnicom.10010v4.subt",
+          "name": "通知副标题模板",
+          "val": "",
+          "type": "textarea",
+          "persistentHint": true,
+          "desc": "默认: [时长] 跳 [所有通用.用量] 免 [所有免流.用量], 例: 18分钟 跳 10M 免 10M. 变量看文档"
+        },
+        {
+          "id": "@ChinaUnicom.10010v4.desc",
+          "name": "通知正文模板",
+          "val": "",
+          "type": "textarea",
+          "persistentHint": true,
+          "desc": "默认: 通用剩 [通用有限.剩余] 免流剩 [免流有限.剩余], 例: 通用剩 5.03G 免流剩 26.35G. 若定向无限, 推荐使用: 剩 [通用有限.剩余] 今用 [所有通用.今日用量] 今免 [所有免流.今日用量] 变量看文档"
+        },
+        {
+          "id": "@ChinaUnicom.10010v4.bark",
+          "name": "使用 Bark 通知",
+          "val": "",
+          "type": "textarea",
+          "persistentHint": true,
+          "desc": "[推送标题]/[推送内容]会被自动替换 形如 https://api.day.app/XXXXXXXXX/[推送标题]/[推送内容]?group=10010&autoCopy=1&isArchive=1&icon=https%3A%2F%2Fraw.githubusercontent.com%2Fanker1209%2Ficon%2Fmain%2Fzglt.png&sound=shake&level=timeSensitive 具体看文档"
+        },
+        {
+          "id": "@ChinaUnicom.10010v4.pkgs",
+          "name": "包详情 JSON",
+          "val": "",
+          "type": "text"
+        },
+        {
+          "id": "@ChinaUnicom.10010v4.last",
+          "name": "上次数据 JSON",
+          "val": "",
+          "type": "text"
+        },
+        {
+          "id": "@ChinaUnicom.10010v4.today",
+          "name": "今日数据 JSON",
+          "val": "",
+          "type": "text"
+        },
+        {
+          "id": "@ChinaUnicom.10010v4.config",
+          "name": "设置",
+          "val": "",
+          "type": "text"
+        },
+        {
+          "id": "@ChinaUnicom.10010v4.vars",
+          "name": "变量",
+          "val": "",
+          "type": "text"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/10010.png",
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/10010.png"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+name: |-
+  PikPak
+desc: |-
+  先开脚本再打开软件，未成功尝试恢复购买，下载地址请访问script-path链接获取。you need to create an account first
+
+http:
+
+  mitm:
+    - "*.mypikpak.com"
+
+  script:  
+  - match: ^https:\/\/api-drive\.mypikpak\.com\/(vip\/v\d\/(vip\/info|allSubscriptionStatus)|drive\/v\d\/about\?space)
+    name: PikPak_19
+    type: response
+    require-body: true
+    max-size: -1
+    timeout: 60
+
+
+script-providers:
+  "PikPak_19":
+    url: https://raw.githubusercontent.com/axtyet/Quan-X/main/cyz13724/scripts/PikPakPremium.js
+    interval: 86400
+

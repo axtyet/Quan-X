@@ -1,0 +1,11 @@
+#!name = 熊掌记
+#!author = ios151
+#!homepage = https://github.com/Yu9191/Script
+#!url= https://raw.githubusercontent.com/Yu9191/Script/main/xzj.sgmodule
+
+[Script]
+pintujiang = type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/xiongzhangji.js
+
+
+[MITM]
+hostname = %APPEND% buy.itunes.apple.com

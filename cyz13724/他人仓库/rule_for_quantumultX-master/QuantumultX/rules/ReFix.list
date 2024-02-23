@@ -1,0 +1,239 @@
+# 有兔阅读
+host,app.zhoudamozi.com,direct
+host-suffix,youzibank.com,direct
+host-suffix,mituyuedu.com,direct
+host,img.allahall.com,direct
+host,img.dailmo.com,direct
+host,activation.crossutility.com,direct
+# aaex加速器
+host-suffix,aaex.hk,Outside
+# 村花
+host-suffix,cunhua.mom,Outside
+host-keyword,cunhua,Outside
+#
+host-suffix,cc.m.jd.com,direct
+#inoreader
+host,download.maxmind.com,direct
+host,app-measurement.com,direct
+#笔趣阁
+host-suffix,biqugeu.com,direct
+host-suffix,biquge.com,direct
+#
+host-suffix,laiyifa.org,direct
+#小绿人
+host-suffix,greenmangaming.com,direct
+#
+host,zqzess.qicp.vip,direct
+# subhd字幕
+host-suffix,subhd.tv,direct
+host,img.subhd.la,direct
+# 衫果
+host,www.sonkwo.hk,direct
+host,static.sonkwo.hk,direct
+host-suffix,sonkwo.hk,direct
+# 书旗广告域名,这广告实在太多了，可能误杀，不认识的全禁止了
+#已知
+host-suffix,pangolin-sdk-toutiao.com,reject
+#未知
+host-suffix,xwuad.com,reject
+#未知
+host-suffix,tobapplog.ctobsnssdk.com,reject
+#已知
+host-suffix,pangolin-sdk-toutiao.com,reject
+#未知
+host-suffix,render.shuqireader.com,reject
+#未知
+host-suffix,ali-stats.jpush.cn,reject
+#已知
+host-suffix,toblog.ctobsnssdk.com,reject
+#未知
+host-suffix,sdk.kaijia.com,reject
+#未知
+host-suffix,tobapplog.ctobsnssdk.com,reject
+#已知
+host-suffix,amdc.m.taobao.com,reject
+#未知
+host-suffix,iyes.youku.com,reject
+#未知
+host-suffix,sq.sljkj.com,reject
+#未知
+host-suffix,s2s.adjust.com,reject
+# 百度移动广告联盟，可能误杀
+host-suffix,mobads.baidu.com,reject
+# 腾讯广告联盟，可能误杀
+host-suffix,mi.gdt.qq.com,reject
+# 未知
+host-suffix,jcollection.shuqireader.com,reject
+# 未知
+host-suffix,stats.jpush.cn,reject
+# 未知
+host-suffix,sdk.kaijiawan.com,reject
+
+# 易有云
+host-suffix,ddns.to,direct
+host-suffix,ddnsto.com,direct
+
+# 番茄小说
+host, p6-ad-sign.byteimg.com, reject
+host, p9-ad-sign.byteimg.com, reject
+host, i.snssdk.com, reject
+host, i-lq.snssdk.com, reject
+host, dig.bdurl.net, reject
+host-suffix, zijieapi.com, reject
+host, activity-ag.awemeughun.com, reject
+host, mcs.snssdk.com, reject
+host, tnc3-alisc1.snssdk.com, reject
+host, security-lq.snssdk.com, reject
+host, tnc3-aliec2.snssdk.com, reject
+host, is.snssdk.com, reject
+host, msync-im1-vip6-std.easemob.com, reject
+host, apd-pcdnwxlogin.teg.tencent-cloud.net, reject
+host, api.iegadp.qq.com, reject
+host, sf3-ttcdn-tos.pstatp.com, reject
+host-suffix, pglstatp-toutiao.com, reject
+host, *default.ixigua.com, reject
+host, v6-novelapp.ixigua.com, reject
+host, *novelapp.ixigua.com, reject
+host-suffix, byteorge.com, reject
+host-suffix, bytegoofy.com, reject
+host-suffix, bytedance.com, reject
+ip-cidr, 49.71.37.101/32, reject
+ip-cidr, 117.71.105.23/32, reject
+ip-cidr, 218.94.207.205/32, reject
+ip-cidr, 117.92.229.188/32, reject
+ip-cidr, 101.36.166.16/32, reject
+ip-cidr, 180.96.2.114/32, reject
+# 番茄小说福利页
+host, lf-sourcecdn-tos.bytegecko.com, direct
+
+
+# clubhouse
+ip-cidr,164.52.102.0/24,direct
+
+# 微信小程序
+host,minorshort.weixin.qq.com, direct
+
+# 雀魂麻将
+host,www.maj-soul.com, direct
+host-keyword,maj-soul, direct
+
+# 抖音
+host-suffix,amemv.com,direct
+
+#qq群公告小程序
+host,cdn.ark.qq.com,direct
+
+#qq空间广告屏蔽
+host,d3g.qq.com,reject
+host,bsrv.qq.com,reject
+host,sq.bls.mdt.qq.com,reject
+#host,btrace.qq.com,reject
+host,adsmind.gdtimg.com,reject
+host,xj-landing.gdtimg.com,reject
+
+#修复上游错误
+host, update.pan.baidu.com, direct
+#腾讯视频广告
+host-suffix, tetrack.qq.com, reject
+host-suffix, tpns.tencent.com, reject
+host-suffix, api.poll.video.qq.com, reject
+host-suffix, static-res.qq.com, reject
+host-suffix, stat.tpns.tencent.com, reject
+host, h.trace.qq.com, reject
+host, h.trace.qq.com, reject
+#爱奇艺广告
+host, cr-status.iqiyi.com, reject
+host-suffix, cupid.iqiyi.com, reject
+host, f74f7f7765f8a2f6.ngaa.net.cn, reject
+host, ef-dongfeng.tanx.com, reject
+host, iqiyim.adtrack.enlightent.cn, reject
+#
+host, tu.511.la, direct
+host, 6678888.xyz, direct
+
+#bilibili港澳台自动切换脚本
+ip-cidr, 203.107.1.1/24, reject
+
+#网易云登陆验证
+host, id6.me, direct
+host, o2o-ad-dev.oss-cn-shanghai.aliyuncs.com, reject
+host-suffix, ndsopaapl.nudatasecurity.com, direct
+
+#百度输入法
+host-keyword,jomodns,reject
+host,res.mi.baidu.com,reject
+host,r6.mo.baidu.com,reject
+
+# QQ音乐去广告
+host,adstats.tencentmusic.com,reject
+host,ad.tencentmusic.com,reject
+host,adcdn.tencentmusic.com,reject
+host,adexpo.tencentmusic.com,reject
+host,adclick.tencentmusic.com,reject
+host,us.l.qq.com,reject
+
+#tieba
+host,aod-image.baidu.com,reject
+host,js-ad.a.yximgs.com,reject
+host,mobads-pre-config.cdn.bcebos.com,reject
+host,nadvideo2.baidu.com,reject
+
+#YouTube 去底部广告
+host-suffix, ehg-youtube.hitbox.com, reject
+
+#Qcrane牛奶批发商（机场）
+host-suffix,bgpnode.com,direct
+
+host-suffix,ossez.com,direct
+
+#高德地图
+host,optimus-ads.amap.com,reject
+
+#索尼headphones
+host-suffix,sony.com,direct
+host-suffix,janraincapture.com,direct
+host-suffix,ndmdhs.com,direct
+#育碧
+host-suffix,ubi.com,direct
+host,ubistatic2-a.akamaihd.net,direct
+#surge
+host-suffix,nssurge.com,Outside
+#米读
+host,bid.adview.cn,reject
+host-suffix,afdback.ppsimg.com,reject
+host-suffix,fanqianxs.com,direct
+#
+host-suffix,whitemoon.top,direct
+IP-CIDR,10.0.0.12/32,direct
+host-suffix,push.apple.com,direct
+host-suffix,jddebug.com,reject
+#ios黑科技
+host-suffix,ivapp.cn,Outside
+
+##backiee广告屏蔽
+host-suffix,stats.g.doubleclick.net,reject
+host-suffix,pagead2.googlesyndication.com,reject
+host-suffix,googleads.g.doubleclick.net,reject
+host-suffix,app-measurement.com,reject
+host-suffix,ade.googlesyndication.com,reject
+host-suffix,googleads4.g.doubleclick.net,reject
+
+# 知乎去广告，以下规则请放置在filter_local最顶部
+IP-CIDR,118.89.204.198/32,reject
+IP6-CIDR,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,reject
+host,118.89.204.198,reject
+# 知乎去广告，以下规则的位置越前方越好
+host,appcloud2.in.zhihu.com,reject
+host,mqtt.zhihu.com,reject
+host,sugar.zhihu.com,reject
+USER-AGENT,AVOS*,reject
+#
+host,adjd.scdsvdsczx.cn,reject
+host,rr3---sn-ni57rn7d.gvt1.com,reject
+host,pagead2.googleadservices.com,reject
+
+#pikpak网盘
+host,access.mypikpak.com,Outside
+
+#scriptable
+host,gallery.scriptable.app,Outside

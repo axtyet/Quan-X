@@ -1,0 +1,10 @@
+#!name=熊掌记
+#!desc=熊掌记
+
+[Script]
+
+xiongzhangji = type=http-response,pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/xiongzhangji.js
+
+[MITM]
+
+hostname = %APPEND% buy.itunes.apple.com

@@ -1,0 +1,8 @@
+#!name=CAD快速看图
+#!desc=账号baby密码随意,下载地址 https://t.cn/A60VKj9S
+
+[Script]
+CAD快速看图 = type=http-response,pattern=^https?:\/\/cad\.glodon\.com\/(account|authorize\/query|alipay\/auth),script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/cad2.js,requires-body=1,max-size=0
+
+[MITM]
+hostname = %APPEND% cad.glodon.com

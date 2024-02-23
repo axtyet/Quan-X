@@ -1,0 +1,15 @@
+#!name = Vista
+#!author = ios151
+#!homepage = https://github.com/Yu9191/Script
+#!url= https://raw.githubusercontent.com/Yu9191/Script/main/Vista.sgmodule
+
+[Script]
+
+
+vista1 = type=http-response,pattern=^https://open3.vistastory.com/v3/api/poster/share_poster?,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Script/main/Vista.js
+vista2 = type=http-response,pattern=^https://open3.vistastory.com/v3/api/my/home/get_home_center?,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Script/main/Vistamy.js
+vista3 = type=http-response,pattern=^https://open3.vistastory.com/v3/api,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Script/main/Vistavip.js
+
+
+[MITM]
+hostname = %APPEND% open3.vistastory.com

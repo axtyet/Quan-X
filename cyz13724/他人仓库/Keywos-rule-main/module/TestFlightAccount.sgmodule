@@ -1,0 +1,18 @@
+#!name=TestFlight账户管理
+#!desc=自动存储/合并多个TestFlight账户列表, 并可导出/分享TestFlight APP.
+
+# @NobyDa 原作者  https://github.com/NobyDa/Script/tree/master/TestFlight
+# @key 改写：传入 ',argument=false' 参数时修改tvOS通知为关闭, 需要点进对应的软件的通知里开关一下任意一个通知选项 以生效(会有通知), 不传入参数时候不会修改
+
+# 建议域名 testflight.apple.com 走代理
+# [Rule]
+# DOMAIN-SUFFIX,testflight.apple.com,Proxy //改为自己的代理策略
+
+[General]
+skip-proxy = %APPEND% iosapps.itunes.apple.com
+
+[Script]
+TestFlight账户管理 = type=http-request,pattern=^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/,requires-body=1,script-path=https://raw.githubusercontent.com/Keywos/rule/main/JS/TestFlightAccount.js,argument=false
+
+[MITM]
+hostname = %APPEND% testflight.apple.com

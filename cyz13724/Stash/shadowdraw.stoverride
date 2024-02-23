@@ -1,0 +1,24 @@
+name: |-
+  ShadowDraw: Learn How to Draw（only iPad）
+desc: |-
+  先开脚本再打开软件，未成功尝试恢复购买，下载地址请访问script-path链接获取。
+
+http:
+
+  mitm:
+    - "api.revenuecat.com"
+
+  script:  
+  - match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
+    name: ShadowDraw: Learn How to Draw（only iPad）_19
+    type: response
+    require-body: true
+    max-size: -1
+    timeout: 60
+
+
+script-providers:
+  "ShadowDraw: Learn How to Draw（only iPad）_19":
+    url: https://raw.githubusercontent.com/axtyet/Quan-X/main/cyz13724/scripts/shadowdraw.js
+    interval: 86400
+

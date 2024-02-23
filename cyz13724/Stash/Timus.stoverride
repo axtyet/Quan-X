@@ -1,0 +1,24 @@
+name: |-
+  Timus
+desc: |-
+  无
+
+http:
+
+  mitm:
+    - "api.revenuecat.com"
+
+  script:  
+  - match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
+    name: Timus_19
+    type: response
+    require-body: true
+    max-size: -1
+    timeout: 60
+
+
+script-providers:
+  "Timus_19":
+    url: https://raw.githubusercontent.com/axtyet/Quan-X/main/cyz13724/scripts/Timus.js
+    interval: 86400
+

@@ -1,0 +1,13 @@
+#!name=Noted
+#!desc=Noted
+
+
+
+
+[Script]
+
+Noted_9 = type=http-response, pattern=^https:\/\/subscription-api\.notedapp\.io\/api\/verifyReceipt, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Noted.js, timeout=60, script-update-interval=0
+
+[MITM]
+
+hostname = %APPEND% subscription-api.notedapp.io

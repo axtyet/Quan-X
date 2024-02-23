@@ -1,0 +1,10 @@
+#!name=wink
+#!desc=wink
+
+[Script]
+
+mtxl = type=http-response,pattern=^https:\/\/api-.*\.meitu\.com\/(.+\/user\/vip_info|user\/show),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Script/main/mtxl.js
+
+[MITM]
+
+hostname = %APPEND% api-*.meitu.com

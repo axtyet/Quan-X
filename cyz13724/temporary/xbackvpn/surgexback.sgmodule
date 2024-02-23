@@ -1,0 +1,8 @@
+#!name=surgexbackVPN
+#!desc=抓包抓取类似于https://client-alphant.xback.io/alphant/api/member/getInfo?deviceCode=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx,找到该地址的响应体(response body),点击json查看(json viewer),将newToken双引号的内容复制出来备用。若你使用boxjs网页则点击我的-数据查看器-输入key为xbackvpn_token并将得到的newToken粘贴进来保存。若使用boxjs管理快捷指令也可以操作。
+
+[Script]
+qxXback = type=http-response, pattern=^https:\/\/client-alphant\.xback\.io\/alphant\/api\/member\/getInfo\?.*$, script-path=https://raw.githubusercontent.com/czy13724/Quantumult-X/main/temporary/xbackvpn/surgexback.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% client-alphant.xback.io

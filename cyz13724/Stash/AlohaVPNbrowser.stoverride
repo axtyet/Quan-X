@@ -1,0 +1,24 @@
+name: |-
+  Aloha Browser VPN: Surf internet with more privacy
+desc: |-
+  You need to crate free account first and use the script
+
+http:
+
+  mitm:
+    - "api.alohaprofile.com"
+
+  script:  
+  - match: https://api.alohaprofile.com/v1/profile_info
+    name: Aloha Browser VPN: Surf internet with more privacy_19
+    type: response
+    require-body: true
+    max-size: -1
+    timeout: 60
+
+
+script-providers:
+  "Aloha Browser VPN: Surf internet with more privacy_19":
+    url: https://raw.githubusercontent.com/axtyet/Quan-X/main/cyz13724/scripts/AlohaVPNbrowser.js
+    interval: 86400
+

@@ -1,0 +1,31 @@
+name: |-
+  revenuecat合集 （此合集只包含10.5及以后的软件）
+desc: |-
+  远程引用
+
+http:
+
+  mitm:
+    - "api.revenuecat.com"
+
+  script:  
+  - match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
+    name: revenuecat合集 （此合集只包含10.5及以后的软件）_19
+    type: response
+    require-body: true
+    max-size: -1
+    timeout: 60
+  
+  - match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
+    name: revenuecat合集 （此合集只包含10.5及以后的软件）_19
+    type: request
+    require-body: true
+    max-size: -1
+    timeout: 60
+
+
+script-providers:
+  "revenuecat合集 （此合集只包含10.5及以后的软件）_19":
+    url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/Revenuecat.js
+    interval: 86400
+

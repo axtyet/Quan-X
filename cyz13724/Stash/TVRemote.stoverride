@@ -1,0 +1,24 @@
+name: |-
+  TVRemote
+desc: |-
+  开脚本再开软件，未成功恢复购买。如使用非qx请使用上述链接或通过script-hub自行转换。下载地址请访问script-path链接获取。
+
+http:
+
+  mitm:
+    - "api.revenuecat.com"
+
+  script:  
+  - match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
+    name: TVRemote_19
+    type: response
+    require-body: true
+    max-size: -1
+    timeout: 60
+
+
+script-providers:
+  "TVRemote_19":
+    url: https://raw.githubusercontent.com/axtyet/Quan-X/main/cyz13724/scripts/TVRemote.js
+    interval: 86400
+

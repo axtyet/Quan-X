@@ -1,0 +1,11 @@
+#!name = 小蓝医学（蓝基因）
+#!author = ios151原苍井灰灰
+#!homepage = https://github.com/Yu9191/Script
+#!url= https://raw.githubusercontent.com/Yu9191/Script/main/xiaolanyixue.sgmodule
+
+[Script]
+小蓝医学 = type=http-response,pattern=^https:\/\/edu\.lezaitizhong\.com\/(vod|tiku)\/(class_list|getclassifychapter)\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Script/main/xiaolanyixue.js
+
+
+[MITM]
+hostname = %APPEND% edu.lezaitizhong.com
