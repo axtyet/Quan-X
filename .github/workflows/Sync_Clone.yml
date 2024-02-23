@@ -382,7 +382,7 @@ jobs:
         for file in *.js; do
             if [ "$file" ] ; then
               # 修改脚本链接
-              sed -i 's/raw\.githubusercontent\.com\/FoKit\/Scripts\/main\/scripts/raw.githubusercontent\.com\/axtyet\/Quan-X\/main\/FoKit\/scripts/g' "$file"
+              sed -i 's/raw\.githubusercontent\.com\/FoKit\/Scripts\/main\/scripts/raw.githubusercontent\.com\/axtyet\/Quan-X\/main\/Fokit\/scripts/g' "$file"
             else
               echo "$file not found."
             fi
