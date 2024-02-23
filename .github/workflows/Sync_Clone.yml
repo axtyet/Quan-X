@@ -263,6 +263,62 @@ jobs:
         git clone https://github.com/fmz200/wool_scripts.git asf_Tmp
         cp -r asf_Tmp/* Quan-X-repo/wool_scripts
         rm -rf asf_Tmp
+
+      # Fork czy13724
+    - name: Fork czy13724
+      run: |
+        mkdir -p Quan-X-repo/cyz13724
+        git clone https://github.com/czy13724/Quantumult-X.git qfe_Tmp
+        cp -r qfe_Tmp/* Quantumult-X-repo
+        rm -rf qfe_Tmp   
+      # 修改脚本链接
+    - name: Edit http
+      run: |
+        cd Quan-X-repo/cyz13724/scripts
+        for file in *.js; do
+            if [ "$file" ] ; then
+              # 修改脚本链接
+              sed -i 's/raw\.githubusercontent\.com\/czy13724\/Quantumult-X\/main\/scripts/raw.githubusercontent\.com\/axtyet\/Quan-X\/main\/cyz13724\/scripts/g' "$file"
+            else
+              echo "$file not found."
+            fi
+          done
+     # 修改脚本链接
+    - name: Edit http
+      run: |
+        cd Quan-X-repo/cyz13724/Loon
+        for file in *.plugin; do
+            if [ "$file" ] ; then
+              # 修改脚本链接
+              sed -i 's/raw\.githubusercontent\.com\/czy13724\/Quantumult-X\/main\/scripts/raw.githubusercontent\.com\/axtyet\/Quan-X\/main\/cyz13724\/scripts/g' "$file"
+            else
+              echo "$file not found."
+            fi
+          done
+     # 修改脚本链接
+    - name: Edit http
+      run: |
+        cd Quan-X-repo/cyz13724/Stash
+        for file in *.stoverride; do
+            if [ "$file" ] ; then
+              # 修改脚本链接
+              sed -i 's/raw\.githubusercontent\.com\/czy13724\/Quantumult-X\/main\/scripts/raw.githubusercontent\.com\/axtyet\/Quan-X\/main\/cyz13724\/scripts/g' "$file"
+            else
+              echo "$file not found."
+            fi
+          done
+     # 修改脚本链接
+    - name: Edit http
+      run: |
+        cd Quan-X-repo/cyz13724/Surge
+        for file in *.sgmodule; do
+            if [ "$file" ] ; then
+              # 修改脚本链接
+              sed -i 's/raw\.githubusercontent\.com\/czy13724\/Quantumult-X\/main\/scripts/raw.githubusercontent\.com\/axtyet\/Quan-X\/main\/cyz13724\/scripts/g' "$file"
+            else
+              echo "$file not found."
+            fi
+          done
         
 
 
