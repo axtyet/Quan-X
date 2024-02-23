@@ -173,16 +173,16 @@ jobs:
       run: |
         mkdir -p Quan-X-repo/yqc007
         git clone -b master https://github.com/yqc007/QuantumultX.git  ewq_Tmp
-        cp -r ewq_Tmp/* Quan-X-repo/Yqc007
+        cp -r ewq_Tmp/* Quan-X-repo/yqc007
         rm -rf ewq_Tmp
      # 修改脚本链接
-    - name: Edit QuantumultX/Yqc007
+    - name: Edit QuantumultX/yqc007
       run: |
-        cd Quan-X-repo/Yqc007
+        cd Quan-X-repo/yqc007
         for file in *.js; do
             if [ "$file" ] ; then
               # 修改脚本链接
-              sed -i 's/raw\.githubusercontent\.com\/yqc007\/QuantumultX\/master/raw.githubusercontent\.com\/axtyet\/Quan-X\/main\/Yqc007/g' "$file"
+              sed -i 's/raw\.githubusercontent\.com\/yqc007\/QuantumultX\/master/raw.githubusercontent\.com\/axtyet\/Quan-X\/main\/yqc007/g' "$file"
             else
               echo "$file not found."
             fi
@@ -239,18 +239,18 @@ jobs:
     # Fork Guding88
     - name: Fork Guding88
       run: |
-        mkdir -p Quan-X-repo/Bone/Script
+        mkdir -p Quan-X-repo/Guding88/Script
         git clone https://github.com/Guding88/Script.git qas_Tmp
-        cp -r qas_Tmp/* Quan-X-repo/Bone/Script
+        cp -r qas_Tmp/* Quan-X-repo/Guding88/Script
         rm -rf qas_Tmp
      # 修改脚本链接
     - name: Edit Guding88
       run: |
-        cd Quan-X-repo/Bone/Script
+        cd Quan-X-repo/Guding88/Script
         for file in *.js; do
             if [ "$file" ] ; then
               # 修改脚本链接
-              sed -i 's/raw\.githubusercontent\.com\/Guding88\/Script\/main/raw.githubusercontent\.com\/axtyet\/Quan-X\/main\/Bone\/Script/g' "$file"
+              sed -i 's/raw\.githubusercontent\.com\/Guding88\/Script\/main/raw.githubusercontent\.com\/axtyet\/Quan-X\/main\/Guding88\/Script/g' "$file"
             else
               echo "$file not found."
             fi
