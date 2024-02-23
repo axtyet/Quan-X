@@ -1,0 +1,37 @@
+name: 番茄小说广告屏蔽 @zqzess
+desc: 用于屏蔽番茄小说app广告, version = 3.0
+
+rule-providers:
+  FanQieNovel:
+    behavior: domain
+    url: https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/Stash/ruleList/FanQieNovel.yaml
+    interval: 86400
+
+rules:
+ - RULE-SET,FanQieNovel,REJECT
+
+http:
+  mitm:
+    - "*.pangolin-sdk-toutiao"
+    - "*.pangolin-sdk-toutiao.*"
+    - "*.pstatp.com"
+    - "*.pstatp.com.*"
+    - "*.pglstatp-toutiao.com.*"
+    - "*.pglstatp-toutiao.com"
+    - "gurd.snssdk.com"
+    - "gurd.snssdk.com.*"
+    - "*default.ixigua.com"
+  rewrite:
+    - ^https?:\/\/.+\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/(get-ads|stats|settings)\/ - reject
+    - ^https?:\/\/.+\.pglstatp-toutiao\.com\/.+\/toutiao\.mp4 - reject
+    - ^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/(ad-app-package|ad)\/.+ - reject
+    - ^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/web\.business\.image\/.+ - reject
+    - ^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/obj\/ad-pattern\/renderer - reject
+    - ^https?:\/\/gurd\.snssdk\.com\/src\/server\/v3\/package - reject
+    - ^https?:\/\/.+\.byteimg.com/tos-cn-i-1yzifmftcy\/(.+)-jpeg\.jpeg - reject
+    - ^https?:\/\/.+\.pstatp\.com\/obj\/mosaic-legacy\/.+\?from\=ad - reject
+    - ^https?:\/\/.+\.pstatp\.com\/bytecom\/resource\/track-log\/src\/.+ - reject
+    - ^https?:\/\/.+\.snssdk\.com\/video\/play\/1\/toutiao\/.+\/mp4 - reject
+    - ^https?:\/\/.+\.snssdk.com\/api\/ad\/.+ - reject
+    - ^http:\/\/.+\.byteimg\.com\/ad-app-package - reject
+    - ^http:\/\/.+\.byteimg\.com\/web\.business\.image - reject
