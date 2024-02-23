@@ -5,7 +5,7 @@
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/TestFlight.png
 #!input = APP_ID
-#!date = 2023-11-19 02:37:18
+#!date = 2024-02-23 19:09:28
 
 [Rule]
 DOMAIN, testflight.apple.com, PROXY

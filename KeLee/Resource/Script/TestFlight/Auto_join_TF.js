@@ -27,7 +27,7 @@ function autoPost(ID) {
   }
   return new Promise(function(resolve) {
     $httpClient.get({url: testurl + ID,headers: header}, function(error, resp, data) {
-      if (error === null) {
+      if (error == null) {
         if (resp.status == 404) {
           ids = $persistentStore.read('APP_ID').split(',')
           ids = ids.filter(ids => ids !== ID)
