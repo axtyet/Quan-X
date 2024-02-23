@@ -1,9 +1,0 @@
-# 关于 App Store 下载卡转圈
-host, identity.ess.apple.com, direct
-host, p18-buy.itunes.apple.com, direct
-host, stats.gc.apple.com, direct
-host, p14-buy.itunes.apple.com, direct
-host, ocsp.apple.com, direct
-host, api.smoot.apple.com,direct
-HOST, apps.apple.com,direct
-HOST, itunes.apple.com,direct

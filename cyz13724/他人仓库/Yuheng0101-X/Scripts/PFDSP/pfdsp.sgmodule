@@ -1,8 +1,0 @@
-#!name = 泡芙短视频
-#!desc = 解锁视频 + 去除广告
-
-[Script]
-PFDSPCrack = type=http-response, pattern=^http[s]?:\/\/.*(m6aw0|3ju7q|gar48|68bhf|z0pf9|cloudfront).+\/api\/app\/(recommend\/vid\/(list|ad)|mine\/info|ping\/domain\/h5|vid\/(section|info|list|user\/count)|recreation\/list), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/PFDSP/pfdsp.js, timeout=60, script-update-interval=0
-
-[MITM]
-hostname = %APPEND% *m6aw*,*3ju7q*,*gar48*,*68bhf*,*z0pf9*,*cloudfront*

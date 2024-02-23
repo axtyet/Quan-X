@@ -1,9 +1,0 @@
-#!name=阿里网盘签到
-#!desc=阿里网盘定时签到任务。详情见仓库
-#!openUrl=https://github.com/zqzess/rule_for_quantumultX/tree/master/js/Mine/aDriveCheckIn
-#!author=zqzess
-#!homepage=https://github.com/zqzess/rule_for_quantumultX/tree/master/js/Mine/aDriveCheckIn
-#!icon=https://raw.githubusercontent.com/Softlyx/Fileball/main/YUAN/ALiYun.png
-
-[Script]
-cron "12 0 * * *" script-path=https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/aDriveCheckIn/aDriveCheckIn.js, tag=阿里网盘签到

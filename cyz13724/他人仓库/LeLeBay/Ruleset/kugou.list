@@ -1,5 +1,0 @@
-# 内容：酷狗音乐去开屏广告
-# 数量：3条
-host,adserviceretry.kugou.com,reject
-host,ads.service.kugou.com,reject
-host,us.l.qq.com,reject
