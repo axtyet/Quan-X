@@ -1,0 +1,19 @@
+#!name=联通余量(v4)
+#!desc=定时查询 与 Panel 面板
+
+[General]
+force-http-engine-hosts = %APPEND% 10010v4.com
+
+[Script]
+10010v4-cron = type=cron,cronexp=*/5 * * * *,timeout=60,script-path=https://github.com/ChinaTelecomOperators/ChinaUnicom/releases/download/Prerelease-Alpha/10010.js
+
+10010v4-request = type=http-request,pattern=^https?:\/\/10010v4\.com,script-path=https://github.com/ChinaTelecomOperators/ChinaUnicom/releases/download/Prerelease-Alpha/10010.js,requires-body=false,max-size=0,timeout=60
+
+# Panel
+10010v4-panel = type=generic,timeout=60,script-path=https://github.com/ChinaTelecomOperators/ChinaUnicom/releases/download/Prerelease-Alpha/10010.js,argument=icon=arrow.up.arrow.down.circle&icon-color=#5d84f8
+
+[MITM]
+hostname = %APPEND% 10010v4.com
+
+[Panel]
+10010v4-panel = script-name=10010v4-panel,update-interval=300

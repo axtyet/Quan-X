@@ -1,0 +1,11 @@
+#!name=TIDAL
+#!desc=解锁 HiFi Plus 权限
+
+[Script]
+# 解锁个人中心
+TIDALHiFiPlusCrack = type=http-response, pattern=^https?:\/\/api\.tidal\.com\/v1\/users\/\d+\/subscription.+, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/TIDALHiFiPlusCrack.js, timeout=60, script-update-interval=0
+# 解锁音质
+TIDALMasterCrack = type=http-request, pattern=^https?:\/\/api\.tidal\.com\/v1\/tracks/\d+\/playbackinfopostpaywall.+, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/TIDAL/tidal.js, timeout=60, script-update-interval=0
+
+[MITM]
+hostname = %APPEND% api.tidal.com

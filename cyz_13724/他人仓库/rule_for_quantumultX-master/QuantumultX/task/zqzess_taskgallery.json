@@ -1,0 +1,26 @@
+{
+  "name": "zqzess Repository",
+  "task": [
+    {
+      "config": "0 8,20 * * * https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/covid19/covid19.js, img-url=https://raw.githubusercontent.com/zqzess/pichouse/master/pic/covid-19.jpg, tag=疫情信息监控, enabled=true",
+      "addons": ""
+    },
+    {
+      "config": "0 9 * * * https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/wnCalendar/wnCalendar.js, img-url=https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/synology-calendar.png, tag=今日黄历, enabled=true",
+      "addons": ""
+    },
+    {
+      "config": "30 8 * * * https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/wnCalendar/DaysMatter.js, img-url=https://cdn.jsdelivr.net/gh/zqzess/pichouse@master/pic/202302061207406.jpg, tag=倒数日, enabled=true",
+      "addons": ""
+    },
+    {
+      "config": "12 0 * * * https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/aDriveCheckIn/aDriveCheckIn.js, img-url=https://raw.githubusercontent.com/Softlyx/Fileball/main/YUAN/ALiYun.png, tag=阿里网盘签到, enabled=true",
+      "addons": "https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/aDriveCheckIn/aDriveCheckIn_token.qxrewrite, tag=阿里网盘token获取, update-interval=86400, opt-parser=false, enabled=true"
+    },
+    {
+      "config": "12 0 * * * https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/v2freeCheckIn/v2freeCheckIn.js, tag=v2free签到, enabled=true",
+      "addons": "https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/v2freeCheckIn/v2freeCheckIn_cookie.qxrewrite, tag=v2free_cookie获取, update-interval=86400, opt-parser=false, enabled=true"
+    }
+  ],
+  "description": "定时任务 作者@zqzess"
+}

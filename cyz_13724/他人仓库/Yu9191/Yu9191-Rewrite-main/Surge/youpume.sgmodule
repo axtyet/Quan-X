@@ -1,0 +1,8 @@
+#!name=有谱么
+#!desc=用完就关
+
+[Script]
+有谱么 = type=http-response,pattern=^https:\/\/yopu\.co\/api\/user\/info,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/ypm.js,requires-body=1,max-size=0
+
+[MITM]
+hostname = %APPEND% yopu.co

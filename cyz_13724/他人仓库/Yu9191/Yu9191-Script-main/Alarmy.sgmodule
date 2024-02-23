@@ -1,0 +1,10 @@
+#!name=smnz
+#!desc=smnz
+
+[Script]
+
+Alarmy = type=http-response,pattern=^https://ars.alar.my/api/v2/user/sync,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Script/main/Alarmy.js
+
+[MITM]
+
+hostname = %APPEND% ars.alar.my

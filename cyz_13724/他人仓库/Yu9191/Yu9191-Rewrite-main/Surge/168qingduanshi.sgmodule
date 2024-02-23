@@ -1,0 +1,9 @@
+#!name=168轻断食
+#!desc=需要先开试用会员才有数据@ios151
+
+
+[Script]
+168轻断食 = type=http-response,pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/168qingduanshi.js
+
+[MITM]
+hostname= %APPEND% buy.itunes.apple.com

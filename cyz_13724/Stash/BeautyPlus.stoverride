@@ -1,0 +1,25 @@
+name: |-
+  BeautyPlus
+desc: |-
+  先开脚本再打开软件，未成功尝试恢复购买，下载地址请访问script-path链接获取。
+
+http:
+
+  mitm:
+    - "api.mr.pixocial.com"
+    - "newbeee-api.beautyplus.com"
+
+  script:  
+  - match: https:\/\/(api\.mr\.pixocial\.com\/v1\/manual_unlock|newbeee-api\.beautyplus\.com\/api\/v1\/asset\/balance)
+    name: BeautyPlus_19
+    type: response
+    require-body: true
+    max-size: -1
+    timeout: 60
+
+
+script-providers:
+  "BeautyPlus_19":
+    url: https://raw.githubusercontent.com/axtyet/Quan-X/main/cyz_13724/scripts/BeautyPlus.js
+    interval: 86400
+

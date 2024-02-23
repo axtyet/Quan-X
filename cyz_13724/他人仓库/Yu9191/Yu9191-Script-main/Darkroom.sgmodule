@@ -1,0 +1,11 @@
+#!name = Darkroom
+#!author = ios151
+#!homepage = https://github.com/Yu9191/Script
+#!url= https://raw.githubusercontent.com/Yu9191/Script/main/Darkroom.sgmodule
+
+[Script]
+Darkroom = type=http-response,pattern=^https://api.revenuecat.com/v1/(receipts|subscribers)/*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Script/main/Darkroom.js
+
+
+[MITM]
+hostname = %APPEND% api.revenuecat.com

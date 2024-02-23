@@ -1,0 +1,24 @@
+name: |-
+  digitalplanner
+desc: |-
+  先开脚本再打开软件，未成功尝试恢复购买，下载地址请访问script-path链接获取。
+
+http:
+
+  mitm:
+    - "buy.itunes.apple.com"
+
+  script:  
+  - match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+    name: digitalplanner_19
+    type: response
+    require-body: true
+    max-size: -1
+    timeout: 60
+
+
+script-providers:
+  "digitalplanner_19":
+    url: https://raw.githubusercontent.com/axtyet/Quan-X/main/cyz_13724/scripts/digitalplanner.js
+    interval: 86400
+

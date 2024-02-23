@@ -1,0 +1,17 @@
+#!name = TIDAL
+#!desc = 解锁 HiFi Plus 权限
+#!openUrl = 
+#!author = Hausd0rff yuheng
+#!icon = https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/66/57/cb/6657cbbf-9928-f58f-2a73-5cdb3a3adf1f/AppIcon-1x_U007epad-0-85-220.png/120x120.png?
+#!date = 2023-10-31 15:00:00
+
+[Script]
+# 解锁个人中心
+http-response ^https?:\/\/api\.tidal\.com\/v1\/users\/\d+\/subscription.+ script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/TIDALHiFiPlusCrack.js, requires-body=true, timeout=60, tag=TIDALHiFiPlusCrack
+
+# 解锁音质
+http-request ^https?:\/\/api\.tidal\.com\/v1\/tracks/\d+\/playbackinfopostpaywall.+ script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/TIDAL/tidal.js, requires-body=true, timeout=60, tag=TIDALMasterCrack
+
+  
+[Mitm]
+hostname = api.tidal.com

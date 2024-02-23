@@ -1,0 +1,10 @@
+#!name=trace
+#!desc=trace
+
+[Script]
+
+MorpholioTrace = type=http-response,pattern=^https:\/\/www\.mymorpholio\.com\/api\/index\.php\/rest_iap\/receipt,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/MorpholioTrace.js
+
+[MITM]
+
+hostname = %APPEND% www.mymorpholio.com

@@ -1,0 +1,24 @@
+name: |-
+  GitHub 1.142.1
+desc: |-
+  除了AI功能，其他功能都可用
+
+http:
+
+  mitm:
+    - "api.github.com"
+
+  script:  
+  - match: https://api.github.com/graphql
+    name: GitHub 1.142.1_19
+    type: response
+    require-body: true
+    max-size: -1
+    timeout: 60
+
+
+script-providers:
+  "GitHub 1.142.1_19":
+    url: https://raw.githubusercontent.com/axtyet/Quan-X/main/cyz_13724/scripts/Github.js
+    interval: 86400
+

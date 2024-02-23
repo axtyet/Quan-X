@@ -1,0 +1,24 @@
+name: |-
+  语言类iTunes合集（此合集只包含learn xx with flashcards）
+desc: |-
+  先开脚本再重新进入一次应用，即可解锁订阅；未解锁需要点击菜单恢复购买。下载链接请通过script-path链接获取。
+
+http:
+
+  mitm:
+    - "buy.itunes.apple.com"
+
+  script:  
+  - match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+    name: 语言类iTunes合集（此合集只包含learn xx with flashcards）_19
+    type: response
+    require-body: true
+    max-size: -1
+    timeout: 60
+
+
+script-providers:
+  "语言类iTunes合集（此合集只包含learn xx with flashcards）_19":
+    url: https://raw.githubusercontent.com/axtyet/Quan-X/main/cyz_13724/scripts/Language_iTunes.js
+    interval: 86400
+

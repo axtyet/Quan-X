@@ -1,0 +1,24 @@
+name: |-
+  Mimo
+desc: |-
+  先开脚本再打开软件，未成功尝试恢复购买，下载地址请访问script-path链接获取。You need to create account first
+
+http:
+
+  mitm:
+    - "api.getmimo.com"
+
+  script:  
+  - match: https://api.getmimo.com/v1/subscriptions
+    name: Mimo_19
+    type: response
+    require-body: true
+    max-size: -1
+    timeout: 60
+
+
+script-providers:
+  "Mimo_19":
+    url: https://raw.githubusercontent.com/axtyet/Quan-X/main/cyz_13724/scripts/MimoPro.js
+    interval: 86400
+

@@ -1,0 +1,8 @@
+#!name = 无忧短视频
+#!desc = 解锁视频 + 去除广告
+
+[Script]
+WYDSPCrack = type=http-response, pattern=^https:\/\/(kj9.7ve0z.com|56h.2bd6o.com|53g.g0ki2.com)\/api\/app\/(ping\/domain\/h5|vid\/(info\/?|user\/count|tiroCountdown)|mine\/info), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/WYDSP/wydsp.js, timeout=60, script-update-interval=0
+
+[MITM]
+hostname = %APPEND% kj9.7ve0z.com,56h.2bd6o.com,53g.g0ki2.com
