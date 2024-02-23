@@ -326,8 +326,31 @@ jobs:
         mkdir -p Quan-X-repo/DivineEngine
         git clone -b master https://github.com/DivineEngine/Profiles.git qsd_Tmp
         cp -r qsd_Tmp/* Quan-X-repo/DivineEngine
-        rm -rf qsd_Tmp 
-        
+        rm -rf qsd_Tmp
+
+    # Fork zqzess
+    - name: Fork zqzess
+      run: |
+        mkdir -p Quan-X-repo/zqzess
+        git clone -b master https://github.com/zqzess/rule_for_quantumultX.git sfa_Tmp
+        cp -r sfa_Tmp/* Quan-X-repo/zqzess
+        rm -rf sfa_Tmp 
+
+    # Fork ACL4SSR
+    - name: Fork ACL4SSR
+      run: |
+        mkdir -p Quan-X-repo/ACL4SSR
+        git clone -b master https://github.com/ACL4SSR/ACL4SSR.git sdf_Tmp
+        cp -r sdf_Tmp/* Quan-X-repo/ACL4SSR
+        rm -rf sdf_Tmp
+
+    # Fork VirgilClyne
+    - name: Fork VirgilClyne
+      run: |
+        mkdir -p Quan-X-repo/VirgilClyne
+        git clone -b main https://github.com/VirgilClyne/GetSomeFries.git sty_Tmp
+        cp -r sty_Tmp/* Quan-X-repo/VirgilClyne
+        rm -rf sty_Tmp
 
 
       # 保存、推送   
