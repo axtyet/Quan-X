@@ -372,7 +372,7 @@ jobs:
     - name: Fork Fokit
       run: |
         mkdir -p Quan-X-repo/Fokit
-        git clone -b main https://github.com/chavyleung/scripts.git hyu_Tmp
+        git clone -b main https://github.com/FoKit/Scripts.git hyu_Tmp
         cp -r hyu_Tmp/* Quan-X-repo/Fokit
         rm -rf hyu_Tmp
      # 修改脚本链接
