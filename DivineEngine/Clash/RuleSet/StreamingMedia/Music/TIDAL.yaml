@@ -1,0 +1,4 @@
+payload:
+  # > TIDAL
+  - PROCESS-NAME,com.aspiro.tidal
+  - DOMAIN-SUFFIX,tidal.com
