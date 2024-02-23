@@ -319,6 +319,14 @@ jobs:
               echo "$file not found."
             fi
           done
+
+    # Fork DivineEngine
+    - name: Fork DivineEngine
+      run: |
+        mkdir -p Quan-X-repo/DivineEngine
+        git clone -b master https://github.com/DivineEngine/Profiles.git qsd_Tmp
+        cp -r qsd_Tmp/* Quan-X-repo/DivineEngine
+        rm -rf qsd_Tmp 
         
 
 
