@@ -269,7 +269,7 @@ jobs:
       run: |
         mkdir -p Quan-X-repo/cyz13724
         git clone https://github.com/czy13724/Quantumult-X.git qfe_Tmp
-        cp -r qfe_Tmp/* Quantumult-X-repo
+        cp -r qfe_Tmp/* Quan-X-repo/cyz13724
         rm -rf qfe_Tmp   
       # 修改脚本链接
     - name: Edit http
