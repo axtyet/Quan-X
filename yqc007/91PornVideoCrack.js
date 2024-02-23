@@ -1,0 +1,30 @@
+/******************************
+
+脚本功能：91视频解锁会员权限
+软件版本：7.0.1
+下载地址：https://shrtm.nu/91porn
+脚本作者：Hausd0rff
+更新时间：2022-12-12
+电报频道：https://t.me/yqc_123
+问题反馈：https://t.me/yqc_777
+特别鸣谢：感谢@PayNe大神提供的帮助
+使用声明：⚠️仅供学习交流，🈲️商业用途
+
+*******************************
+
+[rewrite_local]
+# > 91视频解锁会员权限
+^https?:\/\/.*\/m_user\/info url script-response-body https://raw.githubusercontent.com/axtyet/Quan-X/main/yqc007/91PornVideoCrack.js
+^https?:\/\/.*\/m_sns\/(film|video|short_video)\/(film_detail|detail_list|apply_play) url request-header (\r\n)X-AUTH-TOKEN:.+(\r\n) request-header $1X-AUTH-TOKEN: eyJhbGciOiJIUzUxMiIsImlhdCI6MTY3MDg0MTYwMSwiZXhwIjoxNjg2MzkzNjAxfQ.eyJpZCI6MTEyNDM1MTY0fQ.cDXTx14EaNf1TJzihOxOoIB4lyfwKnNNSrXbDiBj43kXzkzkqfftQRAqE23WTCuxQ45VYB-1IadrwxG_t3QoNA$2
+^https?:\/\/.*\/(common\/splash_config|m_user\/(check_phone|behavior_verification_code)) url reject-200
+
+[mitm] 
+hostname = app.weilaixushi.com, api.orientlion.com, app.qdjdswkj.com, api.0954auto.com, appapi.xmblgg.com, api.czbt.cc, api.jtshuzhiwa.com, appapi.17gwl.com, api.saiyijiaju.com, api.ddoukids.com, appapi.mnghx.info, appapi.zdxclr.com
+
+*******************************/
+
+var body = $response.body;
+body = "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";
+$done({
+    body
+});

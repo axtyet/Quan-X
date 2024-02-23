@@ -1,0 +1,194 @@
+#!name=APP脚本合集-骨钉
+#!desc=超200款APP脚本解锁合集，已解锁列表请见仓库说明，持续更新中，请关注TG频道获取更新通知
+#!openUrl=https://t.me/Guding88
+#!author = 骨钉
+#!homepage=https://github.com/Guding88/Script/blob/main/Readme.md
+#!icon=https://raw.githubusercontent.com/Guding88/iCon/main/png/Guding.png
+
+[Script]
+
+# iTunes合集
+http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path=https://raw.githubusercontent.com/Guding88/Script/main/APPheji_iTunes.js, requires-body=true, tag=iTunes合集
+
+# Revenuecat合集
+http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path=https://raw.githubusercontent.com/Guding88/Script/main/APPheji_Revenuecat.js, requires-body=true, tag=Revenuecat合集
+http-request ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path=https://raw.githubusercontent.com/Guding88/Script/main/APPheji_Revenuecat.js, tag=Revenuecat清缓存
+
+# CountThings from Photos
+http-response ^https?:\/\/my\.countingthings\.com\/api\/v2.0\/users\/GetUserAndSubscription script-path=https://raw.githubusercontent.com/Guding88/Script/main/CountThings.js, requires-body=true, tag=CountThings
+
+# Cubox
+http-response ^https?:\/\/cubox\.(cc|pro)\/c\/api\/userInfo script-path=https://raw.githubusercontent.com/Guding88/Script/main/Cubox.js, requires-body=true, tag=Cubox
+
+# NFC Scanner Tool for iPhone
+http-response ^https?:\/\/api\.qonversion\.io\/v1\/user\/init script-path=https://raw.githubusercontent.com/Guding88/Script/main/NFC.js, requires-body=true, tag=NFC
+
+# PocketLists
+http-response ^https?:\/\/pocketlists\.com\/api\/v1\/pocketlists.me.get script-path=https://raw.githubusercontent.com/Guding88/Script/main/PocketLists.js, requires-body=true, tag=PocketLists
+
+# Prisma&Lensa
+http-response ^https?:\/\/(api|appapi)\.neuralprisma\.com\/receipt\/ios\/status\/(prisma|lensa) script-path=https://raw.githubusercontent.com/Guding88/Script/main/Prisma.js, requires-body=true, tag=Prisma&Lensa
+
+# Todo清单
+http-response ^https?:\/\/www\.evestudio\.cn\/todoList\/getDetailUser script-path=https://raw.githubusercontent.com/Guding88/Script/main/Todoqingdan.js, requires-body=true, tag=Todo清单
+
+# ToonMe
+http-response ^https?:\/\/purchases\.ws\.pho\.to\/api\/v2\/apple\/verifyReceipt script-path=https://raw.githubusercontent.com/Guding88/Script/main/ToonMe.js, requires-body=true, tag=ToonMe
+
+# 博树
+http-response ^https?:\/\/api\.busuu\.com\/users\/me script-path=https://raw.githubusercontent.com/Guding88/Script/main/boshu.js, requires-body=true, tag=博树
+
+# exping
+http-response ^https?:\/\/api\.expingworld\.com\/users script-path=https://raw.githubusercontent.com/Guding88/Script/main/exping.js, requires-body=true, tag=exping
+
+# 飞跃VPN
+http-response ^https?:\/\/api\.leapmobile\.cloud\/users script-path=https://raw.githubusercontent.com/Guding88/Script/main/feiyueVPN.js, requires-body=true, tag=飞跃VPN
+
+# 极简汇率
+http-response ^https?:\/\/explorer\.tratao\.com\/api\/client\/xtool\/vip script-path=https://raw.githubusercontent.com/Guding88/Script/main/jijianhuilv.js, requires-body=true, tag=极简汇率
+
+# 旅途随身听
+http-response ^https?:\/\/www\.1314zhilv\.com\/ltsstnew\/(user\/getInfo|guideScenic\/getScenicAllMarkerList) script-path=https://raw.githubusercontent.com/Guding88/Script/main/lvtusuishenting.js, requires-body=true, tag=旅途随身听
+
+# 每日艺术
+http-response ^https?:\/\/api\.getdailyart\.com\/api\/check-logged script-path=https://raw.githubusercontent.com/Guding88/Script/main/meiriyishu.js, requires-body=true, tag=每日艺术
+
+# 冥想星球
+http-response ^https:\/\/kc\.xinli001\.com\/lingxikc\/(?!.*plan).* script-path=https://raw.githubusercontent.com/Guding88/Script/main/mingxiangxingqiu.js, requires-body=true, tag=冥想星球
+
+# 如期
+http-response ^https?:\/\/www\.freshhome\.top\/mngruqi\/api\/reg\/push script-path=https://raw.githubusercontent.com/Guding88/Script/main/ruqi.js, requires-body=true, tag=如期
+
+# stats.fm
+http-response ^https?:\/\/api\.stats\.fm\/api\/v1\/me$ script-path=https://raw.githubusercontent.com/Guding88/Script/main/statsfm.js, requires-body=true, tag=stats.fm
+
+#小戈输入法
+http-response ^https?:\/\/api\.boyasec\.com\/ime script-path=https://raw.githubusercontent.com/Guding88/Script/main/xiaogeshurufa.js, requires-body=true, tag=小戈输入法
+
+# 易截图2
+http-response ^https?:\/\/(jietu6|1jietu)\.com\/apiv2\/user script-path=https://raw.githubusercontent.com/Guding88/Script/main/yijietu2.js, requires-body=true, tag=易截图2
+
+# 一言
+http-response ^https?:\/\/app\.yiyan\.art\/yiyan script-path=https://raw.githubusercontent.com/Guding88/Script/main/yiyan.js, requires-body=true, tag=一言
+
+# 指尖时光
+http-response ^https?:\/\/integral2\.dasyibalang\.com\/v2\/User script-path=https://raw.githubusercontent.com/Guding88/Script/main/zhijianshiguang.js, requires-body=true, tag=指尖时光
+
+# 朝暮计划
+http-response ^https?:\/\/www\.zomoplan\.com\/zhaoMuPlan_user\/info script-path=https://raw.githubusercontent.com/Guding88/Script/main/zhaomujihua.js, requires-body=true, tag=朝暮计划
+
+# 有谱么 @Baby
+http-response ^https:\/\/yopu\.co\/api\/user\/info script-path=https://raw.githubusercontent.com/Guding88/Script/main/youpume.js, requires-body=true, tag=有谱么
+
+# 格志日记
+http-response ^http?:\/\/diary-id\.sumi\.io\/api\/profile script-path=https://raw.githubusercontent.com/Guding88/Script/main/gezhiriji.js, requires-body=true, tag=格志日记
+
+# FIMO
+http-response ^https?:\/\/server\.zbisq\.com\/fimo-user\/user script-path=https://raw.githubusercontent.com/Guding88/Script/main/FIMO.js, requires-body=true, tag=FIMO
+
+# Focos
+http-response ^https?:\/\/focos\.oracle\.bendingspoonsapps\.com\/v2\/users\/setup script-path=https://raw.githubusercontent.com/Guding88/Script/main/Focos.js, requires-body=true, tag=Focos
+
+# 亲爱的冰箱
+http-response ^https:\/\/bingxiang\.51wnl-cq\.com\/api\/(v2\/GetUserMember|v2\/users\/checktoken) script-path=https://raw.githubusercontent.com/Guding88/Script/main/qinaidebingxiang.js, requires-body=true, tag=亲爱的冰箱
+http-request ^https:\/\/bingxiang\.51wnl-cq\.com\/api\/Unlocking script-path=https://raw.githubusercontent.com/Guding88/Script/main/qinaidebingxiang.js, requires-body=true, tag=亲爱的冰箱
+
+# 给未来写封信
+http-response ^https?:\/\/api\.to-future\.net\/user\/get_user_info script-path=https://raw.githubusercontent.com/Guding88/Script/main/geiweilaixiefengxin.js, requires-body=true, tag=给未来写封信
+
+# 77
+http-response ^https?:\/\/19700\.com\/(todo|computer|clock)\/api\/v1\/o\/member\/getProfile script-path=https://raw.githubusercontent.com/Guding88/Script/main/77.js, requires-body=true, tag=77
+
+# 简讯 - 短阅读秒懂
+http-response ^https?:\/\/api\.tipsoon\.com/api\/v1\/(user\/info|login\/account) script-path=https://raw.githubusercontent.com/Guding88/Script/main/jianxun.js, requires-body=true, tag=简讯
+
+# 画世界
+http-response ^https?:\/\/app\.huashijie\.art\/api\/(user\/getPerson|level\/info) script-path=https://raw.githubusercontent.com/Guding88/Script/main/huashijie.js, requires-body=true, tag=画世界
+
+# Easybrain
+http-response ^https?:\/\/storevalidator\.easybrain\.com\/api\/v1\/receipt_verify script-path=https://raw.githubusercontent.com/Guding88/Script/main/Easybrain.js, requires-body=true, tag=Easybrain
+
+# 时间积木
+http-response ^https?:\/\/box\.timeblocks\.com\/api\/inbox script-path=https://raw.githubusercontent.com/Guding88/Script/main/shijianjimu.js, requires-body=true, tag=时间积木
+
+# Fomz
+http-response ^https:\/\/fz68resapi\.imendon\.com\/v2\/purchase\/vip\/verification script-path=https://raw.githubusercontent.com/Guding88/Script/main/Fomz.js, requires-body=true, tag=Fomz
+
+# 收起来
+http-response ^https?:\/\/api\.shouqilai\.cn\/m\/receive\/account\/getAccountByToken script-path=https://raw.githubusercontent.com/Guding88/Script/main/shouqilai.js, requires-body=true, tag=收起来
+
+# 西窗烛
+http-response ^https?:\/\/lchttpapi\.xczim\.com\/1.1\/users script-path=https://raw.githubusercontent.com/Guding88/Script/main/xichuangzhu.js, requires-body=true, tag=西窗烛
+
+# 软眠眠
+http-response ^https?:\/\/ruanmianmian\.xinzhi\.space\/api\/v1\/getUserByToken script-path=https://raw.githubusercontent.com/Guding88/Script/main/ruanmianmian.js, requires-body=true, tag=软眠眠
+
+# 堆糖
+http-response ^https?:\/\/.*\.duitang\.com\/napi script-path=https://raw.githubusercontent.com/Guding88/Script/main/duitang.js, requires-body=true, tag=堆糖
+
+# 小习惯
+http-response ^https?:\/\/xianbeikeji\.com\/daily\/app\/user\/query$ script-path=https://raw.githubusercontent.com/Guding88/Script/main/xiaoxiguan.js, requires-body=true, tag=小习惯
+
+# 星光手帐
+http-response ^https?:\/\/sz\.szsszykj\.com\/api\/(user\/info|sign\/index|energy\/index|version\/popup) script-path=https://raw.githubusercontent.com/Guding88/Script/main/xingguangshouzhang.js, requires-body=true, tag=星光手帐
+
+# 夸克扫描王
+http-response ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.sm\.order\.service\.member\.getmemberinfo script-path=https://raw.githubusercontent.com/Guding88/Script/main/kuakesaomiaowang.js, requires-body=true, tag=夸克扫描王
+
+# Agenda
+http-response ^https?:\/\/accounts\.agenda\.com\/users script-path=https://raw.githubusercontent.com/Guding88/Script/main/Agenda.js, requires-body=true, tag=Agenda
+
+# 句读
+http-response ^https?:\/\/judouapp\.com\/api\/v2\/mine\/profile script-path=https://raw.githubusercontent.com/Guding88/Script/main/judou.js, requires-body=true, tag=句读
+
+# 千瓜数据
+http-response ^https?:\/\/openapi.qian-gua.com\/v2\/(Login\/LoginByWechat|User\/GetUserInfo) script-path=https://raw.githubusercontent.com/Guding88/Script/main/qianguashuju.js, requires-body=true, tag=千瓜数据
+
+# FoodCa
+http-response ^https?:\/\/service-ei2k47mp-1251731618\.bj\.apigw\.tencentcs\.com/release\/aifood_order script-path=https://raw.githubusercontent.com/Guding88/Script/main/FoodCa.js, requires-body=true, tag=FoodCa
+
+# 疯狂百科知识问答
+http-response ^https?:\/\/newos\.glassmarket\.cn\/index\.php script-path=https://raw.githubusercontent.com/Guding88/Script/main/fengkuangbaikezhishiwenda.js, requires-body=true, tag=疯狂百科知识问答
+
+# 冷知识酱
+http-response ^https?:\/\/lengapp\.com\/api\/v1\/mine script-path=https://raw.githubusercontent.com/Guding88/Script/main/lengzhishijiang.js, requires-body=true, tag=冷知识酱
+
+# 一念便签
+# http-response ^https?:\/\/yinian\.pro\/api\/user script-path=https://raw.githubusercontent.com/Guding88/Script/main/yinianbianqian.js, requires-body=true, tag=一念便签
+
+# NeckGo
+http-response ^https?:\/\/neckgo\.wedea\.cn\/neok\/api\/api\/getLoginInfo script-path=https://raw.githubusercontent.com/Guding88/Script/main/NeckGo.js, requires-body=true, tag=NeckGo
+
+# 飞鱼计划
+http-response ^https?:\/\/getway-plan\.bjsybw\.cn\/api\/sync\/putNeedUpdateData script-path=https://raw.githubusercontent.com/Guding88/Script/main/feiyujihua.js, requires-body=true, tag=飞鱼计划
+
+# 佐糖
+http-response ^https?:\/\/gw\.aoscdn\.com\/base\/vip\/v2\/vips script-path=https://raw.githubusercontent.com/Guding88/Script/main/zuotang.js, requires-body=true, tag=佐糖
+
+# 每记
+http-response ^https?:\/\/api\.wemore\.com\/mylogs\/users script-path=https://raw.githubusercontent.com/Guding88/Script/main/meiji.js, requires-body=true, tag=每记
+
+# 挖财记账
+http-response ^https?:\/\/jz\.wacai\.com\/api\/vipmember\/v3\/index script-path=https://raw.githubusercontent.com/Guding88/Script/main/wacaijizhang.js, requires-body=true, tag=挖财记账
+
+# Ease助眠
+http-response ^https?:\/\/api0\.easeprime\.com\/api\/(login\/loginByWeChatCode|memberInfo\/myInfo) script-path=https://raw.githubusercontent.com/Guding88/Script/main/Ease.js, requires-body=true, tag=Ease助眠
+
+# CARROT Weather
+http-response ^https?:\/\/carrotweather\.herokuapp\.com\/parse\/functions\/findSubscriptionsForUserId script-path=https://raw.githubusercontent.com/Guding88/Script/main/CARROTWeather.js, requires-body=true, tag=CARROT Weather
+
+# PhotoGrid
+http-response ^https?:\/\/pgapi\.ksmobile\.com\/v1\/ios\/auth script-path=https://raw.githubusercontent.com/Guding88/Script/main/PhotoGrid.js, requires-body=true, tag=PhotoGrid
+
+# 青柠设计
+http-response ^https?:\/\/api\.qingning6\.com\/api\/user\/getUserInfo script-path=https://raw.githubusercontent.com/Guding88/Script/main/qingningsheji.js, requires-body=true, tag=青柠设计
+
+
+
+
+[MITM]
+
+hostname = buy.itunes.apple.com,api.revenuecat.com,my.countingthings.com,cubox.cc,cubox.pro,api.qonversion.io,pocketlists.com,api.neuralprisma.com,appapi.neuralprisma.com,www.evestudio.cn,purchases.ws.pho.to,api.busuu.com,api.expingworld.com,api.leapmobile.cloud,explorer.tratao.com,www.1314zhilv.com,api.getdailyart.com,kc.xinli001.com,www.freshhome.top,api.stats.fm,api.boyasec.com,jietu6.com,1jietu.com,app.yiyan.art,integral2.dasyibalang.com,www.zomoplan.com,yopu.co,diary-id.sumi.io, server.zbisq.com, focos.oracle.bendingspoonsapps.com, bingxiang.51wnl-cq.com, api.to-future.net, 19700.com, api.tipsoon.com, app.huashijie.art, storevalidator.easybrain.com, box.timeblocks.com, fz68resapi.imendon.com, api.shouqilai.cn, lchttpapi.xczim.com, ruanmianmian.xinzhi.space, *.duitang.com， xianbeikeji.com, sz.szsszykj.com, acs.m.taobao.com, accounts.agenda.com, judouapp.com, openapi.qian-gua.com, service-ei2k47mp-1251731618.bj.apigw.tencentcs.com, newos.glassmarket.cn, lengapp.com, neckgo.wedea.cn, getway-plan.bjsybw.cn, gw.aoscdn.com, api.wemore.com, jz.wacai.com, api0.easeprime.com, carrotweather.herokuapp.com, pgapi.ksmobile.com, api.qingning6.com
+
+
+
