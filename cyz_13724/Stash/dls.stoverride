@@ -10,14 +10,14 @@ http:
 
   script:  
   - match: ^https:\/\/vip\.ixiliu\.cn\/mp\/sign\/applyV2$
-    name: 杜蕾斯会员中心小程序签到_81
+    name: 杜蕾斯会员中心小程序签到_36
     type: request
     require-body: true
     max-size: -1
     timeout: 60
   
   - match: ^https:\/\/vip\.ixiliu\.cn\/mp\/user\/info$
-    name: 杜蕾斯会员中心小程序签到_81
+    name: 杜蕾斯会员中心小程序签到_36
     type: request
     require-body: true
     max-size: -1
@@ -25,7 +25,7 @@ http:
 
 
 script-providers:
-  "杜蕾斯会员中心小程序签到_81":
+  "杜蕾斯会员中心小程序签到_36":
     url: https://raw.githubusercontent.com/axtyet/Quan-X/main/cyz_13724/scripts/dls.js
     interval: 86400
 

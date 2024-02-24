@@ -10,7 +10,7 @@ http:
 
   script:  
   - match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
-    name: 语言类iTunes合集（此合集只包含learn xx with flashcards）_81
+    name: 语言类iTunes合集（此合集只包含learn xx with flashcards）_36
     type: response
     require-body: true
     max-size: -1
@@ -18,7 +18,7 @@ http:
 
 
 script-providers:
-  "语言类iTunes合集（此合集只包含learn xx with flashcards）_81":
+  "语言类iTunes合集（此合集只包含learn xx with flashcards）_36":
     url: https://raw.githubusercontent.com/axtyet/Quan-X/main/cyz_13724/scripts/Language_iTunes.js
     interval: 86400
 
