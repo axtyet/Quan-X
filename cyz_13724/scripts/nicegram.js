@@ -11,7 +11,7 @@
 使用声明： 仅供个人参考学习交流，勿用于其它用途
 
 [rewrite_local]
-^https:\/\/nicegram\.cloud\/api\/v6\/telegram\/(auth|user|info)$ url script-response-body https://raw.githubusercontent.com/axtyet/Quan-X/main/cyz_13724/scripts/nicegram.js
+^https?:\/\/nicegram\.cloud\/api\/v\d\/(ai-assistant\/purchase-list|user\/info|telegram\/auth) url script-response-body https://raw.githubusercontent.com/axtyet/Quan-X/main/cyz_13724/scripts/nicegram.js
 
 [mitm]
 hostname = nicegram.cloud

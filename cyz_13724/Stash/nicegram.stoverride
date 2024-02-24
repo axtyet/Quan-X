@@ -9,8 +9,8 @@ http:
     - "nicegram.cloud"
 
   script:  
-  - match: ^https:\/\/nicegram\.cloud\/api\/v6\/telegram\/(auth|user|info)$
-    name: nicegram_36
+  - match: ^https?:\/\/nicegram\.cloud\/api\/v\d\/(ai-assistant\/purchase-list|user\/info|telegram\/auth)
+    name: nicegram_98
     type: response
     require-body: true
     max-size: -1
@@ -18,7 +18,7 @@ http:
 
 
 script-providers:
-  "nicegram_36":
+  "nicegram_98":
     url: https://raw.githubusercontent.com/axtyet/Quan-X/main/cyz_13724/scripts/nicegram.js
     interval: 86400
 

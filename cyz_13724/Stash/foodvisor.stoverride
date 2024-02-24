@@ -10,7 +10,7 @@ http:
 
   script:  
   - match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
-    name: Foodvisor_36
+    name: Foodvisor_98
     type: response
     require-body: true
     max-size: -1
@@ -18,7 +18,7 @@ http:
 
 
 script-providers:
-  "Foodvisor_36":
+  "Foodvisor_98":
     url: https://raw.githubusercontent.com/axtyet/Quan-X/main/cyz_13724/scripts/foodvisor.js
     interval: 86400
 

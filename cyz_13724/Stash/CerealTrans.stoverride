@@ -10,7 +10,7 @@ http:
 
   script:  
   - match: ^https:\/\/youxifanyizhushou\.com\/ios\/api\/product\/user\/remain\/ios$
-    name: cereal-translator_36
+    name: cereal-translator_98
     type: response
     require-body: true
     max-size: -1
@@ -18,7 +18,7 @@ http:
 
 
 script-providers:
-  "cereal-translator_36":
+  "cereal-translator_98":
     url: https://raw.githubusercontent.com/axtyet/Quan-X/main/cyz_13724/scripts/CerealTrans.js
     interval: 86400
 

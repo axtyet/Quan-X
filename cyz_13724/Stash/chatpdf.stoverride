@@ -10,7 +10,7 @@ http:
 
   script:  
   - match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
-    name: chatpdf_36
+    name: chatpdf_98
     type: response
     require-body: true
     max-size: -1
@@ -18,7 +18,7 @@ http:
 
 
 script-providers:
-  "chatpdf_36":
+  "chatpdf_98":
     url: https://raw.githubusercontent.com/axtyet/Quan-X/main/cyz_13724/scripts/chatpdf.js
     interval: 86400
 
