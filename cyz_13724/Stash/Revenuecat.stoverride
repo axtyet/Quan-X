@@ -10,14 +10,14 @@ http:
 
   script:  
   - match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
-    name: revenuecat合集 （此合集只包含10.5及以后的软件）_19
+    name: revenuecat合集 （此合集只包含10.5及以后的软件）_81
     type: response
     require-body: true
     max-size: -1
     timeout: 60
   
   - match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
-    name: revenuecat合集 （此合集只包含10.5及以后的软件）_19
+    name: revenuecat合集 （此合集只包含10.5及以后的软件）_81
     type: request
     require-body: true
     max-size: -1
@@ -25,7 +25,7 @@ http:
 
 
 script-providers:
-  "revenuecat合集 （此合集只包含10.5及以后的软件）_19":
+  "revenuecat合集 （此合集只包含10.5及以后的软件）_81":
     url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/Revenuecat.js
     interval: 86400
 
