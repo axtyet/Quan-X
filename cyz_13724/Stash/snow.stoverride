@@ -1,0 +1,24 @@
+name: |-
+  SNOW-Ai写真
+desc: |-
+  
+
+http:
+
+  mitm:
+    - "*.snow.me"
+
+  script:  
+  - match: ^https:\/\/user-snow-api\.snow\.me\/v1\/purchase\/subscription\/subscriber\/status$
+    name: SNOW-Ai写真_83
+    type: response
+    require-body: true
+    max-size: -1
+    timeout: 60
+
+
+script-providers:
+  "SNOW-Ai写真_83":
+    url: https://raw.githubusercontent.com/axtyet/Quan-X/main/cyz_13724/scripts/snow.js
+    interval: 86400
+

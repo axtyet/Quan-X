@@ -10,7 +10,7 @@ http:
 
   script:  
   - match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
-    name: Timus_69
+    name: Timus_83
     type: response
     require-body: true
     max-size: -1
@@ -18,7 +18,7 @@ http:
 
 
 script-providers:
-  "Timus_69":
+  "Timus_83":
     url: https://raw.githubusercontent.com/axtyet/Quan-X/main/cyz_13724/scripts/Timus.js
     interval: 86400
 

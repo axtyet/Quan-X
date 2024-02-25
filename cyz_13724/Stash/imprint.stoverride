@@ -10,7 +10,7 @@ http:
 
   script:  
   - match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
-    name: imprint_69
+    name: imprint_83
     type: response
     require-body: true
     max-size: -1
@@ -18,7 +18,7 @@ http:
 
 
 script-providers:
-  "imprint_69":
+  "imprint_83":
     url: https://raw.githubusercontent.com/axtyet/Quan-X/main/cyz_13724/scripts/imprint.js
     interval: 86400
 

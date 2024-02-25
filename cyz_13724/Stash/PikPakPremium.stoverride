@@ -10,7 +10,7 @@ http:
 
   script:  
   - match: ^https:\/\/api-drive\.mypikpak\.com\/(vip\/v\d\/(vip\/info|allSubscriptionStatus)|drive\/v\d\/about\?space)
-    name: PikPak_69
+    name: PikPak_83
     type: response
     require-body: true
     max-size: -1
@@ -18,7 +18,7 @@ http:
 
 
 script-providers:
-  "PikPak_69":
+  "PikPak_83":
     url: https://raw.githubusercontent.com/axtyet/Quan-X/main/cyz_13724/scripts/PikPakPremium.js
     interval: 86400
 
