@@ -10,7 +10,7 @@ http:
 
   script:  
   - match: https://api.alohaprofile.com/v1/profile_info
-    name: Aloha Browser VPN: Surf internet with more privacy_83
+    name: Aloha Browser VPN: Surf internet with more privacy_90
     type: response
     require-body: true
     max-size: -1
@@ -18,7 +18,7 @@ http:
 
 
 script-providers:
-  "Aloha Browser VPN: Surf internet with more privacy_83":
+  "Aloha Browser VPN: Surf internet with more privacy_90":
     url: https://raw.githubusercontent.com/axtyet/Quan-X/main/cyz_13724/scripts/AlohaVPNbrowser.js
     interval: 86400
 

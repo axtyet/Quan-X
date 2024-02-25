@@ -10,7 +10,7 @@ http:
 
   script:  
   - match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
-    name: whisper memos_83
+    name: whisper memos_90
     type: response
     require-body: true
     max-size: -1
@@ -18,7 +18,7 @@ http:
 
 
 script-providers:
-  "whisper memos_83":
+  "whisper memos_90":
     url: https://raw.githubusercontent.com/axtyet/Quan-X/main/cyz_13724/scripts/Whispermemos.js
     interval: 86400
 

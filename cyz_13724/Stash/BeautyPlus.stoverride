@@ -11,7 +11,7 @@ http:
 
   script:  
   - match: https:\/\/(api\.mr\.pixocial\.com\/v1\/manual_unlock|newbeee-api\.beautyplus\.com\/api\/v1\/asset\/balance)
-    name: BeautyPlus_83
+    name: BeautyPlus_90
     type: response
     require-body: true
     max-size: -1
@@ -19,7 +19,7 @@ http:
 
 
 script-providers:
-  "BeautyPlus_83":
+  "BeautyPlus_90":
     url: https://raw.githubusercontent.com/axtyet/Quan-X/main/cyz_13724/scripts/BeautyPlus.js
     interval: 86400
 

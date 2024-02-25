@@ -1,4 +1,4 @@
-#!name=SNOW-Ai写真
+#!name=SNOW-Ai写真  +  EPIK AI 两个软件
 #!desc=
 #!====================================
 #!⚠️【免责声明】
@@ -13,4 +13,4 @@
 [MITM]
 hostname = *.snow.me
 [Script]
-http-response ^https:\/\/user-snow-api\.snow\.me\/v1\/purchase\/subscription\/subscriber\/status$,script-path=https://raw.githubusercontent.com/axtyet/Quan-X/main/cyz_13724/scripts/snow.js, requires-body=true, timeout=60, tag=SNOW-Ai写真
+http-response ^https:\/\/user-snow-api\.snow\.me\/v1\/purchase\/subscription\/subscriber\/status$,script-path=https://raw.githubusercontent.com/axtyet/Quan-X/main/cyz_13724/scripts/snow.js, requires-body=true, timeout=60, tag=SNOW-Ai写真  +  EPIK AI 两个软件

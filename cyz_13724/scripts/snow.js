@@ -4,7 +4,7 @@
 // Stash 覆写地址： https://raw.githubusercontent.com/czy13724/Quantumult-X/main/Stash/snow.stoverride
 
 /*
-项目名称： SNOW-Ai写真
+项目名称： SNOW-Ai写真  +  EPIK AI 两个软件
 项目作者： David
 下载地址： https://apps.apple.com/us/app/snow-ai-profile/id1022267439?l=en-GB
 使用说明： 
@@ -16,24 +16,25 @@
 [mitm]
 hostname = *.snow.me
 */
-var objc = JSON.parse($response.body);
+if ($response.body !== 'undefined') {
+  var mgmdev = JSON.parse($response.body);
+  const url = $request.url;
+  var ids;
+  var packageName;
 
-objc = {
-  "result": {
-    "products": [
-      {
-        "id": 4,
-        "productId": "com.campmobile.snow.subscribe.oneyear",
-        "storeType": "APPLE",
-        "title": "apple - year",
-        "sale": true,
-        "isPromotion": false,
-        "createdAt": 1708883213000,
-        "packageName": "com.campmobile.snow"
-      }
-    ],
-    "activated": true
+  if (url.indexOf('EPIK') !== -1) {
+    ids = "com.snowcorp.epik.subscribe.plan.oneyear";
+    packageName = "com.snowcorp.epik";
+  } else if (url.indexOf('SNOW') !== -1) {
+    ids = "com.campmobile.snow.subscribe.oneyear";
+    packageName = "com.snowcorp.snow";
   }
-};
 
-$done({ body: JSON.stringify(objc)});
+  mgmdev["result"]["products"].forEach(product => {
+    product.productId = ids;
+  });
+
+  mgmdev["result"]["activated"] = true;
+
+  $done({ body: JSON.stringify(mgmdev) });
+}
