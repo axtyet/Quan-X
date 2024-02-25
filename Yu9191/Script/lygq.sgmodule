@@ -1,0 +1,8 @@
+#!name=lygq
+#!desc=lygq
+
+[Script]
+lygq = type=http-response, pattern=^https:\/\/piano-api\.quthing\.com\/vip\/state\/v2, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/lygq.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% piano-api.quthing.com
