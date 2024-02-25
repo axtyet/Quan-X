@@ -10,14 +10,14 @@ http:
 
   script:  
   - match: ^https:\/\/xapi\.weimob\.com\/api3\/onecrm\/mactivity\/sign\/misc\/sign\/activity\/core\/c\/sign$
-    name: 蒙牛母婴官方自营店签到_98
+    name: 蒙牛母婴官方自营店签到_69
     type: request
     require-body: true
     max-size: -1
     timeout: 60
   
   - match: https:\/\/xapi\.weimob\.com\/api3(?:\/.*)?$
-    name: 蒙牛母婴官方自营店签到_98
+    name: 蒙牛母婴官方自营店签到_69
     type: request
     require-body: true
     max-size: -1
@@ -25,7 +25,7 @@ http:
 
 
 script-providers:
-  "蒙牛母婴官方自营店签到_98":
+  "蒙牛母婴官方自营店签到_69":
     url: https://raw.githubusercontent.com/axtyet/Quan-X/main/cyz_13724/scripts/mnmy.js
     interval: 86400
 
