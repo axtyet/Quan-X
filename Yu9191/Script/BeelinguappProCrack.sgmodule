@@ -1,0 +1,11 @@
+#!name=BeelinguappProCrack
+#!desc=Hausd0rff
+
+[Script]
+# > Beelinguapp解锁永久高级版
+BeelinguappProCrack = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/BeelinguappProCrack.js, requires-body=true, max-size=-1, timeout=60
+
+Lingvist = type=http-response, pattern=^https:\/\/payment-api\.lingvist\.com\/1\.4\/user\/services, script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/Lingvist.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% buy.itunes.apple.com, payment-api.lingvist.com
