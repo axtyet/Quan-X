@@ -56,10 +56,10 @@ $.log(`⚠ FORMAT: ${FORMAT}`, "");
 							break;
 						case "cgi-bin/mmspamsupport-bin/newredirectconfirmcgi":
 							let script = body?.querySelector("script")?.textContent?.trim();
-							//$.log(`🚧 ${$.name}`, `script: ${JSON.stringify(script)}`, "");
+							$.log(`🚧 ${$.name}`, `script: ${JSON.stringify(script)}`, "");
 							eval(script);
 							//Function(`"use strict";return (${script})`)();
-							//$.log(`🚧 ${$.name}`, `cgiData: ${JSON.stringify(cgiData ?? undefined)}`, "");
+							$.log(`🚧 ${$.name}`, `cgiData: ${JSON.stringify(cgiData ?? undefined)}`, "");
 							if (cgiData?.url) {
 								let url = URI.parse(cgiData.url);
 								switch (url?.host) {
@@ -109,7 +109,7 @@ $.log(`⚠ FORMAT: ${FORMAT}`, "");
 										break;
 									case "http":
 									case "https":
-										$response = await $.http.get(cgiData.url);
+										$response = await $.fetch(cgiData.url);
 								};
 							}
 							break;

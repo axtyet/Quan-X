@@ -100,7 +100,7 @@ $.log(`⚠ FORMAT: ${FORMAT}`, "");
 										break;
 									case "http":
 									case "https":
-										$response = await $.http.get(cgiData.url);
+										$response = await $.fetch(cgiData.url);
 								};
 							}
 							break;
