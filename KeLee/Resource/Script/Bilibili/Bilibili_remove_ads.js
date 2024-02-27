@@ -1,5 +1,5 @@
 /*
-引用地址：https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/bilibili/bili.js
+引用地址：https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/bilibili/json.js
 */
 // 2024-01-06 12:10
 
