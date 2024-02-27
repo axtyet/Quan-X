@@ -10,7 +10,7 @@ http:
 
   script:  
   - match: ^https:\/\/gw\.aoscdn\.com\/base\/vip\/v2\/vips$
-    name: 傲软投屏_90
+    name: 傲软投屏_80
     type: response
     require-body: true
     max-size: -1
@@ -18,7 +18,7 @@ http:
 
 
 script-providers:
-  "傲软投屏_90":
+  "傲软投屏_80":
     url: https://raw.githubusercontent.com/axtyet/Quan-X/main/cyz_13724/scripts/artp.js
     interval: 86400
 

@@ -10,7 +10,7 @@ http:
 
   script:  
   - match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
-    name: clearful_90
+    name: clearful_80
     type: response
     require-body: true
     max-size: -1
@@ -18,7 +18,7 @@ http:
 
 
 script-providers:
-  "clearful_90":
+  "clearful_80":
     url: https://raw.githubusercontent.com/axtyet/Quan-X/main/cyz_13724/scripts/clearful.js
     interval: 86400
 

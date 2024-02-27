@@ -10,7 +10,7 @@ http:
 
   script:  
   - match: https://api.github.com/graphql
-    name: GitHub 1.142.1_90
+    name: GitHub 1.142.1_80
     type: response
     require-body: true
     max-size: -1
@@ -18,7 +18,7 @@ http:
 
 
 script-providers:
-  "GitHub 1.142.1_90":
+  "GitHub 1.142.1_80":
     url: https://raw.githubusercontent.com/axtyet/Quan-X/main/cyz_13724/scripts/Github.js
     interval: 86400
 

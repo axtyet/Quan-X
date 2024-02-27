@@ -10,7 +10,7 @@ http:
 
   script:  
   - match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
-    name: TVRemote_90
+    name: TVRemote_80
     type: response
     require-body: true
     max-size: -1
@@ -18,7 +18,7 @@ http:
 
 
 script-providers:
-  "TVRemote_90":
+  "TVRemote_80":
     url: https://raw.githubusercontent.com/axtyet/Quan-X/main/cyz_13724/scripts/TVRemote.js
     interval: 86400
 
