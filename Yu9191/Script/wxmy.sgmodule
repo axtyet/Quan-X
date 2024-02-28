@@ -1,0 +1,8 @@
+#!name=wanxingmiaoying
+#!desc=wanxingmiaoying
+
+[Script]
+wanxingmiaoying = type=http-response, pattern=https://api.300624.com/v3/plan/feature-code/auth, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/wanxingmiaoying.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% api.300624.com
