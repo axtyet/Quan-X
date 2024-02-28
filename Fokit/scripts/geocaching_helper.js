@@ -84,7 +84,7 @@ const appid = $.getdata('BaiDu_APP_ID') || '';  // 百度翻译 appid
 const securityKey = $.getdata('BaiDu_SECURITY_KEY') || '';  // 百度翻译 securityKey
 const translateTo = $.getdata('BAIDU_TRANSLATE_TO_KEY') || 'zh';  // 翻译后的语言
 const geocaching_translate = $.getjson('geocaching_translate') || false;  // 百度翻译
-const geocaching_gps_fix = $.getjson('buy_helper_mmm') || true;  // 坐标转换
+const geocaching_gps_fix = $.getjson('geocaching_gps_fix') || true;  // 坐标转换
 let startTime = new Date().getTime();
 let success_num = 0, gps_convert_num = 0;
 let obj = JSON.parse($response.body);
@@ -93,9 +93,9 @@ $.notifyMsg = [];  // 为通知准备的空数组
 $.is_debug = ($.isNode() ? process.env.IS_DEDUG : $.getdata('is_debug')) || 'false';
 
 !(async () => {
-  if (!$request) return $.msg($.name, '', `❌ 非 cron 类脚本，停止执行`);
+  if (!$request) throw new Error('❌ 非 cron 类脚本，不支持手动运行');
   if (/map\/search\?adventuresTake/.test($request.url)) {
-    if (!geocaching_gps_fix) return console.log(`⚠️ 未启用翻译功能，跳过翻译。`);
+    if (!geocaching_gps_fix) throw new Error('⚠️ 未启用转换坐标功能');
     $.log("🔁 开始转换坐标");
     // 通过 map 方法创建一个新数组，用于遍历转换坐标
     let coordinatesArr = obj.geocaches.map(item => item.postedCoordinates);
@@ -140,7 +140,7 @@ $.is_debug = ($.isNode() ? process.env.IS_DEDUG : $.getdata('is_debug')) || 'fal
     $.error_msg && $.notifyMsg.push(`❌ 翻译失败: ${$.error_msg}`);
 
     // 此页面需要转换当前 cache 坐标，否则会导致定位偏移
-    if (!geocaching_gps_fix) return console.log(`⚠️ 未启用翻译功能，跳过翻译。`);
+    if (!geocaching_gps_fix) throw new Error('⚠️ 未启用转换坐标功能');
     $.log("🔁 开始转换坐标");
     // 提取经纬度变量
     let { latitude, longitude } = obj.postedCoordinates;
@@ -154,7 +154,7 @@ $.is_debug = ($.isNode() ? process.env.IS_DEDUG : $.getdata('is_debug')) || 'fal
   }
 })()
   .catch((e) => {
-    $.log('', `❌ ${$.name}, 失败! 原因: ${e}!`, '');
+    $.log(`❌ ${$.name}, 失败! 原因: ${e}!`);
   })
   .finally(() => {
     // 发送通知
