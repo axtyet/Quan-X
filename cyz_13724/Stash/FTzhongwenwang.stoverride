@@ -10,7 +10,7 @@ http:
 
   script:  
   - match: ^https:\/\/dqbam2jv6gg9m\.cloudfront\.net\/index\.php\/jsapi\/paywall
-    name: FTzhongwenwang_80
+    name: FTzhongwenwang_85
     type: response
     require-body: true
     max-size: -1
@@ -18,7 +18,7 @@ http:
 
 
 script-providers:
-  "FTzhongwenwang_80":
+  "FTzhongwenwang_85":
     url: https://raw.githubusercontent.com/axtyet/Quan-X/main/cyz_13724/scripts/FTzhongwenwang.js
     interval: 86400
 

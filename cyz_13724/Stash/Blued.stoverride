@@ -10,21 +10,21 @@ http:
 
   script:  
   - match: ^https:\/\/social\.blued\.cn\/users\/.*\/setting
-    name: blued_80
+    name: blued_85
     type: response
     require-body: true
     max-size: -1
     timeout: 60
   
   - match: ^https:\/\/social\.blued\.cn\/users\/shadow
-    name: blued_80
+    name: blued_85
     type: response
     require-body: true
     max-size: -1
     timeout: 60
   
   - match: ^https:\/\/social\.blued\.cn\/users\/.*\/basi
-    name: blued_80
+    name: blued_85
     type: response
     require-body: true
     max-size: -1
@@ -32,7 +32,7 @@ http:
 
 
 script-providers:
-  "blued_80":
+  "blued_85":
     url: https://raw.githubusercontent.com/anyehttp/quantumult-x/main/Adguard/blued.js
     interval: 86400
 

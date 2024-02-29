@@ -1,0 +1,24 @@
+name: |-
+  AutoCAD
+desc: |-
+  
+
+http:
+
+  mitm:
+    - "app.autocad360.com"
+
+  script:  
+  - match: ^https:\/\/app\.autocad360\.com\/entitlements\/v2\/me\/status
+    name: AutoCAD_85
+    type: response
+    require-body: true
+    max-size: -1
+    timeout: 60
+
+
+script-providers:
+  "AutoCAD_85":
+    url: https://raw.githubusercontent.com/axtyet/Quan-X/main/cyz_13724/scripts/autoCAD.js
+    interval: 86400
+
