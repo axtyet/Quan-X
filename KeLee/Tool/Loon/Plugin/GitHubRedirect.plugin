@@ -4,10 +4,16 @@
 #!author = 可莉🅥
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/GitHub.png
-#!date = 2024-01-04 20:03:54
+#!date = 2024-03-02 20:46:35
+
+[Rule]
+DOMAIN, raw.kkgithub.com, DIRECT
 
 [Rewrite]
-^https:\/\/raw\.githubusercontent\.com 302 https://raw.fastgit.org
+# 由某位热心网友提供服务
+^https:\/\/raw\.githubusercontent\.com 302 https://fastraw.ixnic.net
+# 需境内IP访问，有仓库黑名单关键词。
+# ^https:\/\/raw\.githubusercontent\.com 302 https://raw.kkgithub.com
 
 [Mitm]
 hostname = raw.githubusercontent.com

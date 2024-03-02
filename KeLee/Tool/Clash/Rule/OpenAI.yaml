@@ -1,5 +1,5 @@
 payload:
-# 2023-12-07 16:00:16
+# 2024-03-0219:41:41
   - DOMAIN,api.statsig.com
   - DOMAIN,browser-intake-datadoghq.com
   - DOMAIN,cdn.openai.com
@@ -15,6 +15,7 @@ payload:
   - DOMAIN-SUFFIX,algolia.net
   - DOMAIN-SUFFIX,auth0.com
   - DOMAIN-SUFFIX,cdn.cloudflare.net
+  - DOMAIN-SUFFIX,chatgpt.com
   - DOMAIN-SUFFIX,challenges.cloudflare.com
   - DOMAIN-SUFFIX,client-api.arkoselabs.com
   - DOMAIN-SUFFIX,events.statsigapi.net
