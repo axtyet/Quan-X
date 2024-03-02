@@ -1,0 +1,8 @@
+#!name=duitang
+#!desc=duitang
+
+[Script]
+duitang = type=http-response, pattern=^http[s]?:\/\/.*\.duitang\.com\/napi, script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/duitang.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% *.duitang.com
