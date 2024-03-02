@@ -63,6 +63,7 @@ if (typeof $response == "undefined") {
   var UA = $request.headers['user-agent'];
   const app = '1';
   const UAMappings = {
+    'Text%20Workflow':{ name: 'pro', id: 'tw_99_1m'},//2024.3.2
     'FaceMa':{ name: 'Pro access', id: 'Pro_Lifetime'},//Facemo
     'MadeYu':{ name: 'pro_plus', id: 'my_549_1m_400'},//
     'clica':{ name: 'pro', id: 'clica.vip.year'},//
