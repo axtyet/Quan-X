@@ -7,16 +7,17 @@
 #!select =  自动显示翻译字幕, 是, 否
 #!select = 仅输出字幕译文, 是, 否
 #!select = 字幕译文的位置, 译文位于原文之上, 译文位于原文之下
-#!date = 2024-03-04 13:00:01
-
+#!date = 2024-03-04 15:04:59
 
 [Script]
 # YouTube字幕翻译
 http-request https?:\/\/(www|m|tv)\.youtube\.com\/youtubei\/v1\/player script-path = https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script/YouTube/YouTube_request.js, requires-body = true, tag = JSON·YouTube播放器请求, argument = 
 http-response ^https?:\/\/(www|m|tv)\.youtube\.com\/youtubei\/v1\/player script-path = https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script/YouTube/YouTube_response.js, requires-body = true, tag = JSON·YouTube播放器响应, argument = 
 http-request ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player script-path = https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script/YouTube/YouTube_request.js, requires-body = true, binary-body-mode = true, tag = Proto·YouTube播放器请求, argument = 
-http-response ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext\?(.*)subtype=(Official|External) script-path = https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script/YouTube/YouTube_Composite_Subtitles_response.js, requires-body = true, tag = YouTube合成时间响应, argument = 
-http-response ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext\?(.*)subtype=Translate script-path = https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script/YouTube/YouTube_Subtitles_Translate_response.js, requires-body = true, tag = YouTube翻译时间响应, argument = 
+http-response ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player script-path = https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script/YouTube/YouTube_response.js, requires-body = true, binary-body-mode = true, tag = Proto·YouTube播放器响应, argument = 
+http-request ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext script-path = https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script/YouTube/YouTube_request.js, requires-body = false, tag = YouTube定时文本请求, argument = 
+http-response ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext\?(.*)subtype=(Official|External) script-path = https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script/YouTube/YouTube_Composite_Subtitles_response.js, requires-body = true, tag = YouTube合成定时文本响应, argument = 
+http-response ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext\?(.*)subtype=Translate script-path = https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script/YouTube/YouTube_Subtitles_Translate_response.js, requires-body = true, tag = YouTube翻译定时文本响应, argument = 
 
 # YouTube Music字幕翻译
 http-request ^https?:\/\/music\.youtube\.com\/youtubei\/v1\/browse script-path = https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script/YouTube/YouTube_request.js, requires-body = true, tag = JSON·YouTube Music浏览请求, argument = 
