@@ -10,7 +10,7 @@ https:\/\/.*\.cos\.(ap-guangzhou|ap-beijing)\.myqcloud\.com\/dataUrl url script-
 
 [mitm] 
 
-hostname = cos.ap-guangzhou.myqcloud.com, cos.ap-beijing.myqcloud.com
+hostname = tingli-1259565884.cos.ap-beijing.myqcloud.com, zeng-1259565884.cos.ap-guangzhou.myqcloud.com
 */
 
 var responseBody = $response.body;
