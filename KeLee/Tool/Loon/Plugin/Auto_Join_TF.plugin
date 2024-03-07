@@ -1,11 +1,11 @@
 #!name = 自动加入TestFlight
 #!desc = 自动监控TestFlight名额，一旦有新的名额即刻加入。
 #!openUrl = 
-#!author = DecoAri 佚名 Lucky🅥
+#!author = DecoAri xream
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/TestFlight.png
 #!input = APP_ID
-#!date = 2024-02-23 19:09:28
+#!date = 2024-03-07 22:10:30
 
 [Rule]
 DOMAIN, testflight.apple.com, PROXY
