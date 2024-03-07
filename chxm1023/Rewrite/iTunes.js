@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：iTunes-系列解锁合集
-更新日期：2024-02-20
+更新日期：2024-03-07
 脚本作者：chxm1023
 电报频道：https://t.me/chxm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -26,6 +26,10 @@ const ua = $request.headers['User-Agent'] || $request.headers['user-agent'];
 const bundle_id = chxm1023.receipt["bundle_id"] || chxm1023.receipt["Bundle_Id"];
 
 const list = {
+  'Future%20Baby': { cm: 'sjbla', hx: 'hxpda', id: "com.nilu.faceseer.yearly", latest: "chxm1023" },  //宝宝长相预测
+  'Smoke': { cm: 'sjbla', hx: 'hxpda', id: "smoke19870727", latest: "chxm1023" },  //今日香烟
+  'com.wms.hrv': { cm: 'sjbla', hx: 'hxpda', id: "com.wms.hrv.pro", latest: "chxm1023" },  //ECG+
+  'AppAlarmIOS': { cm: 'sjbla', hx: 'hxpda', id: "alarm.me.vip.year.tier1", latest: "chxm1023" },  //Me+
   'Tinglee': { cm: 'sjbla', hx: 'hxpdb', id: "vip.forever.tinglee", latest: "chxm1023" },  //英语听听
   'NoteKeys': { cm: 'sjbla', hx: 'hxpda', id: "notekeys_access_weekly", latest: "chxm1023" },  //五线谱
   'SheetMusicPro': { cm: 'sjbla', hx: 'hxpda', id: "sheetmusicpro.yearwithtrial", latest: "chxm1023" },  //乐谱吧
