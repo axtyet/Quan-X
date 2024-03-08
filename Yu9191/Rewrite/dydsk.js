@@ -10,7 +10,7 @@ https:\/\/api\.dayuclass\.com\/api\/v2\/(course|member\/detail) url script-respo
 
 hostname = api.dayuclass.com
 */
-let url = $request.url;
+var url = $request.url;
 
 if (url.includes("https://api.dayuclass.com/api/v2/member/detail")) {
     let obj = JSON.parse($response.body);
@@ -20,16 +20,10 @@ if (url.includes("https://api.dayuclass.com/api/v2/member/detail")) {
     obj.data.vipExpired = 0;
     obj.data.credit1 = 98992;
     obj.data.buy_status = 1;
-    $done({
-        body: JSON.stringify(obj),
-        status: 200
-    });
+    $done({ body: JSON.stringify(obj), status: 200 });
 } else if (url.includes("https://api.dayuclass.com/api/v2/course")) {
-    let body = $response.body;
-    body = body.replace(/"is_watch":\s*false/g, '"is_watch": true');
-    body = body.replace(/"is_trailer":\s*0/g, '"is_trailer": 1');
-
-    $done({ body });
+    $done({ body: $response.body.replace(/"is_watch":\s*false/g, '"is_watch": true').replace(/"is_trailer":\s*0/g, '"is_trailer": 1') });
 } else {
     $done({});
 }
+
