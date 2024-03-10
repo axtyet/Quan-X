@@ -1,49 +1,42 @@
 /*
-脚本引用https://gist.githubusercontent.com/ddgksf2013/bb1dadbd32f67c68772caebcc70b0a33/raw/pipixia.adblock.js
+脚本引用https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/PPX.js
 */
-var body = $response.body.replace(/id\":([0-9]{15,})/g, 'id":"$1str"'),
-  obj = null;
-try {
-  obj =
-    (body = JSON.parse(body)).data?.data ||
-    body.data?.replies ||
-    body.data?.cell_comments;
-} catch (o) {
-  console.log("JSON parse error:", o);
+// 2024-02-02 13:51
+const url = $request.url;
+const scriptEnvironment = typeof $task != 'undefined' ? 'Surge' : (typeof $loon != 'undefined' ? 'Loon' : (typeof $httpClient != 'undefined' ? 'Qx' : 'Unknown'));
+
+if (!$response.body || scriptEnvironment === 'Unknown') {
+  $done({});
 }
-Array.isArray(obj)
-  ? obj.forEach(function (o, i) {
-      if (null != o.ad_info) {
-        obj.splice(i, 1);
-        return;
-      }
-      o.item?.video &&
-        (o.item.video.video_download.url_list =
-          o.item.origin_video_download.url_list),
-        o.item?.comments &&
-          o.item.comments.forEach(function (o) {
-            o.video && (o.video_download.url_list = o.video.url_list);
-          }),
-        o.comment_info?.video &&
-          (o.comment_info.video_download.url_list =
-            o.comment_info.video.url_list);
-    })
-  : (obj.item?.video &&
-      (obj.item.video.video_download.url_list =
-        obj.item.origin_video_download.url_list),
-    obj.item?.comments &&
-      obj.item.comments.forEach(function (o) {
-        o.video && (o.video_download.url_list = o.video.url_list);
-      }),
-    obj.comment_info?.video &&
-      (obj.comment_info.video_download.url_list =
-        obj.comment_info.video.url_list)),
-  $done({
-    body: (body = (body = (body = (body = (body = JSON.stringify(body)).replace(
-      /id\":\"([0-9]{15,})str\"/g,
-      'id":$1'
-    )).replace(/\"can_download\":false/g, '"can_download":true')).replace(
-      /tplv-ppx-logo.image/g,
-      "0x0.gif"
-    )).replace(/tplv-ppx-logo/g, "0x0")),
-  });
+
+let obj = JSON.parse($response.body);
+
+
+function filterProfileEntrances() {
+  let profileEntrances = obj.data.profile_entrances;
+  let titlesToFilter = ['放心借', '创作中心', '原创特权', '小黑屋', '我的订单'];
+
+  obj.data.profile_entrances = profileEntrances.filter(entry => !titlesToFilter.includes(entry.title));
+  fixPos(obj.data.profile_entrances);
+}
+
+function filterChannelModel() {
+  if (obj.data.channel_model) {
+    obj.data.channel_model = obj.data.channel_model.filter(item => ["feed", "image_text"].includes(item.event_name));
+    fixPos(obj.data.channel_model);
+  }
+}
+
+function fixPos(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    arr[i].pos = i + 1;
+  }
+}
+
+  if (url.includes("/bds/user/check_in/")) {
+  filterProfileEntrances();
+} else if (url.includes("/bds/feed/channel_list/")) {
+  filterChannelModel();
+}
+
+$done({ body: JSON.stringify(obj) });
