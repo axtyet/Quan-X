@@ -10,7 +10,7 @@ http:
 
   script:  
   - match: ^https?:\/\/.*\.oracle\.bendingspoonsapps\.com\/v\d\/(users\/.+|purchases\/verify)
-    name: Remini_85
+    name: Remini_8
     type: response
     require-body: true
     max-size: -1
@@ -18,7 +18,7 @@ http:
 
 
 script-providers:
-  "Remini_85":
+  "Remini_8":
     url: https://raw.githubusercontent.com/axtyet/Quan-X/main/cyz_13724/scripts/ReminiLifetime.js
     interval: 86400
 

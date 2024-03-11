@@ -11,7 +11,7 @@ http:
 
   script:  
   - match: ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token
-    name: aliyun_85
+    name: aliyun_8
     type: request
     require-body: true
     max-size: -1
@@ -19,14 +19,14 @@ http:
 
 
 script-providers:
-  "aliyun_85":
+  "aliyun_8":
     url: https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js
     interval: 86400
 
 
 cron: 
   script: 
-      - name: "aliyun_85"
+      - name: "aliyun_8"
       cron: "0 7,11,17 * * *"
       timeout: 60
 

@@ -1,16 +1,16 @@
 name: |-
-  nicegram
+  Al Photo Generator-Collart AI
 desc: |-
   要激活高级版，请单击底部的“助手”，然后单击“释放您的 Nicegram 福利”，最后单击底部的“开始”。完成此操作后，Premium 应该已解锁
 
 http:
 
   mitm:
-    - "nicegram.cloud"
+    - "iap.etm.tech"
 
   script:  
-  - match: ^https?:\/\/nicegram\.cloud\/api\/v\d\/(ai-assistant\/purchase-list|user\/info|telegram\/auth)
-    name: nicegram_8
+  - match: ^https:\/\/iap\.etm\.tech\/receipts
+    name: Al Photo Generator-Collart AI_8
     type: response
     require-body: true
     max-size: -1
@@ -18,7 +18,7 @@ http:
 
 
 script-providers:
-  "nicegram_8":
-    url: https://raw.githubusercontent.com/axtyet/Quan-X/main/cyz_13724/scripts/nicegram.js
+  "Al Photo Generator-Collart AI_8":
+    url: https://raw.githubusercontent.com/axtyet/Quan-X/main/cyz_13724/scripts/Al
     interval: 86400
 
