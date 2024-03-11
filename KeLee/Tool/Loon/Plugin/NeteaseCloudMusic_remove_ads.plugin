@@ -35,7 +35,7 @@ DOMAIN-SUFFIX, 163jiasu.com, REJECT
 http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/(batch|v\d\/resource\/comment\/floor\/get) script-path = https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = ne_mian
 
 # 伪vip
-http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/(music-vip-membership\/client\/vip\/info|vipauth\/app\/auth\/recycle|vipnewcenter\/app\/resource\/newaccountpage) script-path = https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = ne_vip
+# http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/(music-vip-membership\/client\/vip\/info|vipauth\/app\/auth\/recycle|vipnewcenter\/app\/resource\/newaccountpage) script-path = https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = ne_vip
 
 # tab
 http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/link\/home\/framework\/tab script-path = https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = ne_tab
