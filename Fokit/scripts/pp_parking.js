@@ -132,8 +132,7 @@ async function task() {
         for (let i = 0; i < item['repeat_limit']; i++) {
           if ($.is_done) break;
           $.log(`✈️ 执行任务: ${item['name']} [${i + 1}/${item['repeat_limit']}]`);
-          await complete(purpose, voucher);
-          await acquire(purpose, item['name']);
+          await complete(purpose, voucher) && await acquire(purpose, item['name']);
         }
       } else if (item['name'].includes('签到')) {
         await acquire(purpose, item['name']);
@@ -233,7 +232,7 @@ async function getToken() {
     // $.openid = openid;
     // $.mobile = mobile;
     // $.nickname = nickname;
-    $.token = 'Bearer ' + access_token.value;
+    $.token = access_token.value;
     // msg = `昵称: ${$.nickname} 手机: ${hideSensitiveData($.mobile, 3, 4)}`;
     $.log(`✅ 成功获取 Token`);
   } else {
