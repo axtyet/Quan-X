@@ -4,7 +4,7 @@
 #!author = Keywos
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/NeteaseCloudMusic.png
-#!date = 2024-03-10 09:21:49
+#!date = 2024-03-11 13:31:25
 #!select = 首页卡片数量, 1, 2, 3, 4, 5
 #!select = 隐藏漫游标签, 是, 否
 #!select = 隐藏动态标签, 是, 否
