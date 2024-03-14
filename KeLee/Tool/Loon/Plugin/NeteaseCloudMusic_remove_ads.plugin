@@ -4,12 +4,20 @@
 #!author = Keywos
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/NeteaseCloudMusic.png
-#!date = 2024-03-11 13:31:25
-#!select = 首页卡片数量, 1, 2, 3, 4, 5
+#!date = 2024-03-13 17:59:58
 #!select = 隐藏漫游标签, 是, 否
 #!select = 隐藏动态标签, 是, 否
 #!select = 隐藏推荐标签, 是, 否
 #!select = 隐藏发现标签, 是, 否
+#!select = 隐藏首页问候语, 是, 否
+#!select = 隐藏首页排行榜, 是, 否
+#!select = 隐藏首页每日推荐, 是, 否
+#!select = 隐藏首页推荐歌单, 是, 否
+#!select = 隐藏首页最近常听, 是, 否
+#!select = 隐藏首页雷达歌单, 是, 否
+#!select = 隐藏首页音乐合伙人, 是, 否
+#!select = 隐藏首页推荐专属歌单, 是, 否
+#!select = 隐藏首页你的专属歌单, 是, 否
 
 [Rule]
 DOMAIN, httpdns.music.163.com, REJECT
@@ -33,9 +41,6 @@ DOMAIN-SUFFIX, 163jiasu.com, REJECT
 [Script]
 # mian | 热推、有话想说、分享一下、歌曲下的祝福等小提示去除 ｜ 评论区 乐迷、星评等级 关注 等 图标去除
 http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/(batch|v\d\/resource\/comment\/floor\/get) script-path = https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = ne_mian
-
-# 伪vip
-# http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/(music-vip-membership\/client\/vip\/info|vipauth\/app\/auth\/recycle|vipnewcenter\/app\/resource\/newaccountpage) script-path = https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = ne_vip
 
 # tab
 http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/link\/home\/framework\/tab script-path = https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = ne_tab
