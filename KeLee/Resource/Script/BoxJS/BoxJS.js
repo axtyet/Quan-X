@@ -6,7 +6,7 @@ const $ = new Env('BoxJs')
 // 为 eval 准备的上下文环境
 const $eval_env = {}
 
-$.version = '0.13.1'
+$.version = '0.14.2'
 $.versionType = 'beta'
 
 // 发出的请求需要需要 Surge、QuanX 的 rewrite
@@ -222,6 +222,41 @@ async function handlePage() {
  * 处理`查询`请求
  */
 async function handleQuery() {
+  const referer = $request.headers.referer || $request.headers.Referer
+  if (!/^https?:\/\/(.+\.)?boxjs\.(com|net)\//.test(referer)) {
+    const isMuteQueryAlert = [true, 'true'].includes(
+      $.getdata('@chavy_boxjs_userCfgs.isMuteQueryAlert')
+    )
+
+    if (!isMuteQueryAlert) {
+      // 关闭静默状态
+      const _isMute = $.isMute
+      $.isMute = false
+
+      $.msg(
+        $.name,
+        '❗️发现有脚本或人正在读取你的数据',
+        [
+          '请注意数据安全, 你可以: ',
+          '1. 在 BoxJs 的脚本日志中查看详情',
+          '2. 在 BoxJs 的页面 (侧栏) 中 "不显示查询警告"'
+        ].join('\n')
+      )
+
+      // 还原静默状态
+      $.isMute = _isMute
+    }
+
+    $.log(
+      [
+        '',
+        '❗️❗️❗️ 发现有脚本或人正在读取你的数据 ❗️❗️❗️',
+        JSON.stringify($request),
+        ''
+      ].join('\n')
+    )
+  }
+
   const [, query] = $.path.split('/query')
   if (/^\/boxdata/.test(query)) {
     $.json = getBoxData()
@@ -231,7 +266,6 @@ async function handleQuery() {
   } else if (/^\/versions$/.test(query)) {
     await getVersions(true)
   } else if (/^\/data/.test(query)) {
-    // TODO 记录每次查询的 key 至 usercfgs.viewkeys
     const [, dataKey] = query.split('/data/')
     $.json = {
       key: dataKey,
