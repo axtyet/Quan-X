@@ -1,0 +1,8 @@
+#!name=gupaoyun
+#!desc=gupaoyun
+
+[Script]
+gupaoyun = type=http-response, pattern=https:\/\/ke\.gupaoedu\.cn\/api\/(web\/quiz\/package|v2\/curriculum\/outline|user\/), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/gupaoyun.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% ke.gupaoedu.cn
