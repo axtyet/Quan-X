@@ -1,0 +1,9 @@
+#!name=Notability
+#!desc=Notability
+
+[Map Local]
+# notability
+https://notability.com/global data-type=file data="https://raw.githubusercontent.com/Yu9191/Rewrite/main/Nob.txt"
+
+[MITM]
+hostname = %APPEND% notability.com
