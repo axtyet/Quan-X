@@ -9,7 +9,7 @@
 [rewrite_local]
 
 
-https://miniapp.guniuniu.com/api/app/user url script-response-body https://raw.githubusercontent.com/axtyet/Quan-X/main/Yu9191/Rewrite/ticaiku.js
+https://miniapp.guniuniu.com/api/app/user$ url script-response-body https://raw.githubusercontent.com/axtyet/Quan-X/main/Yu9191/Rewrite/ticaiku.js
 
 [mitm] 
 
