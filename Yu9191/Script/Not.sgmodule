@@ -1,8 +1,8 @@
-#!name=Notability
-#!desc=Notability
+#!name=Not
+#!desc=Not
 
 [Map Local]
-# notability
+# not
 https://notability.com/global data-type=file data="https://raw.githubusercontent.com/Yu9191/Rewrite/main/Nob.txt"
 
 [MITM]
