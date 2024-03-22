@@ -388,7 +388,67 @@ jobs:
             fi
           done
 
-     # Fork evilbutcher
+     # Fork 墨鱼
+    - name: Fork ddgksf2013
+      run: |
+        mkdir -p Quan-X-repo/ddgksf2013/Rewrite
+        git clone -b master https://github.com/ddgksf2013/Rewrite.git cds_Tmp
+        cp -r cds_Tmp/* Quan-X-repo/ddgksf2013/Rewrite
+        rm -rf cds_Tmp
+    # Fork 墨鱼
+    - name: Fork ddgksf2013
+      run: |
+        mkdir -p Quan-X-repo/ddgksf2013/Scripts
+        git clone -b master https://github.com/ddgksf2013/Scripts.git dcf_Tmp
+        cp -r dcf_Tmp/* Quan-X-repo/ddgksf2013/Scripts
+        rm -rf cdf_Tmp
+     # 修改脚本链接
+    - name: Edit http
+      run: |
+        cd Quan-X-repo/ddgksf2013/Scripts
+        for file in *.js; do
+            if [ "$file" ] ; then
+              # 修改脚本链接
+              sed -i 's/github\.com\/ddgksf2013\/Scripts\/raw\/master/raw.githubusercontent\.com\/axtyet\/Quan-X\/main\/ddgksf2013\/Scripts/g' "$file"
+            else
+              echo "$file not found."
+            fi
+          done
+      # Fork 墨鱼
+    - name: Fork ddgksf2013
+      run: |
+        mkdir -p Quan-X-repo/ddgksf2013/Filter
+        git clone -b master https://github.com/ddgksf2013/Filter.git ytu_Tmp
+        cp -r ytu_Tmp/* Quan-X-repo/ddgksf2013/Filter
+        rm -rf ytu_Tmp
+      # Fork 墨鱼
+    - name: Fork ddgksf2013
+      run: |
+        mkdir -p Quan-X-repo/ddgksf2013/Profile
+        git clone -b master https://github.com/ddgksf2013/Profile.git tyu_Tmp
+        cp -r tyu_Tmp/* Quan-X-repo/ddgksf2013/Profile
+        rm -rf tyu_Tmp
+     # Fork 墨鱼
+    - name: Fork ddgksf2013
+      run: |
+        mkdir -p Quan-X-repo/ddgksf2013/MOYU
+        git clone -b master https://github.com/ddgksf2013/MoYu.git uyt_Tmp
+        cp -r uyt_Tmp/* Quan-X-repo/ddgksf2013/MOYU
+        rm -rf uyt_Tmp
+     # 修改脚本链接
+    - name: Edit http
+      run: |
+        cd Quan-X-repo/ddgksf2013/MOYU
+        for file in *.js; do
+            if [ "$file" ] ; then
+              # 修改脚本链接
+              sed -i 's/github\.com\/ddgksf2013\/MoYu\/raw\/master/raw.githubusercontent\.com\/axtyet\/Quan-X\/main\/ddgksf2013\/MOYU/g' "$file"
+            else
+              echo "$file not found."
+            fi
+          done
+
+    # Fork evilbutcher
     - name: Fork evilbutcher
       run: |
         mkdir -p Quan-X-repo/evilbutcher
