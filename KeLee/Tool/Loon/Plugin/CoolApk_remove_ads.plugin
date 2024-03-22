@@ -10,9 +10,9 @@
 ^https:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch reject-dict
 
 [Script]
-http-response ^https:\/\/api\.coolapk\.com\/v6\/feed\/(detail|replyList)\? script-path = https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script//CoolApk/CoolApk_remove_ads.js, requires-body = true, tag = 移除酷安广告
-http-response ^https:\/\/api\.coolapk\.com\/v6\/main\/(dataList|indexV8|init) script-path = https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script//CoolApk/CoolApk_remove_ads.js, requires-body = true, tag = 移除酷安广告
-http-response ^https:\/\/api\.coolapk\.com\/v6\/page\/dataList\? script-path = https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script//CoolApk/CoolApk_remove_ads.js, requires-body = true, tag = 移除酷安广告
+http-response ^https:\/\/api\.coolapk\.com\/v6\/feed\/(detail|replyList)\? script-path = https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script/CoolApk/CoolApk_remove_ads.js, requires-body = true, tag = 移除酷安广告
+http-response ^https:\/\/api\.coolapk\.com\/v6\/main\/(dataList|indexV8|init) script-path = https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script/CoolApk/CoolApk_remove_ads.js, requires-body = true, tag = 移除酷安广告
+http-response ^https:\/\/api\.coolapk\.com\/v6\/page\/dataList\? script-path = https://raw.githubusercontent.com/axtyet/Quan-X/main/KeLee/Resource/Script/CoolApk/CoolApk_remove_ads.js, requires-body = true, tag = 移除酷安广告
 
 [Mitm]
 hostname = api.coolapk.com
