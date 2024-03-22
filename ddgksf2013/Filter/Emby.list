@@ -1,0 +1,176 @@
+#======================================#
+#更新时间 2024-02-01
+#https://t.me/ddgksf2021
+#======================================#
+
+# > ntRRR
+DOMAIN-SUFFIX, stream.ntrrr.top
+DOMAIN-SUFFIX, stream.synn.cc
+
+# > Singularity
+DOMAIN-SUFFIX,singularity.deja-vu.beauty
+
+# > 品云
+DOMAIN-SUFFIX,embyplus.club
+
+# > Netcup
+DOMAIN-SUFFIX,404.sb
+
+# > 佛系
+DOMAIN-SUFFIX,4545.cf
+
+# > 蓝海
+DOMAIN-SUFFIX,blueseacdn.com 
+IP-CIDR,212.90.120.164/32,no-resolve
+
+#> 1111
+DOMAIN-SUFFIX,emby.ml
+DOMAIN-SUFFIX,loseremby.org
+
+# > llon plex
+DOMAIN-SUFFIX,plex.direct
+DOMAIN,plex.llon.net
+
+# > texon
+DOMAIN-SUFFIX,texon.fans
+
+# > 剧狗
+DOMAIN-SUFFIX,ju.dog
+IP-CIDR,202.61.255.248/32,no-resolve
+
+# > TreeDiagram
+DOMAIN-SUFFIX,123456.al
+
+# > EMBY 餐厅
+DOMAIN-SUFFIX,mius.uk
+
+# > emby-nexitally
+DOMAIN,emby.nexitally.com
+
+# > emby-paoche
+DOMAIN,emby.cjpc.cc
+
+# > emby-flowercloud
+DOMAIN,emby.flowercloud.yt
+
+# > emby-maying
+DOMAIN,emby.maying.club
+
+# > emby-mdss
+DOMAIN,emby.mdss.cloud
+
+# > emby-ytoo
+DOMAIN,emby.ytoo.li
+
+# > emby-w8ves
+DOMAIN,embyserver.ga
+
+# > emby-prpr
+DOMAIN,emby.prprcloud.com
+
+# > emby-nyancat
+DOMAIN,emby.nyancat.net
+
+# > emby-Plus
+DOMAIN,emby.plusmedia.site
+DOMAIN,emby-cf.plusmedia.site 
+DOMAIN,emby.xeton.dev
+DOMAIN,jellyfin.xeton.dev
+DOMAIN,movie.xeton.dev
+DOMAIN,servers.xeton.dev
+
+# > emby-Otaku
+DOMAIN,emby.otakudrive.life
+DOMAIN,emby2.otakudrive.life 
+
+# > emby-jmsooo
+DOMAIN,agahk1.jmsooo.com
+DOMAIN,agasg1.jmsooo.com
+DOMAIN,agajp1.jmsooo.com
+DOMAIN,aws.jmsooo.com
+DOMAIN,ntt1.jmsooo.com
+DOMAIN,hinet.jmsooo.com
+DOMAIN,cf1.jmsooo.com
+
+# > pornemby
+DOMAIN,pornemby.club
+
+# > IMM
+DOMAIN,emby.immtel.com
+
+# > Odyssey
+DOMAIN,cf.odysseyplus.site
+DOMAIN,agahk.odysseyplus.site
+DOMAIN,agasg.odysseyplus.site
+DOMAIN,ru.odysseyplus.site
+
+# > Exflux
+DOMAIN,line.emby.men
+
+# > SoCloud
+DOMAIN,emby.run
+
+# > 普拉斯影业
+DOMAIN,emby.plusmedia.site
+DOMAIN,emby-sg.plusmedia.site
+DOMAIN,emby-cf.plusmedia.site
+DOMAIN,emby.xeton.dev
+DOMAIN,jellyfin.xeton.dev
+DOMAIN,movie.xeton.dev
+DOMAIN,servers.xeton.dev
+
+# > WaveCloud
+DOMAIN,embyserver.ga
+
+# > 卷毛鼠
+DOMAIN,jmsooo.com
+DOMAIN,cf.jmsooo.com
+DOMAIN,hk.jmsooo.com
+DOMAIN,sg.jmsooo.com
+
+# > 终点站
+DOMAIN,emby.wtf
+DOMAIN,pub1back.emby.wtf
+DOMAIN,pub2back.emby.wtf
+DOMAIN,pub3back.emby.wtf
+DOMAIN,pub1.emby.wtf
+DOMAIN,pub2.emby.wtf
+DOMAIN,pub3.emby.wtf
+
+# > 熊猫
+DOMAIN,embyclub.com
+DOMAIN,az-hk.embyclub.com
+DOMAIN,azsgp.embyclub.com
+
+# > 卡戎
+DOMAIN,play.charontv.com
+
+# > 大白
+DOMAIN,emby.p-p.men
+
+# > aiyowei
+DOMAIN,emby.aiyowei.ml
+
+# > polo
+DOMAIN-SUFFIX,poloemby.xyz
+DOMAIN-SUFFIX,pololine.ml
+
+# > MisakaF
+DOMAIN-SUFFIX,misakaf.org
+
+# > GfwEmby
+DOMAIN-SUFFIX,gfwemby.org
+
+# > 垃圾影音
+DOMAIN-SUFFIX,loseremby.org
+
+# > Cc
+DOMAIN,cc.ccemby.tk
+
+# > Nebula
+DOMAIN,direct.nebula-emby.com
+
+# > aca
+DOMAIN,emby.aca.best
+DOMAIN,porn.aca.best
+
