@@ -1,0 +1,8 @@
+# NAME: NowE
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2024-02-25 16:04:10
+# HOST-SUFFIX: 2
+# TOTAL: 2
+HOST-SUFFIX,nowe.com,NowE
+HOST-SUFFIX,nowestatic.com,NowE

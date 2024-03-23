@@ -1,0 +1,19 @@
+# NAME: Salesforce
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2024-02-25 16:04:35
+# HOST-SUFFIX: 13
+# TOTAL: 13
+HOST-SUFFIX,force.com,Salesforce
+HOST-SUFFIX,heroku.com,Salesforce
+HOST-SUFFIX,herokuapp.com,Salesforce
+HOST-SUFFIX,herokucdn.com,Salesforce
+HOST-SUFFIX,mulesoft.com,Salesforce
+HOST-SUFFIX,salesforce.com,Salesforce
+HOST-SUFFIX,salesforce.org,Salesforce
+HOST-SUFFIX,salesforceliveagent.com,Salesforce
+HOST-SUFFIX,sfdcdigital.com,Salesforce
+HOST-SUFFIX,sfdcstatic.com,Salesforce
+HOST-SUFFIX,tableau.com,Salesforce
+HOST-SUFFIX,trailblazer.me,Salesforce
+HOST-SUFFIX,trailhead.com,Salesforce

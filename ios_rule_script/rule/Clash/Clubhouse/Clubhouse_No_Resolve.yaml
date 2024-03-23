@@ -1,0 +1,13 @@
+# NAME: Clubhouse
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2024-02-25 16:03:59
+# DOMAIN: 2
+# DOMAIN-SUFFIX: 3
+# TOTAL: 5
+payload:
+  - DOMAIN,clubhouse.pubnub.com
+  - DOMAIN,clubhouseprod.s3.amazonaws.com
+  - DOMAIN-SUFFIX,clubhouse.com
+  - DOMAIN-SUFFIX,clubhouseapi.com
+  - DOMAIN-SUFFIX,joinclubhouse.com

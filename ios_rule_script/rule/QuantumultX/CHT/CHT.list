@@ -1,0 +1,13 @@
+# NAME: CHT
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2024-02-25 16:04:01
+# HOST-SUFFIX: 7
+# TOTAL: 7
+HOST-SUFFIX,cht.com.tw,CHT
+HOST-SUFFIX,chtf.org.tw,CHT
+HOST-SUFFIX,emome.net,CHT
+HOST-SUFFIX,gtlsca.nat.gov.tw,CHT
+HOST-SUFFIX,hinet.net,CHT
+HOST-SUFFIX,litv.tv,CHT
+HOST-SUFFIX,xuite.net,CHT

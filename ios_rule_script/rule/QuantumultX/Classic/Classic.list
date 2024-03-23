@@ -1,0 +1,10 @@
+# NAME: Classic
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2024-02-25 16:04:08
+# HOST: 4
+# TOTAL: 4
+HOST,asia.battle.net,Classic
+HOST,europe.battle.net,Classic
+HOST,useast.battle.net,Classic
+HOST,uswest.battle.net,Classic

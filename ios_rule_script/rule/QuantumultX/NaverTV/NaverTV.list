@@ -1,0 +1,10 @@
+# NAME: NaverTV
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2024-02-25 16:04:10
+# HOST-SUFFIX: 2
+# USER-AGENT: 1
+# TOTAL: 3
+HOST-SUFFIX,naver.com,NaverTV
+HOST-SUFFIX,smartmediarep.com,NaverTV
+USER-AGENT,Naver%20TV*,NaverTV
