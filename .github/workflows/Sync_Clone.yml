@@ -464,6 +464,22 @@ jobs:
         cp -r xcv_Tmp/* Quan-X-repo/ios_rule_script
         rm -rf xcv_Tmp
 
+    # fork 毒奶去广告
+    - name: Fork repository limbopro
+      run: |
+        mkdir -p Quan-X-repo/limbopro
+        git clone -b main https://github.com/limbopro/Adblock4limbo.git  cxv_Tmp
+        cp -r cxv_Tmp/* Quan-X-repo/limbopro
+        rm -rf cxv_Tmp
+
+    # fork app2smile
+    - name: Fork repository app2smile
+      run: |
+        mkdir -p Quan-X-repo/app2smile
+        git clone -b master https://github.com/app2smile/rules.git  xvc_Tmp
+        cp -r xvc_Tmp/* Quan-X-repo/app2smile
+        rm -rf xvc_Tmp   
+
 
       # 保存、推送   
     - name: Add and Commits
