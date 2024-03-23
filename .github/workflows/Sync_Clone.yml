@@ -465,7 +465,7 @@ jobs:
         rm -rf xcv_Tmp
 
     # fork 毒奶去广告
-    - name: Fork repository limbopro
+    - name: Fork limbopro
       run: |
         mkdir -p Quan-X-repo/limbopro
         git clone -b main https://github.com/limbopro/Adblock4limbo.git  cxv_Tmp
@@ -473,7 +473,7 @@ jobs:
         rm -rf cxv_Tmp
 
     # fork app2smile
-    - name: Fork repository app2smile
+    - name: Fork app2smile
       run: |
         mkdir -p Quan-X-repo/app2smile
         git clone -b master https://github.com/app2smile/rules.git  xvc_Tmp
