@@ -456,6 +456,14 @@ jobs:
         cp -r dfr_Tmp/* Quan-X-repo/evilbutcher
         rm -rf dfr_Tmp
 
+    # Fork blackmatrix7
+    - name: Fork blackmatrix7
+      run: |
+        mkdir -p Quan-X-repo/ios_rule_script
+        git clone -b master https://github.com/blackmatrix7/ios_rule_script.git xcv_Tmp
+        cp -r xcv_Tmp/* Quan-X-repo/ios_rule_script
+        rm -rf xcv_Tmp
+
 
       # 保存、推送   
     - name: Add and Commits
