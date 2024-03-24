@@ -3,28 +3,42 @@
 
 [rewrite_local]
 
-^https:\/\/partner-ai-api\.quthing\.com\/(ai\/vip\/state|student\/info\/h5) url script-response-body https://raw.githubusercontent.com/axtyet/Quan-X/main/Yu9191/Rewrite/Laiyin.js
+^https:\/\/.*api\.quthing\.com\/(.+\/vip|vip|student|user|ai|appearance|background|rest) url script-response-body https://raw.githubusercontent.com/axtyet/Quan-X/main/Yu9191/Rewrite/Laiyin.js
 
 [mitm]
 hostname = partner-ai-api.quthing.com
 */
-var url = $request.url;
 var body = $response.body;
 
-if (url.indexOf('student/info/h5') !== -1) {
-    var obj = JSON.parse(body);
+// 修改属性值
+body = body
+    .replace(/"trialPeriod":\w+/g, '"trialPeriod":true')
+    .replace(/"trial":\w+/g, '"trial":true')
+    .replace(/"buttonTip":"(.*?)"/g, '"buttonTip":"已解锁"')
+    .replace(/"newButtonTitle":"(.*?)"/g, '"newButtonTitle":"已解锁会员"')
+    .replace(/"buttonTitle":"(.*?)"/g, '"buttonTitle":"已解锁会员"')
+    .replace(/"vipMessage":"(.*?)"/g, '"vipMessage":"终身会员"')
+    .replace(/"cnButtonTip":"(.*?)"/g, '"cnButtonTip":"已解锁会员"')
+    .replace(/"vipHighlight":"(.*?)"/g, '"vipHighlight":""')
+    .replace(/"trialDays":"(.*?)"/g, '"trialDays":"99999"')
+    .replace(/"vipType":\d+/g, '"vipType":3')
+    .replace(/"seniorVipType":\d+/g, '"seniorVipType":3')
+    .replace(/"courseVipType":\d+/g, '"courseVipType":3')
+    .replace(/"validVip":\w+/g, '"validVip":true')
+    .replace(/"validSeniorVip":\w+/g, '"validSeniorVip":true')
+    .replace(/"validCourseVip":\w+/g, '"validCourseVip":true')
+    .replace(/"canEnterCourseIfOldVip":\w+/g, '"canEnterCourseIfOldVip":true')
+    .replace(/"unlocked":false/g, '"unlocked":true')
+    .replace(/"vipFree":\w+/g, '"vipFree":false')
+    .replace(/"cost":\d+/g, '"cost":0')
+    .replace(/"expireTime":\d+/g, '"expireTime":4092599349000')
+    .replace(/"seniorExpireTime":\d+/g, '"seniorExpireTime":4092599349000')
+    .replace(/"courseVipExpireTime":\d+/g, '"courseVipExpireTime":4092599349000')
+    .replace(/"expiredDays":\d+/g, '"expiredDays":999999')
+    .replace(/"status":\d+/g, '"status":1')
+    .replace(/"vipCount":\d+/g, '"vipCount":999999')
+    .replace(/"showText":".*?"/g, '"showText":"2099.9.9到期"')
+    .replace(/"lastBuySkuName":".*?"/g, '"lastBuySkuName":"partnertrainingai_year_vip"');
 
-    
+$done({ body: body });
 
-    obj.data.vipInfo.seniorVip = true;
-    obj.data.vipInfo.showText = "2099.09.09到期";
-    obj.data.vipInfo.validVip = true;
-    obj.data.vipInfo.expireTime = 4092595200000;
-    obj.data.vipInfo.vipCount = 205889;
-    obj.data.vipInfo.lastBuySkuName = "partnertrainingai_yaer_vip";
-    
-
-    body = JSON.stringify(obj);
-}
-
-$done({ body });

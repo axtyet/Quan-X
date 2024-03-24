@@ -1,0 +1,8 @@
+#!name=shizilaobajgs
+#!desc=shizilaobajgs
+
+[Script]
+shizilaobajgs = type=http-response, pattern=^http:\/\/152\.136\.134\.81:8090\/wechat\/(weiXin\/queryUserById|classify\/(getClassifyInfoByIdList2|getIndexPlay2)|audio\/getList2), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/shizilaobajgs.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% 152.136.134.81:8090
