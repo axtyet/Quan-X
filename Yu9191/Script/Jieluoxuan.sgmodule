@@ -1,0 +1,8 @@
+#!name=Jieluoxuan
+#!desc=Jieluoxuan
+
+[Script]
+Jieluoxuan = type=http-response, pattern=^https:\/\/app\.helixlife\.cn\/api\/v1\/(user\/(users\/profile|overviews)|edu\/(trainings|courses)), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Jieluoxuan.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% app.helixlife.cn
