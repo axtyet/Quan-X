@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：iTunes-系列解锁合集
-更新日期：2024-03-22
+更新日期：2024-03-25
 脚本作者：chxm1023
 电报频道：https://t.me/chxm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -26,6 +26,7 @@ const ua = $request.headers['User-Agent'] || $request.headers['user-agent'];
 const bundle_id = chxm1023.receipt["bundle_id"] || chxm1023.receipt["Bundle_Id"];
 
 const list = {
+  'ProFit': { cm: 'sjbla', hx: 'hxpda', id: "com.maxty.gofitness.yearlyplan", latest: "chxm1023" },  //ProFit锻炼计划
   '%E7%91%9C%E4%BC%BD': { cm: 'sjbla', hx: 'hxpda', id: "com.vgfit.yoga.yearly", latest: "chxm1023" },  //瑜伽
   'GPSMaker': { cm: 'sjbla', hx: 'hxpda', id: "theodolite_vip_year", latest: "chxm1023" },  //指南针定位
   'wrongbook': { cm: 'sjbla', hx: 'hxpda', id: "com.palmmob.wrongbookios.yearly", latest: "chxm1023" },  //错题宝
