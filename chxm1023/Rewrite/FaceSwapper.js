@@ -2,7 +2,7 @@
 
 项目名称：FaceSwapper
 下载地址：https://t.cn/A6TUPtBv
-更新日期：2024-03-25
+更新日期：2024-03-26
 脚本作者：chxm1023
 电报频道：https://t.me/chxm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -28,7 +28,7 @@ chxm1023.data.list = [{
   "productId" : "73_premium_normal_yearly",
   "productType" : 3,
   "orderStatus" : 1,
-  "autoRenewStatus" : false,
+  "autoRenewStatus" : true,
   "originalOrderId" : "340001399999999",
   "sign" : "c5e5450b552ac10149dcd7d4625b1ad2"
 }];
