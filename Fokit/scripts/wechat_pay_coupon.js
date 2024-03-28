@@ -1,7 +1,7 @@
 /**
  * 脚本名称：微信支付有优惠 - 领金币
- * 活动规则：每周累计使用微信支付 10 次可领取 15 金币，每周日执行一次即可。
- * 脚本说明：添加重写进入微信支付有优惠小程序即可获取 Token，支持多账号，兼容 NE / Node.js 环境。
+ * 活动规则：每周累计使用微信支付 10 次可领取 15 金币。
+ * 脚本说明：添加重写进入"微信支付有优惠"小程序即可获取 Token，支持多账号，兼容 NE / Node.js 环境。
  * 环境变量：WECHAT_PAY_TOKEN / CODESERVER_ADDRESS、CODESERVER_FUN
  * 更新时间：2024-03-27
 
@@ -13,9 +13,9 @@
 hostname = payapp.weixin.qq.com
 
 [Script]
-微付金币² = type=http-response, pattern=https:\/\/payapp\.weixin\.qq\.com\/coupon-center-user\/home\/login, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/axtyet/Quan-X/main/Fokit/scripts/wechat_pay_coupon.js
+微付金币² = type=http-response,pattern=https:\/\/payapp\.weixin\.qq\.com\/coupon-center-user\/home\/login,requires-body=1,max-size=0,binary-body-mode=0,timeout=30,script-path=https://raw.githubusercontent.com/axtyet/Quan-X/main/Fokit/scripts/wechat_pay_coupon.js,script-update-interval=0
 
-微付金币 = type=cron,cronexp=30 9 * * 0, timeout=60, script-path=https://raw.githubusercontent.com/axtyet/Quan-X/main/Fokit/scripts/wechat_pay_coupon.js, script-update-interval=0
+微付金币 = type=cron,cronexp=30 9 * * *,timeout=60,script-path=https://raw.githubusercontent.com/axtyet/Quan-X/main/Fokit/scripts/wechat_pay_coupon.js,script-update-interval=0
 
 ------------------- Loon 配置 -------------------
 
@@ -23,9 +23,9 @@ hostname = payapp.weixin.qq.com
 hostname = payapp.weixin.qq.com
 
 [Script]
-http-response https:\/\/payapp\.weixin\.qq\.com\/coupon-center-user\/home\/login tag=微付金币², script-path=https://raw.githubusercontent.com/axtyet/Quan-X/main/Fokit/scripts/wechat_pay_coupon.js,requires-body=1
+http-response https:\/\/payapp\.weixin\.qq\.com\/coupon-center-user\/home\/login tag=微付金币²,script-path=https://raw.githubusercontent.com/axtyet/Quan-X/main/Fokit/scripts/wechat_pay_coupon.js,requires-body=1
 
-cron "30 9 * * 0" script-path=https://raw.githubusercontent.com/axtyet/Quan-X/main/Fokit/scripts/wechat_pay_coupon.js,tag = 微付金币,enable=true
+cron "30 9 * * *" script-path=https://raw.githubusercontent.com/axtyet/Quan-X/main/Fokit/scripts/wechat_pay_coupon.js,tag=微付金币,enable=true
 
 --------------- Quantumult X 配置 ---------------
 
@@ -36,14 +36,14 @@ hostname = payapp.weixin.qq.com
 https:\/\/payapp\.weixin\.qq\.com\/coupon-center-user\/home\/login url script-response-body https://raw.githubusercontent.com/axtyet/Quan-X/main/Fokit/scripts/wechat_pay_coupon.js
 
 [task_local]
-30 9 * * 0 https://raw.githubusercontent.com/axtyet/Quan-X/main/Fokit/scripts/wechat_pay_coupon.js, tag=微付金币, img-url=https://raw.githubusercontent.com/FoKit/Scripts/main/images/wechat_pay_coupon.png, enabled=true
+30 9 * * * https://raw.githubusercontent.com/axtyet/Quan-X/main/Fokit/scripts/wechat_pay_coupon.js, tag=微付金币, img-url=https://raw.githubusercontent.com/FoKit/Scripts/main/images/wechat_pay_coupon.png, enabled=true
 
 ------------------ Stash 配置 ------------------
 
 cron:
   script:
     - name: 微付金币
-      cron: '30 9 * * 0'
+      cron: '30 9 * * *'
       timeout: 10
 
 http:
@@ -84,10 +84,17 @@ async function main() {
     for (let i = 0; i < $.userArr.length; i++) {
       $.log(`----- 账号 [${i + 1}] 开始执行 -----`);
       // 初始化
+      $.is_login = true;
       $.token = $.userArr[i]['token'];
+
+      // 集章任务
+      await collectstamp();
+
+      if (!$.is_login) continue;  // 无效 token 跳出
 
       // 获取任务列表
       await getTask();
+
     }
     $.log(`----- 所有账号执行完成 -----`);
   } else {
@@ -106,7 +113,6 @@ async function getToken(code) {
       coutom_version: $.version
     }
   }
-
 
   // 发起请求
   const result = await Request(options);
@@ -141,16 +147,16 @@ async function getTask() {
       const { name, reward_coin_count, state, task_id, total_times } = task_list[i - 1];
       switch (state) {
         case 'USER_TASK_STATE_OBTAIN':  // 奖励已领取
-          msg += `任务${i}: 支付${total_times}次, 已获得${reward_coin_count}金币 ✅\n`;
+          msg += `任务: 支付${total_times}次, 已获得${reward_coin_count}金币 ✅\n`;
           break;
 
         case 'USER_TASK_STATE_COMPLETE_NOT_OBTAIN':  // 奖励未领取
           const coin_count = await getCoin(task_id);
-          msg += `任务${i}: 支付${total_times}次, 已领取${coin_count}金币 💰\n`;
+          msg += `任务: 支付${total_times}次, 已领取${coin_count}金币 💰\n`;
           break;
 
         case 'USER_TASK_STATE_RUNNING':  // 任务未完成
-          msg += `任务${i}: 支付${total_times}次, 可获得${reward_coin_count}金币 ❌\n`;
+          msg += `任务: 支付${total_times}次, 可获得${reward_coin_count}金币 ❌\n`;
           break;
       }
     }
@@ -182,6 +188,34 @@ async function getCoin(task_id) {
   return coin_count;
 }
 
+
+// 集章任务
+async function collectstamp() {
+  let msg = '';
+  // 构造请求
+  let opt = {
+    url: `https://payapp.weixin.qq.com/coupon-center-operation/stampcalendar/collectstamp?session_token=${$.token}`,
+    headers: {
+      'content-type': 'application/json'
+    },
+    body: $.toStr({
+      coutom_version: $.version
+    })
+  };
+
+  // 发起请求
+  var result = await Request(opt);
+  if (result?.errcode == 0 && result?.data?.user_calendar_stamp_record?.user_calendar_stamp_record_id == 8) {
+    msg += `任务: 集章日历, 任务已完成 ✅`;
+  } else if (result?.errcode == 270718475) {
+    $.is_login = false;  // Token 失效
+    msg += `${result.msg} ❌`;
+  } else {
+    $.log(`每日集章任务执行失败 `);
+  }
+  $.messages.push(msg), $.log(msg);
+}
+
 // 脚本执行入口
 !(async () => {
   if (typeof $request !== `undefined`) {
@@ -198,7 +232,7 @@ async function getCoin(task_id) {
 
 
 
-// 获取签到数据
+// 获取用户数据
 function GetCookie() {
   try {
     let msg = '';
