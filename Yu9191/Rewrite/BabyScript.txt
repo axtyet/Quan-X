@@ -1,0 +1,1010 @@
+#=============UserScript=============#
+# 项目名称：App解锁合集
+# 项目作者：ios151
+# 关注频道：https://t.me/chxm1023
+# 加入群组：https://t.me/chxm1023_Chat
+
+#============【使用说明】==============#
+# 使用声明：作者并未参与任何形式的金钱交易，仅限测试和学习，请勿转载与贩卖，下载使用后24小时请删除⚠️⚠️⚠️⚠️⚠️
+
+# 使用方法：先开脚本再打开App，自动会生效，如果无效就关了重开或者按一下恢复购买，在还不行就卸载App重新安装！最后还不行的话就是脚本失效了！
+
+# 解决方法：关[MITM][脚本][代理工具]方法选一即可
+
+# 更新日期：2024-03-28
+
+# 项目解锁App下载地址：https://too.st/iTunes
+
+#=============UserScript=============#
+
+# RevenueCat解锁订阅 加到Chxm1023的合集脚本中 不做维护
+
+# 屏蔽提示更新
+# 过滤整合hostname 留下完整的hostname
+
+
+#************************************#
+# iTunes解锁系列 加到Chxm1023的合集脚本中
+
+#***********字母排序*************#
+# 1 
+# 1998 解锁全课程全资料 
+# 标签：学习类
+# hostname = www.1998xuexi.com 
+^https:\/\/www\.1998xuexi\.com\/store-web\/(course\/getCurrCatalogue\.action|material\/getMaterialCateLog\.action|vip\/getMemberVipInfo\.action|vip\/getVipInfomationAll\.action) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/1998.js
+
+
+# 2
+
+#************ A ************#
+
+
+# Alltrails 2023.12.13最新
+# 标签：运动健康
+# hostname = api-v5.alltrails.com
+https://api-v5.alltrails.com/api/alltrails/me url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Alltrails.js
+
+# Anki记忆卡片解锁
+# 标签：学习类
+# hostname = api.ankichinas.com
+^https:\/\/api\.ankichinas\.com\/api\/v1\/users\/vipInfo url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Anki.js
+
+# Anycats VPN
+# 标签：VPN工具
+# hostname = api.tuanleme.net, api.fengyunyizu.com, api.jianghumeng.net
+^https?:\/\/api\.(tuanleme|fengyunyizu|jianghumeng)\.(net|com)\/ url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Anycats.js
+
+# AppRaven
+# 标签：工具
+# hostname = appraven.net
+https://appraven.net/appraven/graphql url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/AppRaven.js
+
+# adblockpro 
+# 标签：工具
+# hostname = api.adblockpro.app
+^https:\/\/api\.adblockpro\.app\/verify url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/adblockpro.js
+
+# 安安车生活
+# 标签：工具
+# hostname = lifeserver.clifes.cn
+https://lifeserver.clifes.cn/exam/vip/info url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/ananche.js
+
+
+# 哎呀漫鸭
+# 标签：漫画
+# hostname = www.aiyamanya.com
+https://www.aiyamanya.com/aymy/api/getUserInfo url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/aymy.js
+
+#************ B ************# 
+
+# BH pro
+# 标签：工具
+# hostname = litebhapi.belugabh.com
+^https:\/\/litebhapi\.belugabh\.com\/personal_center\/(my_homepage|user_equity_status_list) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/BHpro.js
+
+# 编程狮
+# 标签：学习类
+# hostname = appapi.w3cschool.cn
+^https:\/\/appapi\.w3cschool\.cn\/api\/myapp\/(isLogin|getLevel|getMyMedal|getMyCertificate) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Bcs.js
+
+# Beat Maker Go
+# 标签：音乐
+# hostname = buy.itunes.apple.com
+# buy系列已加chxm1023合集
+
+# Blinkist
+# 标签：学习类
+# hostname = api.blinkist.com
+https://api.blinkist.com/v4/me/access url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Blinkist.js
+
+# BodyOk
+# 标签：运动健康
+# hostname = api.apphud.com
+^https:\/\/api\.apphud\.com\/v1\/(subscriptions|customers)$ url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/BodyOk.js
+
+# bizhi 主题 壁纸大全
+# 标签：工具
+# hostname = wallpaper-zz.laoyinnianhua.com
+http://wallpaper-zz.laoyinnianhua.com/api/visitors url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/bzdq.js
+
+#************ C ************#
+
+
+# Context 
+# 标签：工具
+# hostname = api.revenuecat.com
+# api系列已加chxm1023合集
+
+# cutisan壁纸
+# 标签：工具
+# hostname = cutisanapi.imuuzi.com
+^https:\/\/cutisanapi\.imuuzi\.com\/api\/(Home\/index|Index\/index) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Cutisan.js
+
+# 虫虫吉他 2.3.0
+# 标签：音乐
+# http不需要hostname
+http://cc.lzjoy.com url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/ccjt.js
+
+# 超级单词表
+# 标签：学习类
+# hostname = cloud.jtsee.com
+https://cloud.jtsee.com/superwords/userInfo url script-response-body https://gist.githubusercontent.com/Yu9191/e1e0fc002ffdd827e1822f921c1d69ff/raw/chaojidancibiao.js
+
+# 禅记 
+# 标签：工具
+# hostname = buy.itunes.apple.com
+# buy系列已加chxm1023合集
+
+# ChatAl 4.0中文版
+# 标签：工具
+# hostname = www.longstargpt.com
+# (?<=vip=)false url 302 true
+
+# 创合汇
+# 标签：工具
+# hostname = *.chuanghehui.com
+https:\/\/(xcxapi\.chuanghehui\.com\/app\/publicCourse\/detail|api\.chuanghehui\.com\/api\/cli\/member\/home|api\.chuanghehui\.com\/api\/cli\/post|api\.chuanghehui\.com\/api\/cli\/member\/my) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/chh.js
+https://api.chuanghehui.com/api/cli/post url 302 https://t.me/chxm1023
+
+# code
+# 标签：工具
+# hostname = api.cs-ide.io
+https://api.cs-ide.io/purchases/active url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/codesnackide.js
+
+# cubox 
+# 标签：工具
+# hostname = cubox.pro
+^https:\/\/cubox\.pro\/c\/api\/userInfo url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/cubox.js
+
+#************ D ************#
+
+# DVD相机
+# 标签：工具
+# hostname = buy.itunes.apple.com
+# buy系列已加chxm1023合集
+
+# Darkroom
+# 标签：工具
+# hostname = api.revenuecat.com
+# api系列已加chxm1023合集
+
+# DreamFace
+# 标签：工具
+# hostname = www.dreamfaceapp.com
+https://www.dreamfaceapp.com/df-server/user/save_user_login url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/DreamFace.js
+
+# Duet Display 
+# DuetAir
+# 标签：工具
+# hostname = rdp.duetdisplay.com
+https://rdp.duetdisplay.com/v1/users/validateReceipt url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/DuetDisplay.js
+
+# 订阅通
+# 标签：工具
+# hostname = buy.itunes.apple.com
+# buy系列已加chxm1023合集
+
+# 大渔大师课
+# 标签：学习类
+# hostname = api.dayuclass.com
+https:\/\/api\.dayuclass\.com\/api\/v2\/(course|member\/detail) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/dydsk.js
+
+# 地震预警
+# 标签：工具
+# hostname = mobile-new.chinaeew.cn
+https://mobile-new.chinaeew.cn/v1/user/info url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/dzyj.js
+
+
+#************ E ************#
+
+# everyday-习惯养成
+# 标签：工具
+# hostname = api.everyday.app
+https://api.everyday.app/users url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/everyday.js
+
+#************ F ************#
+
+# FT中文网 外区
+# 标签：新闻阅读
+# hostname = dqbam2jv6gg9m.cloudfront.net
+# 可以搭配快捷指令使用@leepyer
+# 地址：https://www.icloud.com/shortcuts/652791ed6b8d45fb8f6ff4f43e525405获取文章内容
+# 加上这个参数?webview=ftcapp就能返回全文
+^https:\/\/dqbam2jv6gg9m\.cloudfront\.net\/index\.php\/jsapi\/paywall url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/FTzhongwenwang.js
+
+# faceai 
+# Watch Faces GallerY 4.93
+# 标签：工具
+# hostname = api.adapty.io
+https://api.adapty.io/api/v1/sdk/in-apps/apple/receipt/validate/ url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/FaceAi.js
+
+# Faceswap
+# Faceswap funny Face replace
+# AI-powered Face Swap. Dreams Come True!
+# 标签：工具
+# hostname = api.apphud.com
+^https?:\/\/api\.apphud\.com\/v1\/subscriptions url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Faceswap.js
+
+# Fantastical Calendar
+# 标签：工具
+# hostname = api.flexibits.com
+^https:\/\/api\.flexibits\.com\/v1\/account\/details\/\? url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Fantastical.js
+
+# Flightradar24
+# 标签：工具
+# hostname = api.flightradar24.com
+# 已失效
+# ^https://mobile.flightradar24.com/mobile/(user-session|subscribe) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Flightradar24.js
+
+# FlipaClip2
+# 标签：工具
+# hostname = api.purchasely.io
+^https://api.purchasely.io/paab/user_purchases url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/FlipaClip.js
+
+# 凡音钢琴 
+# 标签：音乐
+# hostname = gzfanyin.com
+https://gzfanyin.com/api/ums/getMember url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/fanyingq.js
+
+# 凤凰书苑
+# 标签：学习类
+# hostname = app.ppmbook.com
+#会员
+http:\/\/app.ppmbook.com\/(system\/getVipInfo\.do|user\/getMyCenterVo\.do) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/fhsy.js
+#开屏广告
+^http:\/\/app\.ppmbook\.com\/home\/getCurrentAdvertisement\.do$ url reject
+
+# 凤凰易学
+# 标签：学习类
+# hostname = app.fhestudy.com
+https:\/\/app\.fhestudy\.com\/(collection\/getCatalogAndResource\.do|collection\/getVideoResource\.do|collection\/getTeachingOrCourseDetail\.do|system\/getCheckOutInfo\.do|textbooks\/getTextBookInCourse\.do|user\/getUserInfo\.do|home\/getHomeData\.do) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/fhyx.js
+
+# 芳仲短剧 微信小程序
+# 标签：工具
+# hostname = slb.weilianmenggz.cn
+https:\/\/slb\.weilianmenggz\.cn\/api\/(theater\/without\/group\/index|user\/info) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/fzdj.js
+
+#************ G ************#
+
+
+# GUGA （ipad）
+# 标签：工具
+# hostname = www.guga.co
+# 已失效
+
+# GitHub 
+# 标签：工具
+# hostname = api.github.com
+https://api.github.com/graphql url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Github.js
+
+# 怪兽轻断食1.4.4
+# 标签：运动健康
+# hostname = ef.aiotoolbox.com.cn
+https://ef.aiotoolbox.com.cn/basis/v2/init url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/gsqds.js
+
+
+# 过期啦
+# 标签：工具
+# hostname = api.guoqi365.com
+^https:\/\/api\.guoqi365\.com\/1\.1\/functions\/getUserInfo url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/guoqila.js
+
+# 咕泡云课堂
+# 标签：学习类
+# hostname = ke.gupaoedu.cn
+https:\/\/ke\.gupaoedu\.cn\/api\/(web\/quiz\/package|v2\/curriculum\/outline|user\/) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/gupaoyun.js
+
+# 故事飞船
+# 标签：学习
+# hostname = storybook.ifenghui.com
+https://storybook.ifenghui.com/api url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/gushifeichuan.js
+#开屏广告需清理缓存
+https://storybook.ifenghui.com/api/ads/getIndexAds url reject
+
+# 光影边框
+# 标签：工具
+# hostname = prod.dengziwl.com
+https://prod.dengziwl.com/light-shadow/member/info url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/gybk.js
+
+#************ H ************#
+
+
+# 红周刊 2.2.9 (2024.1.10)
+# 标签：新闻阅读
+# hostname = ssl.zhoukan1992.com.cn
+^https:\/\/ssl\.zhoukan1992\.com\.cn\/wechat_xcx\/(info|zk_news_list)\.php url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Hongzhoukan.js
+
+# 和计划心理
+# 标签：学习
+# hostname = cgzd.hejihua.com
+https://cgzd.hejihua.com/api/teaching/project/catalog/v1 url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/hejihuaxl.js
+
+# 话本小说
+# 标签：阅读
+# hostname = user.ihuaben.com
+https://user.ihuaben.com/api/userinfo url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/huabenxiaoshuo.js
+
+# 葫芦时刻 3.2.01
+# 标签：新闻阅读
+# hostname = api-search.hulusaas.com
+https://api-search.hulusaas.com/api/user/ url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/hulushike.js
+
+
+#************ I ************#
+
+# 留位置 暂时没有 
+
+#************ J ************#
+
+# 今日香烟 5.9.0
+# 标签：工具
+# hostname = smk.xiao51.com
+https://smk.xiao51.com/index.php url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/JRXY.js
+
+# 解螺旋
+# 标签：学习 
+# hostname = app.helixlife.cn
+^https:\/\/app\.helixlife\.cn\/api\/v1\/(user\/overviews|edu\/(trainings|courses)) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Jieluoxuan.js
+https://app.helixlife.cn/api/v1/user/users/profile url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Jieluoxianmy.js
+
+# 家惠库
+# 标签：学习 
+# hostname = prodapi.jiahuiku.cn
+https://prodapi\.jiahuiku\.cn/api/content/v1/(kpoint/initSelectedKpoints|app/getKpointList|kpoint/appendKpoints|seminar/annex/getSeminarKpointListBySeminarId|seminar/annex/getSeminarCourseAnnexListBySeminarId) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/jiahuiku.js
+
+# 建工计算器
+# 标签：工具
+# hostname = calc.kuaicad.com
+^https:\/\/calc\.kuaicad\.com\/authority\/verify_vip\? url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/jiangongjsq.js
+
+# 架子鼓
+# 标签：音乐
+# hostname = drum-api.quthing.com
+^https:\/\/drum-api\.quthing\.com\/vip\/goods\/v2 url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/jiazigu.js
+
+# 甲子排盘
+# 标签：工具
+# hostname = app.iyzbz.com
+^https:\/\/app.iyzbz.com\/app\/user\/selfinfo url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/jiazipaipan.js
+
+# 节拍器
+# 标签：音乐
+# hostname = metronome-api.quthing.com
+^https:\/\/metronome-api\.quthing\.com\/vip\/state url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/jiepaiqi.js
+
+# 记乎
+# 标签：学习
+# hostname = api.geefoo.cn
+^https:\/\/api\.geefoo\.cn\/v2\/account\/userinfo url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/jihu.js
+
+# 小程序://极客时间/GXdRaLCdInCX2Lg
+# 解锁全课程播放以及文章
+# 标签：学习
+# hostname = time.geekbang.org
+https://time.geekbang.org/serv/v1 url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/jikeshijian.js
+
+# 九锤配音
+# 标签：工具
+# hostname = api.next.bspapp.com
+https://api.next.bspapp.com/client url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/jiuchuipeiyin.js
+
+# 今日热榜
+# 标签：新闻阅读
+# hostname = api2.tophub.app
+https://api2.tophub.app/account/sync url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/jrrb.js
+
+# 脚印云课
+# 标签：学习
+# hostname = yk.jiaoyin.vip
+
+https://yk.jiaoyin.vip/api/app/courseDetailNew url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/jyyk.js
+
+^https?://(?:liveapi\.jiaoyin\.vip|yk\.jiaoyin\.vip)/liveos/api/(?:vipMember/app/vipInfo/getMyVipInfo|community/user|partner/app/partner/partnerInfo/getPartnerInfo|app/courseDetailNew) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/jyyk.js
+
+#************ K ************#
+
+# Knotes
+# 标签：工具
+# hostname = knotesapp.cn
+https://knotesapp.cn/api/v1/account/profile url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Knotes.js
+
+# 开练
+# 标签：健美健康
+# hostname = fitness-notes.nanxiani.cn
+https://fitness-notes\.nanxiani\.cn/api/v*(|user_diet_recommend|user_info)/? url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/kailian.js
+
+# 考途大学搜题
+# 标签：学习
+# hostname = api-service.tutusouti.com
+^https:\/\/api-service\.tutusouti\.com\/appServiceApi\/(vip\/newUserPayVipData|video\/videoDetail) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/kaotu.js
+
+# 考研汇 
+# 法题库
+# 标签：学习
+# hostname = newapi.kaoyanhui.com.cn
+^https:\/\/newapi\.kaoyanhui\.com\.cn\/index\.php url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/kaoyanhui.js
+
+# 微信小程序考研数学欧几里得
+# 标签：学习
+# hostname = api.tumukaoyan.com
+^https?:\/\/api\.tumukaoyan\.com\/api\/wx\/CheckCodeV2? url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/kaoyanxcx.js
+
+# 考药狮
+# 超级题库
+# 考护狮
+# 标签：学习
+# hostname = gateway.chaojitiku.com
+https:\/\/gateway\.chaojitiku\.com\/h5\/(goods\/goodsInfo\/queryUserPayGoods|question\/testing\/getAppInfo) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/kaoyaoshi.js
+
+# 快制图表 
+# 标签：工具
+# hostname = api.revenuecat.com
+# api系列已加chxm1023合集
+
+#************ L ************#
+
+# 来音节拍器  
+# 标签：音乐
+# hostname = metronome-api.quthing.com
+https://metronome-api\.quthing\.com/(login/mobile|vip/state) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/laiyinjiepaiqi.js
+
+# 灵敢提词器
+# 标签：工具
+# hostname = teleprompter-api.quthing.com
+https://teleprompter-api.quthing.com/vip/state url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/lgtcq.js
+
+# 灵敢足迹
+# 标签：工具
+# hostname = footprint-api.quthing.com
+^https:\/\/footprint-api\.quthing\.com\/vip\/state url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/lgzj.js
+
+# 练就 1.0.7
+# 标签：运动健康
+# hostname = api.lianjiu.fun
+^https:\/\/api\.lianjiu\.fun\/app\/api\/v1\/profile url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/lianjiu.js
+
+# 灵感
+# 标签：工具
+# hostname = buy.itunes.apple.com
+# buy系列已加chxm1023合集
+
+# 灵兰中医
+# 标签：学习 医学 
+# hostname = user.linglan.com
+https://user.linglan.com/api/personCenter/getMyUser url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/linglanzhongyi.js
+
+# 传统文化国学
+# 高考英语听力
+# 开发者刘杰两款App通杀 
+# 标签：学习
+# hostname = tingli-1259565884.cos.ap-beijing.myqcloud.com, zeng-1259565884.cos.ap-guangzhou.myqcloud.com
+https:\/\/.*\.cos\.(ap-guangzhou|ap-beijing)\.myqcloud\.com\/dataUrl url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/liujie.js
+
+# 六六写字
+# 标签：学习 
+# hostname = api.liupinshuyuan.com 
+#六六课字表 
+^https?:\/\/api\.liupinshuyuan\.com\/liuliuWriteV2\/api\/sync-course url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/llxz.js 
+#六六课程 
+^https?:\/\/api\.liupinshuyuan\.com\/liuliuWriteV2\/api\/student\/course-detail url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/llxz.js 
+ 
+# 良师雅集
+# 标签：学习
+# hostname = api.liangshiyaji.cn
+https?:\/\/api\.liangshiyaji\.cn\/(mobile\/Wexin\/customerCenterAppNew|api\/Strict\/getStrictDetails|api\/user\/CgetUserInfo) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/lsyj.js
+
+# 来音钢琴
+# 标签：音乐
+# hostname = piano-api.quthing.com
+^https:\/\/piano-api\.quthing\.com\/vip\/state\/v2 url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/lygq.js
+
+# 来音调音器
+# 标签：音乐
+# hostname = tuner-api.quthing.com
+^https:\/\/tuner-api\.quthing\.com\/vip\/state url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/lytyq.js
+
+# 来音智能陪练
+# 标签：音乐
+# hostname = partner-ai-api.quthing.com
+^https:\/\/.*api\.quthing\.com\/(.+\/vip|vip|student|user|ai|appearance|background|rest) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Laiyin.js
+
+# Lambus 
+# 标签：工具
+# hostname = prod.api.lambus.io
+^https:\/\/prod\.api\.lambus\.io\/v1\.10\/subscriptions url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Lambus.js
+
+# Lento
+# 标签：工具
+# hostname = lentoapp.com:8081
+https://lentoapp.com:8081/getUserMemberShipInfo url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Lento.js
+
+# 狸清照
+# 标签：工具
+# hostname = buy.itunes.apple.com
+# buy系列已加chxm1023合集
+
+# LittleFox
+# 标签：学习
+# hostname = cdn.littlefox.co.kr
+^https?:\/\/cdn\.littlefox\.co\.kr\/contents_5\/hls\/720\/.+\/stream\.m3u8\?_=\d+ url script-request-header https://raw.githubusercontent.com/Yu9191/Rewrite/main/LittleFox.js
+
+# 蓝基因
+# 自己单独加 开解析器即可
+# 标签：学习
+# hostname = edu.lezaitizhong.com
+# https://gist.githubusercontent.com/Yu9191/5d7cbbf36a7db7e92623a1e5ab079dce/raw/xiaolanyixue.sgmodule
+
+
+#************ M ************#
+
+# 芒果TV
+# 标签：影视
+# hostname = *.mgtv.com
+# 可以直接使用Walala的净化广告以及包含会员数据的脚本
+https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/cnftp.snippet
+
+# MX滤镜大师
+# 标签：工具
+# hostname = cdn-bm.camera360.com
+^https:\/\/cdn-bm\.camera360\.com\/api\/mix\/recovery url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/MIX.js
+
+#  Meme Maker
+# 标签：工具
+# hostname = buy.itunes.apple.com 
+# buy系列已加chxm1023合集
+
+# MorpholidTrace
+# 标签：工具
+# hostname = www.mymorpholio.com
+^https:\/\/www\.mymorpholio\.com\/api\/index\.php\/rest_iap\/receipt url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/MorpholioTrace.js
+
+# memoryhelper.js
+# 标签：工具
+# 已下架
+
+# memrise
+# 标签：学习
+# hostname = api.memrise.com
+^https:\/\/api\.memrise\.com url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/memrise.js
+
+# mondly
+# 标签：学习
+# hostname = api.mondlylanguages.com
+^https:\/\/api\.mondlylanguages\.com\/v3\/ios\/user\/sync url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/mondly.js
+
+# 马士兵
+# 标签：学习
+# hostname = gateway.mashibing.com
+https:\/\/gateway\.mashibing\.com\/edu-course\/(coursePackage\/app\/1|app\/systemCourse|courseWeb) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/msb.js
+
+# 幕布
+# 标签：工具
+# hostname = api2.mubu.com
+https://api2.mubu.com/v3/api/user/current_user url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/mubu.js
+
+#  妙音国学
+# 标签：学习
+# hostname = gx.miaoyin.cn
+https://gx\.miaoyin\.cn/(direct/token/(selectVideoClassCatalogueList|selectVideoClassDetails)|course/queryAiCourseCatalogue|user(token/info|VipEquity/token/findNewUserVipInfoV3)) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/mygx.js
+
+# 妙音弟子规 每日经典 围棋 记忆卡 成语故事
+# 标签：学习
+# hostname = gx.miaoyin.cn
+https://gx\.miaoyin\.cn/(dailySentence/token/selectAllDailySentenceList|discipleGauge/token/findDiscipleGaugeList|exiconNew/user/exiconInfo|courseIdiom/token/findCourseIdiomList) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/myheji.js
+
+
+#************ N ************#
+
+# Nicegram 1.4.7
+# 标签：工具
+# hostname = nicegram.cloud
+# 叮当猫合集加了 不再重复
+
+# Nico
+# 标签：社交
+# hostname = data.inicoapp.com
+#会员
+https://data.inicoapp.com/api/2.0/publicUser/detail? url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Nico.js
+#恋爱测试 解锁权限
+https://data.inicoapp.com/api/v4/testQuestions/getTestById url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Nico.js
+#好物推荐
+https://data.inicoapp.com/api/v4/clientConfig/mallBannerConfig url reject-200
+#推广图片
+https://data.inicoapp.com/api/v4/personalActivity/getAppAc? url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Nico.js
+
+# noted
+# 标签：工具
+# hostname = subscription-api.notedapp.io
+^https:\/\/subscription-api\.notedapp\.io\/api\/verifyReceipt url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Noted.js
+
+# 牛津高阶词典第十版
+# 标签：学习
+# hostname = oxfordx.cp.com.cn
+^https:\/\/oxfordx\.cp\.com\.cn\/api\/pay\/apple_notify url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/niujin10.js
+#去除首页下方广告
+^https:\/\/oxadmin\.cp\.com\.cn\/api\/hot\/index url reject-dict
+#去除首页下方广告
+^https:\/\/oxadmin\.cp\.com\.cn\/api\/advertise\/banner url reject-dict
+
+
+#************ O ************#
+
+# OldRoll
+# 标签：工具
+# hostname = buy.itunes.apple.com
+# buy系列已加chxm1023合集
+
+#************ P ************#
+
+
+# PDF点睛
+# 标签：工具
+# hostname = license.pdfexpert.com
+^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/pdfexpert6\/subscription\/refresh url script-request-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/PDFexpert.js
+
+# PDF文档扫描仪 
+# 标签：工具
+# hostname = device.rsjxzl.com
+https://device.rsjxzl.com/api/v2/subscription/info url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/PDFwdsmy.js
+
+# PSExpress 
+# 标签：工具
+# hostname = lcs-mobile-cops.adobe.io
+https://lcs-mobile-cops.adobe.io/mobiles/access_profile/v3 url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/PSExpress.js
+
+# Persona
+# 标签：工具
+# hostname = api.revenuecat.com
+# api系列已加chxm1023合集
+
+# Plantapp
+# 标签：工具
+# hostname = api.adapty.io
+https://api.adapty.io/api/v1/sdk/in-apps/apple/receipt/validate/ url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/PlantApp.js
+
+# Promova
+# 标签：工具
+# hostname = api.panda.boosters.company
+^https:\/\/api\.panda\.boosters\.company\/v1\/subscription-status url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Promova.js
+
+# 泡泡钢琴
+# 标签：音乐
+# hostname = c.abcpiano.cn
+https:\/\/c\.abcpiano\.cn\/(pianoCourse\/units|pianoCourse\/lessons|pianoCourse\/playProgress|practice\/stavePlay|pianist|practice\/home) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/paopaogq.js
+
+# pixiv
+# 标签：工具
+# hostname = oauth.secure.pixiv.net, app-api.pixiv.net
+https:\/\/(?:app-api\.pixiv\.net\/v2\/user\/detail|oauth\.secure\.pixiv\.net\/auth\/token) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/pixiv.js
+
+# 悄悄朋友圈
+# 标签：工具
+# hostname = qqpyqapi.app.xinmaicard.com
+^http?:\/\/qqpyqapi\.app\.xinmaicard\.com\/user\/auth_userinfo.*? url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/pyq.js
+
+
+#************ Q ************#
+
+# 起点读书
+# 标签：阅读
+# hostname = magev6.if.qidian.com
+# 已失效
+
+# 七天学堂
+# 标签：学习
+# hostname = szone-my.7net.cc
+https://szone-my.7net.cc/userInfo/GetUserInfo url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Qitianxuetang.js
+
+
+#************ R ************#
+
+# ReadBot 
+# 标签：工具
+# hostname = api.readbot.tech
+https://api.readbot.tech/v1/vip/status url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/ReadBot.js
+
+# 热汗舞蹈
+# 标签：运动健康
+# http不需要hostname
+http://dancefit.dailyyogac.com/dancefit url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/rehanwudao.js
+
+# 消防设施操作员题小宝
+# 书记员题小宝
+# 军队文职题小宝-军队文职考试刷题平台
+# 标签：学习
+# http不需要hostname
+^http:\/\/richapi\.yestiku\.com\/api\/(identity\/listData|questionset\/getInfo) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/richapi.js
+
+# 日语学习神器
+# 标签：学习
+# hostname = api.528529.com
+http://api.528529.com/apple_product/ url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/riyuxuexi.js
+
+
+#************ S ************#
+
+# 试卷100解锁
+# 标签：学习
+# hostname = paper.zjapp.xyz
+^https:\/\/paper\.zjapp\.xyz\/api\/v1\/status\/list url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Shijuan100.js
+
+# Slopes 
+# 标签：工具
+# hostname = my.getslopes.com
+https://my.getslopes.com/api/v2/account url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Slopes.js
+
+# 三站站棋版助手
+# 标签：工具
+# hostname = jk.dmzgame.com
+https://jk.dmzgame.com/users/info url script-echo-response https://raw.githubusercontent.com/Yu9191/Rewrite/main/sanzhanzhan.js
+
+# 扫描宝
+# 标签：工具
+# hostname = app.yinxiang.com
+#资料
+https://app.yinxiang.com/third/profile/public/restful/public-user-profile? url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/saomiaobao.js
+
+#会员
+https://app.yinxiang.com/third/scanner/scanner/app/userInfo/get url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/saomiaobao2.js
+
+
+# 傻瓜英语
+# 标签：学习
+# hostname = sgyy.easyenglish888.com
+^https:\/\/sgyy\.easyenglish888\.com\/user\/info url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/sgyy.js
+
+# 闪萌表情
+# 标签：工具
+# hostname = hi-api.weshineapp.com
+https://hi-api.weshineapp.com/v3.0/account/profile? url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/shanmengbiaoqing.js
+
+
+# 时光手帐
+# 标签：工具
+# hostname = api.shouzhang.com
+^https:\/\/api\.shouzhang\.com\/memcenterlk\/member\/firstpage\.do url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/shiguangshouzhang.js
+
+# 时光序
+# 标签：工具
+# hostname = api.weilaizhushou.com
+^https:\/\/api\.weilaizhushou\.com\/base\/user\/vip\/getUserVip url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/shiguangxu.js
+
+# 石墨文档
+# 标签：工具
+# hostname = shimo.im
+https://shimo.im/lizard-api/users/me url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/shimowendang.js
+
+# 狮子老爸讲故事
+# 标签：工具
+# hostname = 152.136.134.81:8090
+^http:\/\/152\.136\.134\.81:8090\/wechat\/(weiXin\/queryUserById|classify\/(getClassifyInfoByIdList2|getIndexPlay2)|audio\/getList2) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/shizilaobajgs.js
+
+# simply piano 
+# 标签：音乐
+# hostname = alicdn.joytunescn.com
+^https:\/\/alicdn\.joytunescn\.com\/server\/asla\/accounts\/accountAuthenticate url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/simplypiano.js
+
+# SOOGIF工具永久会员 微信小程序
+# 标签：学习
+# hostname = www.soogif.com
+https://www.soogif.com/search-smallapp/small-soogif/vip url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/soogif.js
+
+# Ten Percent  自慰。。
+# 标签：学习
+# hostname = api.changecollective.com
+# ^https:\/\/api\.changecollective\.com\/api\/v3\/user url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/tenpercent.js
+
+# 题材库 
+# 标签：学习
+# hostnamae = miniapp.guniuniu.com
+https://miniapp.guniuniu.com/api/app/user$ url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/ticaiku.js
+
+# 听书助手
+# 标签：学习
+# hostnmae = www.huojiwangluo.cn
+https:\/\/www\.huojiwangluo.cn\/ting\/user\/(get|anonylogin) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/tingshuzhushou.js
+
+# 图卡壁纸
+# 标签：工具
+# hostname = smallatom.xyz
+https://smallatom.xyz/bz/img006/periodList url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/tukabizhi.js
+
+
+
+#************ O ************#
+
+# 站位  
+
+
+#************ V ************#
+
+#  Vista看天下
+# 标签：新闻阅读
+# hostname = open3.vistastory.com
+#我的photo
+https://open3.vistastory.com/v3/api/poster/share_poster? url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Vista.js
+#我的
+https://open3.vistastory.com/v3/api/my/home/get_home_center? url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/vistamy.js
+#vip
+https://open3.vistastory.com/v3/api/vip/get_vip url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/vistavip.js
+#vip2
+https://open3.vistastory.com/v3/api/magazine url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/vistavip.js
+#vip3
+https://open3.vistastory.com/v3/api/featured/column/get_content? url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/vistavip.js
+#vip4
+https://open3.vistastory.com/v3/api/article/article_detail2? url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/vistavip.js
+
+^https:\/\/open3\.vistastory\.com\/v3\/api\/notice\/need_read_notice_number? url reject
+
+^https:\/\/open3\.vistastory\.com\/v3\/api\/index\/loading_ad2? url reject
+
+
+#************ W ************#
+
+# 万兴喵影
+# 标签 ：工具
+# hostname = api.300624.com
+https://api.300624.com/v3/plan/feature-code/auth url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/wanxingmiaoying.js
+
+# 网易有道词典
+# 标签：学习
+# hostname = dict.youdao.com, business.youdao.com, api-overmind.youdao.com, cdke.youdao.com
+^https:\/\/dict\.youdao\.com\/vip\/user\/status url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/wyydcd.js
+# 翻译   广告均由 安妮 分享 
+^https:\/\/dict\.youdao\.com\/course\/tab\/translateTab url reject-dict
+
+# 听读训练  
+^https:\/\/dict\.youdao\.com\/homepage\/tile url reject-dict
+
+# 首次查词弹窗
+^https:\/\/api-overmind\.youdao\.com\/openapi\/get\/luna\/dict\/dict-mobile\/prod\/dictCommonConfig url reject-dict
+
+# 首页弹窗
+^https:\/\/cdke\.youdao\.com\/course3\/recommend\/dict\/startup url reject-dict
+
+# 搜索预想
+^https:\/\/dict\.youdao\.com\/commonsearch url reject-dict
+
+# 会员优惠券弹窗
+^https:\/\/dict\.youdao\.com\/vip\/activity\/couponinfo url reject-dict
+
+# 首页左上角福利中心
+^https:\/\/dict\.youdao\.com\/dictusertask\/system url reject-dict
+
+# 会员界面横幅广告
+^https:\/\/dictvip-business\.youdao\.com\/home\/ad url reject-dict
+
+
+#************ X ************#
+
+
+# 西窗烛,诗词之美 
+# 标签：工具 
+# hostname = lchttpapi.xczim.com, avoscloud.com
+#西窗烛,诗词之美
+^https?:\/\/lchttpapi\.xczim\.com\/1.1\/users url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Xcz.js
+#汉字的故事
+^https?:\/\/avoscloud\.com\/1.1\/users url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Xcz.js
+
+# 消防行 三个软件合集 
+# 标签： 学习
+# hostname =  www.xfx119.com
+https://www.xfx119.com/ksVRExamSystem/validityTerm? url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Xiaofangxing.js
+
+# 小叶子架子鼓
+# 标签 ：音乐
+# hostname = oneplay-api.instadrum.com， oneplay-api.xiaoyezi.com
+^https:\/\/oneplay-api\.instadrum\.com\/drum\/(score|account|course\/user_behaviour|lesson\/add_process) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Xiaoyejiazigu.js
+
+^https:\/\/oneplay-api\.xiaoyezi\.com\/drum\/(score|account|course\/user_behaviour|lesson\/add_process) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Xiaoyejiazigu.js
+
+# 星题库 
+# 标签：学习
+# hostname = cm15-c110-3.play.bokecc.com,  mb.xinghengedu.com
+#会员
+https://mb.xinghengedu.com/api/v5.3.0/getUserByToken.do url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Xingtiku.js
+#通用题库
+https://cm15-c110-3.play.bokecc.com/flvs/ url script-request-header https://raw.githubusercontent.com/Yu9191/Rewrite/main/Xingtikukecheng.js 
+#其他题库
+https://cm15-c110-2.play.bokecc.com/flvs/ url script-request-header https://raw.githubusercontent.com/Yu9191/Rewrite/main/Xingtikukecheng.js  
+
+# 熊猫博士 
+# 标签：学习
+# hostname = lp-vid.xiongmaoboshi.com, lp-api.xiongmaoboshi.com
+#解锁会员开关
+^https://lp-api.xiongmaoboshi.com/lp-api/ns url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/xiongmaoboshibaike.js
+#获取完整视频
+^https:\/\/lp-vid\.xiongmaoboshi\.com\/.*\.m3u8$ url script-request-header https://raw.githubusercontent.com/Yu9191/Rewrite/main/m3u8/xiongmaoboshibaike.js
+
+# 小歪微商
+# 标签：工具
+# hostname = xw.jietuguanjia.com
+http://xw.jietuguanjia.com/api/app/userInfo url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/xiaowaiweishang.js
+
+# 小熊录屏
+# 标签：工具
+# hostname = donate-api.recorder.duapps.com
+http://donate-api.recorder.duapps.com/pay/checkAppleSubscribeReceipt? url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/xiaoxiongluping.js
+
+# 小熊油耗3.51
+# 标签：工具
+# hostname = www.xiaoxiongyouhao.com
+https://www.xiaoxiongyouhao.com/api/vip/index.php url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/xiaoxiongyouhao.js
+
+# 欣师网校
+# 标签：学习
+# hostname = app.xinxuejy.com
+#课程题库
+https:\/\/api\.xinxuejy\.com\/api\/(course\/detail|package\/liveDetail|know\/index|paper\/index|search\/getList|search\/getLibraryById|index\/banner\/type\/app_mall|user\/myInfo) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/xswx.js
+#欢迎加入叮当猫频道
+https://www31c1.53kf.com/m.php url 302 https://t.me/chxm1023
+
+# 寻简 
+# 标签：工具
+# hostname = api.mindyushu.com
+https:\/\/api\.mindyushu\.com\/user\/(get-apple-member|me|storage-info) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/xunjian.js
+
+
+
+#************ Y ************#
+
+# 药店学堂
+# 标签：学习
+# hostname = api.yaodiandaxue.vip
+https://api.yaodiandaxue.vip/api/opencourse/course/details url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/yaodianxuetang.js
+
+# 易百查 1.92
+# 标签：工具 
+# hostname = api.ebaicha.com
+https://api.ebaicha.com url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/yibaicha.js
+
+# 一念便签
+# 标签：工具 
+# hostname = yinian.pro
+^https?:\/\/yinian\.pro\/api\/user url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/yinianbianqian.js
+
+# 音壳 
+# 标签：音乐
+# hostname = www.notetech.org
+https://www.notetech.org/mobile url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/yinke.js
+https://www.notetech.org/mobile url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/yinkedengji.js
+
+# 音基考级宝
+# 标签：音乐学习 
+# hostname = music.hjyywh.com
+https://music.hjyywh.com/api/Exam. url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/yjkjb.js
+
+# 乐理手册
+# hostname = music-knowledge-api.quthing.com
+^https:\/\/music-knowledge-api\.quthing\.com\/vip\/state url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/ylsc.js
+
+# 有谱么
+# hostname = yopu.co
+^https:\/\/yopu\.co\/api\/user\/info url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/youpume.js
+
+# SODA相机 CCD相机 Dispo相机 拍立得相机 ZAPAN 
+# hostname = yueh.app168.cc
+^http:\/\/yueh\.app168\.cc\/(first|panda|jiaopian|emoji|manghe)\/iap\/check\.php$ url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/yueh.js
+
+
+#************ Z ************#
+
+# 知音律
+# 标签：音乐 
+# hostname = auth.production.metronautapp.cn
+https://auth.production.metronautapp.cn/jwt/refresh/ url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Zhiyinlv.js
+
+#朝暮计划 
+#hostname = app.zomoplan.com
+^https:\/\/app\.zomoplan\.com\/zhaoMuPlan\/user\/info url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/zhaomujihua.js
+
+#昭昭医考 
+# hostname = api.yikao88.com
+https://api.yikao88.com/api-shop/course/app/v5/selectDetail url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/zhaozhaoyikao.js
+
+# 状元共享课堂
+# hostname = xzykt.longmenshuju.com
+https://xzykt.longmenshuju.com/version url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/zygxkt.js
+
+
+# 过滤整合hostname 留下完整的hostname
+hostname = subscription-api.notedapp.io, oxfordx.cp.com.cn, license.pdfexpert.com, device.rsjxzl.com, lcs-mobile-cops.adobe.io, api.adapty.io, api.panda.boosters.company, c.abcpiano.cn, oauth.secure.pixiv.net, app-api.pixiv.net, qqpyqapi.app.xinmaicard.com, paper.zjapp.xyz, my.getslopes.com, jk.dmzgame.com, app.yinxiang.com, magev6.if.qidian.com, szone-my.7net.cc, api.readbot.tech, richapi.yestiku.com, api.528529.com, shimo.im, 152.136.134.81:8090, alicdn.joytunescn.com, www.soogif.com, api.changecollective.com, miniapp.guniuniu.com, www.huojiwangluo.cn, smallatom.xyz, open3.vistastory.com, api.300624.com, dict.youdao.com, business.youdao.com, api-overmind.youdao.com, cdke.youdao.com, lchttpapi.xczim.com, avoscloud.com, www.xfx119.com, cm15-c110-3.play.bokecc.com, cm15-c110-2.play.bokecc.com, lp-vid.xiongmaoboshi.com, lp-api.xiongmaoboshi.com, xw.jietuguanjia.com, donate-api.recorder.duapps.com, www.xiaoxiongyouhao.com, app.xinxuejy.com, api.mindyushu.com, api.yaodiandaxue.vip, api.ebaicha.com, yinian.pro, music.hjyywh.com, music-knowledge-api.quthing.com, yopu.co, yueh.app168.cc, auth.production.metronautapp.cn, app.zomoplan.com, api.yikao88.com, xzykt.longmenshuju.com
